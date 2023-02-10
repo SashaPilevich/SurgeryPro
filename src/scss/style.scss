@@ -352,6 +352,258 @@
     }
   }
 }
+
+//RECORD//
+.record {
+  padding: 130px 0px 140px;
+  background: {
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+    image: url("@img/record/recordBackground.png");
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 760px;
+    width: 100%;
+    min-height: 330px;
+    padding: 50px 10px;
+    margin: 0px auto;
+    background: rgba(249, 250, 255, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+  &__content {
+    h2 {
+      font: {
+        family: "Montserrat";
+        weight: 600;
+        size: 30px;
+      }
+      line-height: 133%;
+      color: $black;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    width: 100%;
+    height: 50px;
+    color: $white;
+    background: $blue;
+    box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+
+    &:hover {
+      background: $red;
+      transition: all 0.3s linear;
+    }
+
+    &:active {
+      background: $red-dark;
+      transition: all 0.1s linear;
+    }
+  }
+}
+
+//GALLERY//
+.gallery {
+  background: $purple-light;
+
+  &__block {
+    width: 100%;
+    height: 820px;
+    display: grid;
+    grid-template-areas:
+      "a a b"
+      "a a e"
+      "c d e"
+      "f d g";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 40px;
+  }
+
+  &__item {
+    background: {
+      repeat: no-repeat;
+      position: center center;
+      size: inherit;
+    }
+    cursor: pointer;
+  }
+
+  .item-a {
+    background-image: url("@img/gallery/gallery_a.png");
+    grid-area: a;
+  }
+
+  .item-b {
+    background-image: url("@img/gallery/gallery_b.png");
+    grid-area: b;
+  }
+
+  .item-c {
+    background-image: url("@img/gallery/gallery_c.png");
+    grid-area: c;
+  }
+
+  .item-d {
+    background-image: url("@img/gallery/gallery_d.png");
+    grid-area: d;
+  }
+
+  .item-e {
+    background-image: url("@img/gallery/gallery_e.png");
+    grid-area: e;
+  }
+
+  .item-f {
+    background-image: url("@img/gallery/gallery_f.png");
+    grid-area: f;
+  }
+
+  .item-g {
+    background-image: url("@img/gallery/gallery_g.png");
+    grid-area: g;
+  }
+
+  &__item-modal {
+    display: none;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+      size: cover;
+    }
+  }
+
+  &__item-modal.active-photo {
+    display: block;
+  }
+
+  .big-item-a {
+    background-image: url("@img/gallery/gallery_big-a.jpg");
+  }
+
+  .big-item-b {
+    background-image: url("@img/gallery/gallery_big-b.jpg");
+  }
+
+  .big-item-c {
+    background-image: url("@img/gallery/gallery_big-c.jpg");
+  }
+
+  .big-item-d {
+    background-image: url("@img/gallery/gallery_big-d.jpg");
+  }
+
+  .big-item-e {
+    background-image: url("@img/gallery/gallery_big-e.jpg");
+  }
+
+  .big-item-f {
+    background-image: url("@img/gallery/gallery_big-f.jpg");
+  }
+
+  .big-item-g {
+    background-image: url("@img/gallery/gallery_big-g.jpg");
+  }
+}
+
+//CONTACT//
+.contacts {
+
+  &__block {
+    display: flex;
+    width: 100%;
+    min-height: 380px;
+  }
+
+  &__content {
+    max-width: 286px;
+    width: 100%;
+    margin-right: 34px;
+    color: $black;
+  }
+
+  &__address {
+    padding-bottom: 50px;
+  }
+
+  &__address p {
+    &:first-child {
+      padding-bottom: 10px;
+    }
+
+    &:last-child {
+      padding-top: 25px;
+    }
+  }
+
+  &__questions {
+    h3 {
+      font: {
+        weight: 700;
+        size: 20px;
+      }
+      line-height: 100%;
+      padding-bottom: 20px;
+    }
+
+    p {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__questions-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    width: 100%;
+    height: 50px;
+    color: $white;
+    background: $purple;
+    box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+
+    &:hover {
+      background: $blue;
+      transition: all 0.3s linear;
+    }
+
+    &:active {
+      background: $blue-dark;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    iframe {
+      width: inherit;
+      min-height: inherit;
+    }
+  }
+}
+
 //FOOTER//
 .footer {
   height: 250px;
