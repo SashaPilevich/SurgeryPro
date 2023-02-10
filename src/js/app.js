@@ -100,33 +100,6 @@ function closeModal(event) {
 
 // открытие больших картинок Gallery ****************************************************************
 
-//  первый вариант
-// const itemsModalGallery = document.querySelectorAll(".gallery__item-modal"),
-//   itemsGallery = document.querySelectorAll(".gallery__item");
-
-// itemsGallery.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     const nameClass = event.target.className
-//       .replace("gallery__item", "")
-//       .replace("modal-open", "")
-//       .trim();
-
-//     itemsModalGallery.forEach((item) => {
-//       const nameClassModal = item.className
-//         .replace("gallery__item-modal", "")
-//         .replace("active-photo", "")
-//         .trim()
-//         .slice(-6);
-
-//       if (`${nameClassModal}` === `${nameClass}`) {
-//         item.classList.add("active-photo");
-//       } else {
-//         item.classList.remove("active-photo");
-//       }
-//     });
-//   });
-// });
-
 // второй вариант, универсальный и не привязаный к разрешениям
 const itemsImgOpen = document.querySelectorAll(".modal-open"),
   itemsBigImg = document.querySelectorAll(".big-img");
@@ -144,3 +117,55 @@ itemsImgOpen.forEach((item) => {
     });
   });
 });
+
+//смена header *********************************************************
+const header = document.querySelector('.header');
+const headerDark = document.querySelector('.header__dark');
+const headerLight = document.querySelector('.header__light');
+const mainBanner = document.querySelector('.main__banner')
+const about = document.querySelector('.about');
+
+let heightAbout = about.offsetHeight;
+let offsetAbout = offset(about).top;
+let offsetBanner = offset(mainBanner).top;
+let heightBanner = mainBanner.offsetHeight;
+const animStart = 0.8;
+const anim = 0.9;
+let animItemPoint = window.innerHeight - heightAbout / animStart;
+let animItemPointBanner = window.innerHeight - heightBanner / anim;
+
+//ligth header с секции about *******************************************
+window.addEventListener('scroll', () => {
+  if (
+    scrollY > offsetAbout - animItemPoint &&
+    screenY < offsetAbout + heightAbout
+  ) {
+  header.classList.remove('banner-version')
+  header.classList.add('light-version')
+  headerDark.style.display = 'none'
+  headerLight.style.display = 'block'
+  } else {
+  header.classList.remove('light-version')
+  header.classList.add('banner-version')
+  headerDark.style.display = 'block'
+  headerLight.style.display = 'none'
+  }
+});
+//dark header на баннере*************************************
+window.addEventListener('scroll', () => {
+  if (
+    scrollY > offsetBanner - animItemPointBanner &&
+    screenY < offsetBanner + heightBanner
+  ) {
+  header.classList.add('banner-version')
+  }else{
+    header.classList.remove('banner-version') 
+  }
+});
+//функция для определения местоположения
+function offset(el) {
+  const rect = el.getBoundingClientRect();
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}

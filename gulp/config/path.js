@@ -37,5 +37,5 @@ export const path = {
   buildFolder:buildFolder,
   srcFolder:srcFolder,
   rootFolder:rootFolder,
-  ftp: `название папки на удаленном сервере`
+  ftp: `name of folder on service`
 }

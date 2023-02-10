@@ -71,7 +71,8 @@ export const fontsStyle = () => {
               fontWeight = 600;
             } else if (fontWeight.toLowerCase() === "bold") {
               fontWeight = 700;
-            } else if (fontWeight.toLowerCase() === "extrabold") {
+            } else if (fontWeight.toLowerCase() === "extrabold" ||
+            fontWeight.toLowerCase() === "heavy") {
               fontWeight = 800;
             } else if (fontWeight.toLowerCase() === "black") {
               fontWeight = 900;
