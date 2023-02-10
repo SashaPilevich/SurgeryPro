@@ -1,0 +1,802 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Light.woff2") format("woff2"), url("../fonts/Mulish-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button,
+input[type=submit] {
+  display: block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+fieldset {
+  border: inset;
+}
+
+body {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 140px;
+  margin: 0 auto;
+}
+
+.title-up {
+  display: flex;
+  align-items: center;
+}
+.title-up .title-up__text {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 133%;
+  color: #020c17;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+.title-up .title-up__line {
+  border: 1px solid #aeb8fe;
+  flex-grow: 1;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.about,
+.whyUs {
+  padding: 120px 0px;
+}
+
+.main__banner {
+  background-image: url("../img/mainscreen/hero screen_bg.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.header,
+.header__anotherpage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  margin: 0 auto;
+}
+.header .header__light,
+.header__anotherpage .header__light {
+  display: none;
+}
+.header .header__dark,
+.header__anotherpage .header__dark {
+  display: block;
+}
+.header .header__nav,
+.header__anotherpage .header__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header .header__nav .header__logo,
+.header__anotherpage .header__nav .header__logo {
+  margin-right: 38px;
+}
+.header .header__nav .header__logo .logo,
+.header__anotherpage .header__nav .header__logo .logo {
+  width: 160px;
+  height: 34px;
+}
+.header .header__nav .header__menu,
+.header .header__nav .header__menu-light,
+.header__anotherpage .header__nav .header__menu,
+.header__anotherpage .header__nav .header__menu-light {
+  display: flex;
+  align-items: center;
+}
+.header .header__nav .header__menu ul,
+.header .header__nav .header__menu-light ul,
+.header__anotherpage .header__nav .header__menu ul,
+.header__anotherpage .header__nav .header__menu-light ul {
+  display: flex;
+  align-items: center;
+}
+.header .header__nav .header__menu ul li,
+.header .header__nav .header__menu-light ul li,
+.header__anotherpage .header__nav .header__menu ul li,
+.header__anotherpage .header__nav .header__menu-light ul li {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.header .header__nav .header__menu ul li a,
+.header .header__nav .header__menu ul li .light,
+.header .header__nav .header__menu-light ul li a,
+.header .header__nav .header__menu-light ul li .light,
+.header__anotherpage .header__nav .header__menu ul li a,
+.header__anotherpage .header__nav .header__menu ul li .light,
+.header__anotherpage .header__nav .header__menu-light ul li a,
+.header__anotherpage .header__nav .header__menu-light ul li .light {
+  padding: 20px 28px;
+  height: 80%;
+  font-size: 14px;
+  line-height: 143%;
+  color: #f9faff;
+  position: relative;
+}
+.header .header__nav .header__menu ul li .light,
+.header .header__nav .header__menu-light ul li .light,
+.header__anotherpage .header__nav .header__menu ul li .light,
+.header__anotherpage .header__nav .header__menu-light ul li .light {
+  color: #020c17;
+}
+.header .header__nav .header__menu li a:after,
+.header .header__nav .header__menu li .light:after,
+.header .header__nav .header__menu-light li a:after,
+.header .header__nav .header__menu-light li .light:after,
+.header__anotherpage .header__nav .header__menu li a:after,
+.header__anotherpage .header__nav .header__menu li .light:after,
+.header__anotherpage .header__nav .header__menu-light li a:after,
+.header__anotherpage .header__nav .header__menu-light li .light:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0px;
+  bottom: 15px;
+  transition: all 0.6s ease-in-out;
+}
+.header .header__nav .header__menu li:hover a:after,
+.header .header__nav .header__menu-light li:hover a:after,
+.header__anotherpage .header__nav .header__menu li:hover a:after,
+.header__anotherpage .header__nav .header__menu-light li:hover a:after {
+  width: 100%;
+  background-color: #f9faff;
+}
+.header .header__nav .header__menu li:hover .light:after,
+.header .header__nav .header__menu-light li:hover .light:after,
+.header__anotherpage .header__nav .header__menu li:hover .light:after,
+.header__anotherpage .header__nav .header__menu-light li:hover .light:after {
+  width: 100%;
+  background-color: #0062ff;
+}
+.header .header__nav .header__menu li:active a:after,
+.header .header__nav .header__menu li:active .light:after,
+.header .header__nav .header__menu-light li:active a:after,
+.header .header__nav .header__menu-light li:active .light:after,
+.header__anotherpage .header__nav .header__menu li:active a:after,
+.header__anotherpage .header__nav .header__menu li:active .light:after,
+.header__anotherpage .header__nav .header__menu-light li:active a:after,
+.header__anotherpage .header__nav .header__menu-light li:active .light:after {
+  width: 100%;
+  background-color: #e94d66;
+}
+.header .header__nav .header__menu ul li:last-child a,
+.header .header__nav .header__menu-light ul li:last-child a,
+.header__anotherpage .header__nav .header__menu ul li:last-child a,
+.header__anotherpage .header__nav .header__menu-light ul li:last-child a {
+  margin-right: 39px;
+}
+.header .header__nav .header__menu ul li:last-child .light,
+.header .header__nav .header__menu-light ul li:last-child .light,
+.header__anotherpage .header__nav .header__menu ul li:last-child .light,
+.header__anotherpage .header__nav .header__menu-light ul li:last-child .light {
+  margin-right: 39px;
+}
+.header .header__nav .header__menu .header__button .btn__signup,
+.header .header__nav .header__menu .header__button .btn__signup-light,
+.header .header__nav .header__menu .header__button-light .btn__signup,
+.header .header__nav .header__menu .header__button-light .btn__signup-light,
+.header .header__nav .header__menu-light .header__button .btn__signup,
+.header .header__nav .header__menu-light .header__button .btn__signup-light,
+.header .header__nav .header__menu-light .header__button-light .btn__signup,
+.header .header__nav .header__menu-light .header__button-light .btn__signup-light,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup-light,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup-light,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup-light,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup-light {
+  display: block;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #f9faff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: #f9faff;
+  padding: 10px;
+}
+.header .header__nav .header__menu .header__button .btn__signup:hover,
+.header .header__nav .header__menu .header__button .btn__signup-light:hover,
+.header .header__nav .header__menu .header__button-light .btn__signup:hover,
+.header .header__nav .header__menu .header__button-light .btn__signup-light:hover,
+.header .header__nav .header__menu-light .header__button .btn__signup:hover,
+.header .header__nav .header__menu-light .header__button .btn__signup-light:hover,
+.header .header__nav .header__menu-light .header__button-light .btn__signup:hover,
+.header .header__nav .header__menu-light .header__button-light .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup:hover,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup:hover,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup-light:hover {
+  filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+  color: #0062ff;
+  background: #f9faff;
+  transition: all 0.4s ease-in-out;
+}
+.header .header__nav .header__menu .header__button .btn__signup-light,
+.header .header__nav .header__menu .header__button-light .btn__signup-light,
+.header .header__nav .header__menu-light .header__button .btn__signup-light,
+.header .header__nav .header__menu-light .header__button-light .btn__signup-light,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup-light,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup-light,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup-light,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup-light {
+  border: 1px solid #0062ff;
+  color: #0062ff;
+}
+.header .header__nav .header__menu .header__button .btn__signup-light:hover,
+.header .header__nav .header__menu .header__button-light .btn__signup-light:hover,
+.header .header__nav .header__menu-light .header__button .btn__signup-light:hover,
+.header .header__nav .header__menu-light .header__button-light .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu .header__button .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu .header__button-light .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button .btn__signup-light:hover,
+.header__anotherpage .header__nav .header__menu-light .header__button-light .btn__signup-light:hover {
+  background: #0062ff;
+  color: #f9faff;
+}
+
+.header__anotherpage {
+  background: #f9faff;
+}
+
+.header.light-version {
+  background-color: #f9faff;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}
+
+.banner-version {
+  background-color: #061B34;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  transition: background-color 1s ease-in-out;
+}
+
+.hero__screen {
+  position: relative;
+}
+.hero__screen .hand__img {
+  position: absolute;
+  max-width: 78.125rem;
+  height: 48.125rem;
+  display: block;
+  top: 11rem;
+  right: 12rem;
+  z-index: 3;
+}
+.hero__screen .banner {
+  display: flex;
+  position: relative;
+  padding: 240px 0px 100px;
+}
+.hero__screen .banner .banner__content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 213px;
+}
+.hero__screen .banner .banner__content h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 103%;
+  color: #f9faff;
+  margin-bottom: 10px;
+}
+.hero__screen .banner .banner__content .banner__text {
+  font-size: 18px;
+  line-height: 139%;
+  color: #f9faff;
+  margin-bottom: 55px;
+}
+.hero__screen .banner .banner__content .banner__btn-programm,
+.hero__screen .banner .banner__content .banner__btn-signup {
+  width: 240px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+  border: none;
+}
+.hero__screen .banner .banner__content .banner__btn-programm {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #f9faff;
+  border: 1px solid #f9faff;
+  position: relative;
+}
+.hero__screen .banner .banner__content .banner__btn-programm:hover {
+  color: #0062ff;
+  background: #f9faff;
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+}
+.hero__screen .banner .banner__content .banner__btn-programm::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: -35px;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/mainscreen/star.svg");
+}
+.hero__screen .banner .banner__content .banner__btn-programm::before {
+  content: "можно онлайн";
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: -27px;
+  width: 52px;
+  height: 30px;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  text-align: center;
+  color: #f9faff;
+  transform: rotate(15deg);
+  z-index: 1;
+}
+.hero__screen .banner .banner__content .banner__btn-signup {
+  font-family: "Montserrat";
+  font-size: 16px;
+  background: #f9faff;
+  color: #020c17;
+  text-transform: uppercase;
+  margin-bottom: 160px;
+  padding: 15px;
+}
+.hero__screen .banner .banner__content .banner__btn-signup:hover {
+  color: #f9faff;
+  background: #e94d66;
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+}
+.hero__screen .banner .banner__content .socials {
+  display: flex;
+}
+.hero__screen .banner .banner__content .socials a .ico__banner {
+  display: block;
+  stroke: #f1f2fe;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.hero__screen .banner .banner__content .socials a .ico__banner:hover {
+  background-color: #f9faff;
+  box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+  border-radius: 50%;
+  stroke: #e94d66;
+  transition: all 0.4s ease-in-out;
+}
+
+.about {
+  background-color: #f1f2fe;
+}
+.about .about__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+.about .about__content .about__description {
+  display: flex;
+  flex-direction: column;
+}
+.about .about__content .about__description .about__description-text-first,
+.about .about__content .about__description .about__description-text-second {
+  line-height: 156%;
+  color: #020c17;
+  margin-bottom: 20px;
+}
+.about .about__content .about__description .about__description-text-second {
+  margin-bottom: 30px;
+}
+.about .about__content .about__description .btn__about {
+  width: 284px;
+  height: 50px;
+  border: 1px solid #0062ff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: #0062ff;
+  padding: 13px;
+  filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+}
+.about .about__content .about__description .btn__about:hover {
+  color: #f9faff;
+  background: #0062ff;
+  box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.about .about__content .about__image {
+  width: 100%;
+}
+.about .about__content .about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.whyUs {
+  background: #f9faff;
+}
+.whyUs .whyUs__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 50px;
+  padding-bottom: 25px;
+}
+.whyUs .whyUs__content .whyUs__item {
+  display: flex;
+  justify-content: center;
+}
+.whyUs .whyUs__content .whyUs__item .whyUs__image {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+.whyUs .whyUs__content .whyUs__item .whyUs__image img {
+  width: 100%;
+}
+.whyUs .whyUs__content .whyUs__item .whyUs__description {
+  width: 81.8%;
+  padding-top: 20px;
+}
+.whyUs .whyUs__content .whyUs__item .whyUs__description .whyUs__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #020c17;
+  margin-bottom: 20px;
+}
+.whyUs .whyUs__content .whyUs__item .whyUs__description .whyUs__text {
+  line-height: 156%;
+  color: #020c17;
+  opacity: 0.8;
+}
+
+.footer {
+  height: 250px;
+  background: #f1f2fe;
+}
+.footer .footer__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 85px;
+  margin-bottom: 53px;
+}
+.footer .footer__nav .footer__logo {
+  margin-right: 38px;
+}
+.footer .footer__nav .footer__logo .logo {
+  width: 160px;
+  height: 34px;
+}
+.footer .footer__nav .footer__menu {
+  display: flex;
+  align-items: center;
+}
+.footer .footer__nav .footer__menu ul {
+  display: flex;
+}
+.footer .footer__nav .footer__menu ul li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer__nav .footer__menu ul li a {
+  font-size: 14px;
+  line-height: 143%;
+  color: #020c17;
+  position: relative;
+  height: 80%;
+  padding: 5px 22px;
+}
+.footer .footer__nav .footer__menu ul li:last-child a {
+  margin-right: 71px;
+}
+.footer .footer__nav .footer__menu li a:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: all 0.6s ease-in-out;
+}
+.footer .footer__nav .footer__menu li:hover a:after {
+  width: 100%;
+  background-color: #0062ff;
+}
+.footer .footer__nav .footer__menu li:active a:after {
+  width: 100%;
+  background-color: #e94d66;
+}
+.footer .socials {
+  display: flex;
+}
+.footer .socials a .ico__footer {
+  display: block;
+  stroke: #020c17;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.footer .socials a .ico__footer:hover {
+  box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  background-color: #aeb8fe;
+  stroke: #f9faff;
+}
+.footer .footer__copy {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1180px) {
+  .hero__screen .hand__img {
+    max-width: 70rem;
+    height: 40rem;
+    top: 14rem;
+  }
+}

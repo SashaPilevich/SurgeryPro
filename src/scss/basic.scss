@@ -1,0 +1,36 @@
+body {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $black;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 140px;
+  margin: 0 auto;
+}
+.title-up {
+  display: flex;
+  align-items: center;
+  .title-up__text {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 133%;
+    color: $black-dark;
+    margin-right: 30px;
+    margin-bottom: 50px;
+  }
+  .title-up__line {
+    border: 1px solid $purple;
+    flex-grow: 1;
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+.about,
+.whyUs {
+  padding: 120px 0px;
+}
