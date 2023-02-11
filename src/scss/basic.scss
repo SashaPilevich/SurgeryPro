@@ -7,6 +7,10 @@ body {
   }
   line-height: 156%;
   color: $black-dark;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  min-height: 100vh;
 
   &.locked-body {
     overflow: hidden;
