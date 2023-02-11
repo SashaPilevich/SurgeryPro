@@ -100,7 +100,6 @@ function closeModal(event) {
 
 // открытие больших картинок Gallery ****************************************************************
 
-// второй вариант, универсальный и не привязаный к разрешениям
 const itemsImgOpen = document.querySelectorAll(".modal-open"),
   itemsBigImg = document.querySelectorAll(".big-img");
 

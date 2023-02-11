@@ -9,6 +9,7 @@
   background-position: center;
   overflow: hidden;
 }
+
 .header,
 .header__anotherpage{
   position: fixed;
@@ -135,9 +136,11 @@
     }
   }
 }
+
 .header__anotherpage {
   background: $white;
 } //для других страниц
+
 .header.light-version {
   background-color: $white;
   position: fixed;
@@ -145,6 +148,7 @@
   z-index: 5;
   transition: all 0.5s ease-in-out;
 }
+
 .banner-version {
   background-color: $header-dark;
   position: fixed;
@@ -291,6 +295,7 @@
     }
   }
 }
+
 // ABOUT
 .about {
   background-color: $purple-light;
@@ -347,6 +352,7 @@
     }
   }
 }
+
 //WHYUS//
 .whyUs {
   background: $white;
