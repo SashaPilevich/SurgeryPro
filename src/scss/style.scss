@@ -25,6 +25,7 @@
     display: block;
   }
 }
+
 .header__nav {
   display: flex;
   align-items: center;
@@ -93,6 +94,7 @@
     }
   }
 }
+
 .header__button,
 .header__button-light {
   .btn__signup,
@@ -295,7 +297,7 @@
     }
   }
 }
-svg.ico__banner.ico-vk path{
+svg.ico__banner.ico-vk path {
   fill: inherit;
 }
 .hero__screen .banner .banner__content .socials a .ico__banner.ico-vk {
@@ -309,12 +311,12 @@ svg.ico__banner.ico-vk path{
     transition: all 0.4s ease-in-out;
   }
   &:active {
-        background: $red;
-        box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
-        fill: $white;
-        fill-rule: nonzero;
-        transition: all 0.4s ease-in-out;
-      }
+    background: $red;
+    box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+    fill: $white;
+    fill-rule: nonzero;
+    transition: all 0.4s ease-in-out;
+  }
 }
 
 // ABOUT
@@ -455,10 +457,16 @@ svg.ico__banner.ico-vk path{
     p {
       font-size: 18px;
       line-height: 25px;
+      padding-bottom: 20px;
     }
   }
 
   &__btn {
+    font: {
+      family: "Montserrat";
+      weight: 700;
+    }
+    line-height: 125%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -497,50 +505,50 @@ svg.ico__banner.ico-vk path{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
-    column-gap: 40px;
+    column-gap: 20px;
   }
 
   &__item {
     background: {
       repeat: no-repeat;
       position: center center;
-      size: inherit;
     }
+    background-size: cover;
     cursor: pointer;
   }
 
   .item-a {
-    background-image: url("@img/gallery/gallery_a.png");
+    background-image: url("@img/gallery/gallery_a.jpg");
     grid-area: a;
   }
 
   .item-b {
-    background-image: url("@img/gallery/gallery_b.png");
+    background-image: url("@img/gallery/gallery_b.jpg");
     grid-area: b;
   }
 
   .item-c {
-    background-image: url("@img/gallery/gallery_c.png");
+    background-image: url("@img/gallery/gallery_c.jpg");
     grid-area: c;
   }
 
   .item-d {
-    background-image: url("@img/gallery/gallery_d.png");
+    background-image: url("@img/gallery/gallery_d.jpg");
     grid-area: d;
   }
 
   .item-e {
-    background-image: url("@img/gallery/gallery_e.png");
+    background-image: url("@img/gallery/gallery_e.jpg");
     grid-area: e;
   }
 
   .item-f {
-    background-image: url("@img/gallery/gallery_f.png");
+    background-image: url("@img/gallery/gallery_f.jpg");
     grid-area: f;
   }
 
   .item-g {
-    background-image: url("@img/gallery/gallery_g.png");
+    background-image: url("@img/gallery/gallery_g.jpg");
     grid-area: g;
   }
 
@@ -558,31 +566,31 @@ svg.ico__banner.ico-vk path{
   }
 
   .big-item-a {
-    background-image: url("@img/gallery/gallery_big-a.jpg");
+    background-image: url("@img/gallery/gallery_a.jpg");
   }
 
   .big-item-b {
-    background-image: url("@img/gallery/gallery_big-b.jpg");
+    background-image: url("@img/gallery/gallery_b.jpg");
   }
 
   .big-item-c {
-    background-image: url("@img/gallery/gallery_big-c.jpg");
+    background-image: url("@img/gallery/gallery_c.jpg");
   }
 
   .big-item-d {
-    background-image: url("@img/gallery/gallery_big-d.jpg");
+    background-image: url("@img/gallery/gallery_d.jpg");
   }
 
   .big-item-e {
-    background-image: url("@img/gallery/gallery_big-e.jpg");
+    background-image: url("@img/gallery/gallery_e.jpg");
   }
 
   .big-item-f {
-    background-image: url("@img/gallery/gallery_big-f.jpg");
+    background-image: url("@img/gallery/gallery_f.jpg");
   }
 
   .big-item-g {
-    background-image: url("@img/gallery/gallery_big-g.jpg");
+    background-image: url("@img/gallery/gallery_g.jpg");
   }
 }
 
@@ -631,6 +639,11 @@ svg.ico__banner.ico-vk path{
   }
 
   &__questions-btn {
+    font: {
+      family: "Montserrat";
+      weight: 700;
+    }
+    line-height: 125%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -749,10 +762,12 @@ svg.ico__banner.ico-vk path{
     }
   }
 }
-svg.ico__footer.ico-vk path{
+
+svg.ico__footer.ico-vk path {
   fill: inherit;
 }
-.footer .socials a .ico__footer.ico-vk{
+
+.footer .socials a .ico__footer.ico-vk {
   stroke: none;
   fill: $black-dark;
   &:hover {
@@ -764,21 +779,21 @@ svg.ico__footer.ico-vk path{
   }
   &:active {
     background: $blue-dark;
-        box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
-        fill: $white;
-        fill-rule: nonzero;
-        transition: all 0.4s ease-in-out;
-      }
-}
-  .footer__copy {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 125%;
-    color: $black;
-    display: flex;
-    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+    fill: $white;
+    fill-rule: nonzero;
+    transition: all 0.4s ease-in-out;
   }
+}
 
+.footer__copy {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  color: $black;
+  display: flex;
+  justify-content: center;
+}
 
 @media (max-width: 1180px) {
   .hero__screen {
