@@ -968,27 +968,6 @@ svg.ico__banner.ico-vk path {
 .gallery__item-modal.active-photo {
   display: block;
 }
-.gallery .big-item-a {
-  background-image: url("../img/gallery/gallery_a.jpg");
-}
-.gallery .big-item-b {
-  background-image: url("../img/gallery/gallery_b.jpg");
-}
-.gallery .big-item-c {
-  background-image: url("../img/gallery/gallery_c.jpg");
-}
-.gallery .big-item-d {
-  background-image: url("../img/gallery/gallery_d.jpg");
-}
-.gallery .big-item-e {
-  background-image: url("../img/gallery/gallery_e.jpg");
-}
-.gallery .big-item-f {
-  background-image: url("../img/gallery/gallery_f.jpg");
-}
-.gallery .big-item-g {
-  background-image: url("../img/gallery/gallery_g.jpg");
-}
 
 .contacts__block {
   display: flex;
