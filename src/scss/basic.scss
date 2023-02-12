@@ -7,9 +7,9 @@ body {
   }
   line-height: 156%;
   color: $black-dark;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 
   &.locked-body {
@@ -50,7 +50,7 @@ body {
 .gallery,
 .feedbacks-home,
 .about,
-.whyUs {
+.whyus {
   padding: 120px 0px;
 }
 
