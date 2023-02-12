@@ -34,12 +34,12 @@ body {
       family: "Montserrat";
       weight: 600;
       size: 30px;
-    };
+    }
     line-height: 133%;
     margin-right: 30px;
   }
 
-  &__line{
+  &__line {
     border: 1px solid $purple;
     flex-grow: 1;
     display: flex;
@@ -120,7 +120,7 @@ body {
         border-right: 1px solid $white;
       }
     }
-    
+
     &:active {
       transition: all 0.1s linear;
       background-color: $blue;
@@ -195,8 +195,7 @@ body {
   &__bg {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
+    background: rgba(6, 27, 52, 0.65);
     display: flex;
     padding: 20px;
   }
@@ -215,7 +214,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  
 
     img {
       max-width: 100%;
