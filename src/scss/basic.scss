@@ -7,9 +7,9 @@ body {
   }
   line-height: 156%;
   color: $black-dark;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 
   &.locked-body {
@@ -29,7 +29,7 @@ body {
   align-items: center;
   margin-bottom: 50px;
 
-  .title-up__text {
+  &__text {
     font: {
       family: "Montserrat";
       weight: 600;
@@ -39,18 +39,20 @@ body {
     margin-right: 30px;
   }
 
-  .title-up__line{
+  &__line{
     border: 1px solid $purple;
     flex-grow: 1;
     display: flex;
   }
 }
 
+.basic-off,
+.faq,
 .contacts,
 .gallery,
 .feedbacks-home,
 .about,
-.whyUs {
+.whyus {
   padding: 120px 0px;
 }
 

@@ -9,8 +9,9 @@
   background-position: center;
   overflow: hidden;
 }
+
 .header,
-.header__anotherpage{
+.header__anotherpage {
   position: fixed;
   left: 0;
   top: 0;
@@ -23,128 +24,131 @@
   .header__dark {
     display: block;
   }
-  .header__nav {
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .header__logo {
+    margin-right: 38px;
+    .logo {
+      width: 160px;
+      height: 34px;
+    }
+  }
+  .header__menu,
+  .header__menu-light {
     display: flex;
     align-items: center;
-    width: 100%;
-    .header__logo {
-      margin-right: 38px;
-      .logo {
-        width: 160px;
-        height: 34px;
-      }
-    }
-    .header__menu,
-    .header__menu-light {
+    ul {
       display: flex;
       align-items: center;
-      ul {
+      li {
         display: flex;
         align-items: center;
-        li {
-          height: 80px;
-          display: flex;
-          align-items: center;
-          a,
-          .light {
-            padding: 20px 28px;
-            height: 80%;
-            font-size: 14px;
-            line-height: 143%;
-            color: $white;
-            position: relative;
-          }
-          .light {
-            color: $black-dark;
-          }
-        }
-      }
-      li a:after,
-      li .light:after {
-        content: "";
-        display: block;
-        clear: both;
-        height: 2px;
-        width: 0px;
-        position: absolute;
-        left: 0px;
-        bottom: 15px;
-        transition: all 0.6s ease-in-out;
-      }
-      li:hover a:after {
-        width: 100%;
-        background-color: $white;
-      }
-      li:hover .light:after {
-        width: 100%;
-        background-color: $blue;
-      }
-      li:active a:after,
-      li:active .light:after {
-        width: 100%;
-        background-color: $red;
-      }
-      ul li:last-child a {
-        margin-right: 39px;
-      }
-      ul li:last-child .light {
-        margin-right: 39px;
-      }
-      .header__button,
-      .header__button-light {
-        .btn__signup,
-        .btn__signup-light {
-          display: block;
-          width: 200px;
-          height: 40px;
-          border: 1px solid $white;
-          font-weight: 700;
+        height: 80px;
+        a,
+        .light {
+          padding: 20px 28px;
           font-size: 14px;
           line-height: 143%;
-          text-align: center;
           color: $white;
-          padding: 10px;
-          &:hover {
-            filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
-            color: $blue;
-            background: $white;
-            transition: all 0.4s ease-in-out;
-          }
-          &:active {
-            background: $purple-medium;
-            border: 1px solid $purple-medium;
-            box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
-            transition: all 0.4s ease-in-out;
-          }
+          position: relative;
         }
-        .btn__signup-light {
-          border: 1px solid $blue;
-          color: $blue;
-          &:hover {
-            background: $blue;
-            color: $white;
-          }
-          &:active {
-            background: $blue-dark;
-            border: 1px solid $blue-dark;
-            box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
-            transition: all 0.4s ease-in-out;
-          }
+        .light {
+          color: $black-dark;
         }
       }
+    }
+    li a:after,
+    li .light:after {
+      content: "";
+      display: block;
+      clear: both;
+      height: 2px;
+      width: 0px;
+      position: absolute;
+      left: 0px;
+      bottom: 15px;
+      transition: all 0.6s ease-in-out;
+    }
+    li:hover a:after {
+      width: 100%;
+      background-color: $white;
+    }
+    li:hover .light:after {
+      width: 100%;
+      background-color: $blue;
+    }
+    li:active a:after,
+    li:active .light:after {
+      width: 100%;
+      background-color: $red;
+    }
+    ul li:last-child a {
+      margin-right: 39px;
+    }
+    ul li:last-child .light {
+      margin-right: 39px;
     }
   }
 }
+.header__button,
+.header__button-light {
+  .btn__signup,
+  .btn__signup-light {
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 1px solid $white;
+    font-weight:bold;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: $white;
+    padding: 10px;
+    &:hover {
+      filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+      color: $blue;
+      background: $white;
+      transition: all 0.4s ease-in-out;
+    }
+    &:active {
+      background: $purple-medium;
+      border: 1px solid $purple-medium;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  .btn__signup-light {
+    border: 1px solid $blue;
+    color: $blue;
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+    &:active {
+      background: $blue-dark;
+      border: 1px solid $blue-dark;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
 .header__anotherpage {
   background: $white;
 } //для других страниц
+
 .header.light-version {
   background-color: $white;
   position: fixed;
   width: 100%;
   z-index: 5;
+  box-shadow: 0px 2px 5px rgba(6, 27, 52, 0.05);
   transition: all 0.5s ease-in-out;
 }
+
 .banner-version {
   background-color: $header-dark;
   position: fixed;
@@ -194,7 +198,7 @@
       .banner__btn-signup {
         width: 240px;
         height: 50px;
-        font-weight: 700;
+        font-weight: bold;
         line-height: 125%;
         text-align: center;
         border: none;
@@ -282,7 +286,7 @@
           transition: all 0.4s ease-in-out;
         }
         &:active {
-          background-color: $red-dark;
+          background-color: $red;
           box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
           stroke: $white;
           transition: all 0.4s ease-in-out;
@@ -291,6 +295,7 @@
     }
   }
 }
+
 // ABOUT
 .about {
   background-color: $purple-light;
@@ -347,21 +352,21 @@
     }
   }
 }
-//WHYUS//
-.whyUs {
-  background: $white;
 
-  .whyUs__content {
+//WHYUS//
+.whyus {
+  background: $white;
+  .whyus__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     column-gap: 40px;
-    row-gap: 50px;
+    row-gap: 40px;
     padding-bottom: 25px;
-    .whyUs__item {
+    .whyus__item {
       display: flex;
       justify-content: center;
-      .whyUs__image {
+      .whyus__image {
         width: 60px;
         height: 60px;
         margin-right: 10px;
@@ -369,17 +374,17 @@
           width: 100%;
         }
       }
-      .whyUs__description {
+      .whyus__description {
         width: 81.8%;
         padding-top: 20px;
-        .whyUs__title {
+        .whyus__title {
           font-weight: 700;
           font-size: 20px;
           line-height: 100%;
           color: $black-dark;
           margin-bottom: 20px;
         }
-        .whyUs__text {
+        .whyus__text {
           line-height: 156%;
           color: $black-dark;
           opacity: 0.8;
