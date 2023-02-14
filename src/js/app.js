@@ -117,7 +117,7 @@ itemsImgOpen.forEach((item) => {
   });
 });
 
-//смена header *********************************************************
+// смена header *********************************************************
 const header = document.querySelector('.header');
 const headerDark = document.querySelector('.header__dark');
 const headerLight = document.querySelector('.header__light');
