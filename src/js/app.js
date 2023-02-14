@@ -1,11 +1,10 @@
 import * as flsFunctions from "./modules/functions.js";
 import { feedbacksHome } from "./modules/mocks.js";
 flsFunctions.isWebp();
-import Swiper, {Navigation, Pagination} from "swiper";
-const swiper = new Swiper()
+import Swiper, { Navigation, Pagination } from "swiper";
+const swiper = new Swiper();
 
-
-// логика для слайдера ****************************************************************
+//логика для слайдера ****************************************************************
 let numberFeedbacks = 0;
 
 const btnPrevFeedbacksHome = document.querySelector(
@@ -17,26 +16,29 @@ const btnPrevFeedbacksHome = document.querySelector(
   textFeedbacksHome = document.querySelector(".feedbacks-home .slider__text"),
   pointsFeedbacksHome = document.querySelectorAll(
     ".feedbacks-home .slider__point-item"
-  ),
-  urlFeedbacksHome = imgFeedbacksHome.src.slice(0, -19);
+  )
+///проверяем есть ли эти элементы на странице и если true , то выполняем код иначе пропускаем и идём дальше
+if(btnPrevFeedbacksHome && btnNextFeedbacksHome && imgFeedbacksHome && titleFeedbacksHome && textFeedbacksHome && pointsFeedbacksHome ){
+  const urlFeedbacksHome = imgFeedbacksHome.src.slice(0, -19);
+  btnNextFeedbacksHome.addEventListener("click", () => {
+    numberFeedbacks === feedbacksHome.length - 1
+      ? (numberFeedbacks = 0)
+      : numberFeedbacks++;
+  
+    getValuesFeedback();
+    getPointFeedback();
+  });
+  
+  btnPrevFeedbacksHome.addEventListener("click", () => {
+    numberFeedbacks === 0
+      ? (numberFeedbacks = feedbacksHome.length - 1)
+      : numberFeedbacks--;
+  
+    getValuesFeedback();
+    getPointFeedback();
+  });
+}
 
-btnNextFeedbacksHome.addEventListener("click", () => {
-  numberFeedbacks === feedbacksHome.length - 1
-    ? (numberFeedbacks = 0)
-    : numberFeedbacks++;
-
-  getValuesFeedback();
-  getPointFeedback();
-});
-
-btnPrevFeedbacksHome.addEventListener("click", () => {
-  numberFeedbacks === 0
-    ? (numberFeedbacks = feedbacksHome.length - 1)
-    : numberFeedbacks--;
-
-  getValuesFeedback();
-  getPointFeedback();
-});
 
 function getValuesFeedback() {
   titleFeedbacksHome.innerText = feedbacksHome[numberFeedbacks]["title"];
@@ -117,54 +119,100 @@ itemsImgOpen.forEach((item) => {
   });
 });
 
-//смена header *********************************************************
-const header = document.querySelector('.header');
-const headerDark = document.querySelector('.header__dark');
-const headerLight = document.querySelector('.header__light');
-const mainBanner = document.querySelector('.main__banner')
-const about = document.querySelector('.about');
+// смена header *********************************************************
+const header = document.querySelector(".header");
+const headerDark = document.querySelector(".header__dark");
+const headerLight = document.querySelector(".header__light");
+const mainBanner = document.querySelector(".main__banner");
+const about = document.querySelector(".about");
+if (about) {
+  let heightAbout = about.offsetHeight;
+  let offsetAbout = offset(about).top;
+  let offsetBanner = offset(mainBanner).top;
+  let heightBanner = mainBanner.offsetHeight;
+  const animStart = 0.8;
+  const anim = 0.9;
+  let animItemPoint = window.innerHeight - heightAbout / animStart;
+  let animItemPointBanner = window.innerHeight - heightBanner / anim;
 
-let heightAbout = about.offsetHeight;
-let offsetAbout = offset(about).top;
-let offsetBanner = offset(mainBanner).top;
-let heightBanner = mainBanner.offsetHeight;
-const animStart = 0.8;
-const anim = 0.9;
-let animItemPoint = window.innerHeight - heightAbout / animStart;
-let animItemPointBanner = window.innerHeight - heightBanner / anim;
-
-//ligth header с секции about *******************************************
-window.addEventListener('scroll', () => {
-  if (
-    scrollY > offsetAbout - animItemPoint &&
-    screenY < offsetAbout + heightAbout
-  ) {
-  header.classList.remove('banner-version')
-  header.classList.add('light-version')
-  headerDark.style.display = 'none'
-  headerLight.style.display = 'block'
-  } else {
-  header.classList.remove('light-version')
-  header.classList.add('banner-version')
-  headerDark.style.display = 'block'
-  headerLight.style.display = 'none'
+  //ligth header с секции about *******************************************
+  window.addEventListener("scroll", () => {
+    if (
+      scrollY > offsetAbout - animItemPoint &&
+      screenY < offsetAbout + heightAbout
+    ) {
+      header.classList.remove("banner-version");
+      header.classList.add("light-version");
+      headerDark.style.display = "none";
+      headerLight.style.display = "block";
+    } else {
+      header.classList.remove("light-version");
+      header.classList.add("banner-version");
+      headerDark.style.display = "block";
+      headerLight.style.display = "none";
+    }
+  });
+  //dark header на баннере*************************************
+  window.addEventListener("scroll", () => {
+    if (
+      scrollY > offsetBanner - animItemPointBanner &&
+      screenY < offsetBanner + heightBanner
+    ) {
+      header.classList.add("banner-version");
+    } else {
+      header.classList.remove("banner-version");
+    }
+  });
+  //функция для определения местоположения
+  function offset(el) {
+    const rect = el.getBoundingClientRect();
+    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
-});
-//dark header на баннере*************************************
-window.addEventListener('scroll', () => {
-  if (
-    scrollY > offsetBanner - animItemPointBanner &&
-    screenY < offsetBanner + heightBanner
-  ) {
-  header.classList.add('banner-version')
-  }else{
-    header.classList.remove('banner-version') 
-  }
-});
-//функция для определения местоположения
-function offset(el) {
-  const rect = el.getBoundingClientRect();
-  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
+
+// let heightAbout = about.offsetHeight;
+// let offsetAbout = offset(about).top;
+// let offsetBanner = offset(mainBanner).top;
+// let heightBanner = mainBanner.offsetHeight;
+// const animStart = 0.8;
+// const anim = 0.9;
+// let animItemPoint = window.innerHeight - heightAbout / animStart;
+// let animItemPointBanner = window.innerHeight - heightBanner / anim;
+
+// //ligth header с секции about *******************************************
+// window.addEventListener('scroll', () => {
+//   if (
+//     scrollY > offsetAbout - animItemPoint &&
+//     screenY < offsetAbout + heightAbout
+//   ) {
+//   header.classList.remove('banner-version')
+//   header.classList.add('light-version')
+//   headerDark.style.display = 'none'
+//   headerLight.style.display = 'block'
+//   } else {
+//   header.classList.remove('light-version')
+//   header.classList.add('banner-version')
+//   headerDark.style.display = 'block'
+//   headerLight.style.display = 'none'
+//   }
+// });
+// //dark header на баннере*************************************
+// window.addEventListener('scroll', () => {
+//   if (
+//     scrollY > offsetBanner - animItemPointBanner &&
+//     screenY < offsetBanner + heightBanner
+//   ) {
+//   header.classList.add('banner-version')
+//   }else{
+//     header.classList.remove('banner-version')
+//   }
+// });
+// //функция для определения местоположения
+// function offset(el) {
+//   const rect = el.getBoundingClientRect();
+//   const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+// }
