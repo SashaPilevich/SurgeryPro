@@ -46,14 +46,18 @@ body {
   }
 }
 
-.basic-off,
 .faq,
 .contacts,
 .gallery,
 .feedbacks-home,
 .about,
+.aboutspace,
+.galleryabout,
 .whyus {
   padding: 120px 0px;
+}
+.aboutspace{
+  padding-bottom: 0px;
 }
 
 .slider {
