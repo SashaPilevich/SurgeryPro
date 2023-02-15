@@ -1,7 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import { slider_1, slider_2 } from "./modules/mocks.js";
 flsFunctions.isWebp();
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper from "swiper";
 const swiper = new Swiper();
 
 //логика для слайдера ****************************************************************
@@ -14,10 +14,12 @@ const btnPrevFeedbacks = document.querySelector(".slider__btn.btn-prev"),
     ".slider__points-list .slider__point-item"
   );
 let numberFeedbacks = 0;
+
 let urlFeedbacks = imgFeedbacks.src.slice(0, -15);
 
 btnNextFeedbacks.addEventListener("click", (event) => {
   numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
+
 
   getPointFeedback();
   getValuesFeedback(event);
@@ -178,47 +180,3 @@ if (about) {
   }
 }
 
-// let heightAbout = about.offsetHeight;
-// let offsetAbout = offset(about).top;
-// let offsetBanner = offset(mainBanner).top;
-// let heightBanner = mainBanner.offsetHeight;
-// const animStart = 0.8;
-// const anim = 0.9;
-// let animItemPoint = window.innerHeight - heightAbout / animStart;
-// let animItemPointBanner = window.innerHeight - heightBanner / anim;
-
-// //ligth header с секции about *******************************************
-// window.addEventListener('scroll', () => {
-//   if (
-//     scrollY > offsetAbout - animItemPoint &&
-//     screenY < offsetAbout + heightAbout
-//   ) {
-//   header.classList.remove('banner-version')
-//   header.classList.add('light-version')
-//   headerDark.style.display = 'none'
-//   headerLight.style.display = 'block'
-//   } else {
-//   header.classList.remove('light-version')
-//   header.classList.add('banner-version')
-//   headerDark.style.display = 'block'
-//   headerLight.style.display = 'none'
-//   }
-// });
-// //dark header на баннере*************************************
-// window.addEventListener('scroll', () => {
-//   if (
-//     scrollY > offsetBanner - animItemPointBanner &&
-//     screenY < offsetBanner + heightBanner
-//   ) {
-//   header.classList.add('banner-version')
-//   }else{
-//     header.classList.remove('banner-version')
-//   }
-// });
-// //функция для определения местоположения
-// function offset(el) {
-//   const rect = el.getBoundingClientRect();
-//   const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-//   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-// }

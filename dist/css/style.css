@@ -487,7 +487,8 @@ body.locked-body {
 .header__nav .header__menu ul li .light,
 .header__nav .header__menu-light ul li a,
 .header__nav .header__menu-light ul li .light {
-  padding: 20px 28px;
+  padding: 20px 0px;
+  margin: 0px 28px;
   font-size: 14px;
   line-height: 143%;
   color: #f9faff;
@@ -504,10 +505,11 @@ body.locked-body {
   content: "";
   display: block;
   clear: both;
-  height: 2px;
+  height: 1px;
   width: 0px;
   position: absolute;
-  left: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 15px;
   transition: all 0.6s ease-in-out;
 }
@@ -530,11 +532,11 @@ body.locked-body {
 }
 .header__nav .header__menu ul li:last-child a,
 .header__nav .header__menu-light ul li:last-child a {
-  margin-right: 39px;
+  margin-right: 67px;
 }
 .header__nav .header__menu ul li:last-child .light,
 .header__nav .header__menu-light ul li:last-child .light {
-  margin-right: 39px;
+  margin-right: 67px;
 }
 
 .header__button .btn__signup,
@@ -542,7 +544,8 @@ body.locked-body {
 .header__button-light .btn__signup,
 .header__button-light .btn__signup-light {
   display: block;
-  width: 200px;
+  min-width: 200px;
+  width: 100%;
   height: 40px;
   border: 1px solid #f9faff;
   font-weight: bold;
@@ -918,67 +921,6 @@ svg.ico__banner.ico-vk path {
   transition: all 0.1s linear;
 }
 
-.galleryabout {
-  background: #f9faff;
-}
-.galleryabout__block {
-  width: 100%;
-  height: 860px;
-  display: grid;
-  grid-template-areas: "h i j" "h i j" "k i j" "k i l" "m i l" "m n n" "o n n" "o n n";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 20px;
-}
-.galleryabout__item {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  cursor: pointer;
-}
-.galleryabout .item-h {
-  background-image: url("../img/gallery/gallery_a.jpg");
-  grid-area: h;
-}
-.galleryabout .item-i {
-  background-image: url("../img/gallery/gallery_b.jpg");
-  grid-area: i;
-}
-.galleryabout .item-j {
-  background-image: url("../img/gallery/gallery_c.jpg");
-  grid-area: j;
-}
-.galleryabout .item-k {
-  background-image: url("../img/gallery/gallery_d.jpg");
-  grid-area: k;
-}
-.galleryabout .item-l {
-  background-image: url("../img/gallery/gallery_e.jpg");
-  grid-area: l;
-}
-.galleryabout .item-m {
-  background-image: url("../img/gallery/gallery_f.jpg");
-  grid-area: m;
-}
-.galleryabout .item-n {
-  background-image: url("../img/gallery/gallery_g.jpg");
-  grid-area: n;
-}
-.galleryabout .item-o {
-  background-image: url("../img/gallery/gallery_g.jpg");
-  grid-area: o;
-}
-.galleryabout__item-modal {
-  display: none;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.galleryabout__item-modal.active-photo {
-  display: block;
-}
-
 .gallery {
   background: #f1f2fe;
 }
@@ -1104,14 +1046,11 @@ svg.ico__banner.ico-vk path {
 }
 .footer .footer__nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding-top: 85px;
   margin-bottom: 53px;
-}
-.footer .footer__nav .footer__logo {
-  margin-right: 38px;
 }
 .footer .footer__nav .footer__logo .logo {
   width: 160px;
@@ -1135,19 +1074,21 @@ svg.ico__banner.ico-vk path {
   color: #020c17;
   position: relative;
   height: 80%;
-  padding: 5px 22px;
+  padding: 5px 0px;
+  margin: 0px 28px;
 }
 .footer .footer__nav .footer__menu ul li:last-child a {
-  margin-right: 71px;
+  margin-right: 66px;
 }
 .footer .footer__nav .footer__menu li a:after {
   content: "";
   display: block;
   clear: both;
-  height: 2px;
+  height: 1px;
   width: 0px;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0px;
   transition: all 0.6s ease-in-out;
 }
@@ -1166,7 +1107,7 @@ svg.ico__banner.ico-vk path {
   display: block;
   stroke: #020c17;
   border-radius: 50%;
-  margin-right: 25px;
+  margin: 0px 12px;
 }
 .footer .socials a .ico__footer:hover {
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
@@ -1179,6 +1120,9 @@ svg.ico__banner.ico-vk path {
   background: #0a50bf;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   transition: all 0.4s ease-in-out;
+}
+.footer .socials:last-child a .ico__footer {
+  margin-right: 0px;
 }
 
 svg.ico__footer.ico-vk path {
@@ -1221,8 +1165,9 @@ svg.ico__footer.ico-vk path {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   margin-bottom: 40px;
+  min-height: 380px;
+  height: 100%;
 }
-.aboutspace .aboutspace__content .aboutspace__content-item,
 .aboutspace .aboutspace__content .aboutspace__content-image {
   max-height: 380px;
   height: 100%;
@@ -1263,6 +1208,67 @@ svg.ico__footer.ico-vk path {
   margin: 0 auto;
   width: 600px;
   border: 1px solid #a1acfc;
+}
+
+.galleryabout {
+  background: #f9faff;
+}
+.galleryabout__block {
+  width: 100%;
+  height: 860px;
+  display: grid;
+  grid-template-areas: "h i j" "h i j" "k i j" "k i l" "m i l" "m n n" "o n n" "o n n";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.galleryabout__item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+.galleryabout .item-h {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_h.jpg");
+  grid-area: h;
+}
+.galleryabout .item-i {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_i.jpg");
+  grid-area: i;
+}
+.galleryabout .item-j {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_j.jpg");
+  grid-area: j;
+}
+.galleryabout .item-k {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_k.jpg");
+  grid-area: k;
+}
+.galleryabout .item-l {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_l.jpg");
+  grid-area: l;
+}
+.galleryabout .item-m {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_m.jpg");
+  grid-area: m;
+}
+.galleryabout .item-n {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_n.jpg");
+  grid-area: n;
+}
+.galleryabout .item-o {
+  background-image: url("../img/aboutspacepage/aboutspacegallery_o.jpg");
+  grid-area: o;
+}
+.galleryabout__item-modal {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.galleryabout__item-modal.active-photo {
+  display: block;
 }
 
 .title-course {
