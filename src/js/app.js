@@ -6,6 +6,7 @@ const swiper = new Swiper();
 
 //логика для слайдера ****************************************************************
 let numberFeedbacks = 0;
+let urlFeedbacksHome;
 
 const btnPrevFeedbacksHome = document.querySelector(
     ".feedbacks-home .btn-prev"
@@ -19,7 +20,7 @@ const btnPrevFeedbacksHome = document.querySelector(
   )
 ///проверяем есть ли эти элементы на странице и если true , то выполняем код иначе пропускаем и идём дальше
 if(btnPrevFeedbacksHome && btnNextFeedbacksHome && imgFeedbacksHome && titleFeedbacksHome && textFeedbacksHome && pointsFeedbacksHome ){
-  const urlFeedbacksHome = imgFeedbacksHome.src.slice(0, -19);
+  urlFeedbacksHome = imgFeedbacksHome.src.slice(0, -19);
   btnNextFeedbacksHome.addEventListener("click", () => {
     numberFeedbacks === feedbacksHome.length - 1
       ? (numberFeedbacks = 0)
