@@ -1,61 +1,69 @@
 import * as flsFunctions from "./modules/functions.js";
-import { feedbacksHome } from "./modules/mocks.js";
+import { slider_1, slider_2 } from "./modules/mocks.js";
 flsFunctions.isWebp();
 import Swiper from "swiper";
 const swiper = new Swiper();
 
 //логика для слайдера ****************************************************************
+const btnPrevFeedbacks = document.querySelector(".slider__btn.btn-prev"),
+  btnNextFeedbacks = document.querySelector(".slider__btn.btn-next"),
+  titleFeedbacks = document.querySelector(".slider__title"),
+  textFeedbacks = document.querySelector(".slider__text"),
+  imgFeedbacks = document.querySelector(".slider__photo"),
+  pointsFeedbacks = document.querySelectorAll(
+    ".slider__points-list .slider__point-item"
+  );
 let numberFeedbacks = 0;
-let urlFeedbacksHome;
+let urlFeedbacks;
 
-const btnPrevFeedbacksHome = document.querySelector(
-    ".feedbacks-home .btn-prev"
-  ),
-  btnNextFeedbacksHome = document.querySelector(".feedbacks-home .btn-next"),
-  imgFeedbacksHome = document.querySelector(".feedbacks-home .slider__photo"),
-  titleFeedbacksHome = document.querySelector(".feedbacks-home .slider__title"),
-  textFeedbacksHome = document.querySelector(".feedbacks-home .slider__text"),
-  pointsFeedbacksHome = document.querySelectorAll(
-    ".feedbacks-home .slider__point-item"
-  )
-///проверяем есть ли эти элементы на странице и если true , то выполняем код иначе пропускаем и идём дальше
-if(btnPrevFeedbacksHome && btnNextFeedbacksHome && imgFeedbacksHome && titleFeedbacksHome && textFeedbacksHome && pointsFeedbacksHome ){
-  urlFeedbacksHome = imgFeedbacksHome.src.slice(0, -19);
-  btnNextFeedbacksHome.addEventListener("click", () => {
-    numberFeedbacks === feedbacksHome.length - 1
-      ? (numberFeedbacks = 0)
-      : numberFeedbacks++;
-  
-    getValuesFeedback();
+if(imgFeedbacks){
+  urlFeedbacks = imgFeedbacks.src.slice(0, -15);
+  btnNextFeedbacks.addEventListener("click", (event) => {
+    numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
     getPointFeedback();
+    getValuesFeedback(event);
   });
   
-  btnPrevFeedbacksHome.addEventListener("click", () => {
-    numberFeedbacks === 0
-      ? (numberFeedbacks = feedbacksHome.length - 1)
-      : numberFeedbacks--;
-  
-    getValuesFeedback();
+  btnPrevFeedbacks.addEventListener("click", (event) => {
+    numberFeedbacks === 0 ? (numberFeedbacks = 2) : numberFeedbacks--;
     getPointFeedback();
+    getValuesFeedback(event);
   });
-}
-
-
-function getValuesFeedback() {
-  titleFeedbacksHome.innerText = feedbacksHome[numberFeedbacks]["title"];
-  textFeedbacksHome.innerText = feedbacksHome[numberFeedbacks]["text"];
-  imgFeedbacksHome.src = `${urlFeedbacksHome}${feedbacksHome[numberFeedbacks]["img"]}`;
-}
-
-function getPointFeedback() {
-  pointsFeedbacksHome.forEach((item, index) => {
-    if (index === numberFeedbacks) {
-      item.classList.add("active-point");
-    } else {
-      item.classList.remove("active-point");
+  function getValuesFeedback(elem) {
+    let dataAttribute = elem.target.dataset.slider;
+    let arr;
+  
+    // тут дописываем появившиеся слайдеры
+    if (dataAttribute === "slider_1") {
+      arr = slider_1;
+    } else if (dataAttribute === "slider_2") {
+      arr = slider_2;
     }
-  });
+  
+    if (
+      dataAttribute === titleFeedbacks.dataset.slider &&
+      dataAttribute === textFeedbacks.dataset.slider &&
+      dataAttribute === imgFeedbacks.dataset.slider
+    ) {
+      titleFeedbacks.innerText = arr[numberFeedbacks]["title"];
+      textFeedbacks.innerText = arr[numberFeedbacks]["text"];
+      imgFeedbacks.src = `${urlFeedbacks}${arr[numberFeedbacks]["img"]}`;
+    }
+  }
+  
+  function getPointFeedback() {
+    pointsFeedbacks.forEach((item, index) => {
+      if (index === numberFeedbacks) {
+        item.classList.add("active-point");
+      } else {
+        item.classList.remove("active-point");
+      }
+    });
+  }
 }
+
+
+
 
 // открытие всех модалок ****************************************************************
 const modalsOpenBtns = document.querySelectorAll(".modal-open"),
