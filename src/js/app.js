@@ -13,21 +13,19 @@ const btnPrevFeedbacks = document.querySelector(".slider__btn.btn-prev"),
   pointsFeedbacks = document.querySelectorAll(
     ".slider__points-list .slider__point-item"
   );
+  console.log(imgFeedbacks)
 let numberFeedbacks = 0;
 
 let urlFeedbacks = imgFeedbacks.src.slice(0, -15);
 
 btnNextFeedbacks.addEventListener("click", (event) => {
   numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
-
-
   getPointFeedback();
   getValuesFeedback(event);
 });
 
 btnPrevFeedbacks.addEventListener("click", (event) => {
   numberFeedbacks === 0 ? (numberFeedbacks = 2) : numberFeedbacks--;
-
   getPointFeedback();
   getValuesFeedback(event);
 });
