@@ -909,11 +909,36 @@ svg.ico__footer.ico-vk path {
       color: $red;
     }
   }
-  .line {
-    margin: 0 auto;
-    width: 600px;
-    border: 1px solid #a1acfc;
+  // .line {
+  //   margin: 0 auto;
+  //   width: 600px;
+  //   border: 1px solid #a1acfc;
+  // }
+}
+.line {
+  margin: 0 auto;
+  width: 600px;
+  border: 1px solid #a1acfc;
+}
+.aboutspaceowner{
+  background: $white;
+  .aboutspaceowner__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    margin-bottom: 120px;
   }
+}
+.aboutspaceowner__content-image{
+  width: 440px;
+  height: 320px;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.aboutspaceowner__content-text-first{
+  margin-bottom: 15px;
 }
 .galleryabout{
   background: $white;
