@@ -13,54 +13,57 @@ const btnPrevFeedbacks = document.querySelector(".slider__btn.btn-prev"),
   pointsFeedbacks = document.querySelectorAll(
     ".slider__points-list .slider__point-item"
   );
-  console.log(imgFeedbacks)
 let numberFeedbacks = 0;
+let urlFeedbacks;
 
-let urlFeedbacks = imgFeedbacks.src.slice(0, -15);
-
-btnNextFeedbacks.addEventListener("click", (event) => {
-  numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
-  getPointFeedback();
-  getValuesFeedback(event);
-});
-
-btnPrevFeedbacks.addEventListener("click", (event) => {
-  numberFeedbacks === 0 ? (numberFeedbacks = 2) : numberFeedbacks--;
-  getPointFeedback();
-  getValuesFeedback(event);
-});
-
-function getValuesFeedback(elem) {
-  let dataAttribute = elem.target.dataset.slider;
-  let arr;
-
-  // тут дописываем появившиеся слайдеры
-  if (dataAttribute === "slider_1") {
-    arr = slider_1;
-  } else if (dataAttribute === "slider_2") {
-    arr = slider_2;
-  }
-
-  if (
-    dataAttribute === titleFeedbacks.dataset.slider &&
-    dataAttribute === textFeedbacks.dataset.slider &&
-    dataAttribute === imgFeedbacks.dataset.slider
-  ) {
-    titleFeedbacks.innerText = arr[numberFeedbacks]["title"];
-    textFeedbacks.innerText = arr[numberFeedbacks]["text"];
-    imgFeedbacks.src = `${urlFeedbacks}${arr[numberFeedbacks]["img"]}`;
-  }
-}
-
-function getPointFeedback() {
-  pointsFeedbacks.forEach((item, index) => {
-    if (index === numberFeedbacks) {
-      item.classList.add("active-point");
-    } else {
-      item.classList.remove("active-point");
-    }
+if(imgFeedbacks){
+  urlFeedbacks = imgFeedbacks.src.slice(0, -15);
+  btnNextFeedbacks.addEventListener("click", (event) => {
+    numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
+    getPointFeedback();
+    getValuesFeedback(event);
   });
+  
+  btnPrevFeedbacks.addEventListener("click", (event) => {
+    numberFeedbacks === 0 ? (numberFeedbacks = 2) : numberFeedbacks--;
+    getPointFeedback();
+    getValuesFeedback(event);
+  });
+  function getValuesFeedback(elem) {
+    let dataAttribute = elem.target.dataset.slider;
+    let arr;
+  
+    // тут дописываем появившиеся слайдеры
+    if (dataAttribute === "slider_1") {
+      arr = slider_1;
+    } else if (dataAttribute === "slider_2") {
+      arr = slider_2;
+    }
+  
+    if (
+      dataAttribute === titleFeedbacks.dataset.slider &&
+      dataAttribute === textFeedbacks.dataset.slider &&
+      dataAttribute === imgFeedbacks.dataset.slider
+    ) {
+      titleFeedbacks.innerText = arr[numberFeedbacks]["title"];
+      textFeedbacks.innerText = arr[numberFeedbacks]["text"];
+      imgFeedbacks.src = `${urlFeedbacks}${arr[numberFeedbacks]["img"]}`;
+    }
+  }
+  
+  function getPointFeedback() {
+    pointsFeedbacks.forEach((item, index) => {
+      if (index === numberFeedbacks) {
+        item.classList.add("active-point");
+      } else {
+        item.classList.remove("active-point");
+      }
+    });
+  }
 }
+
+
+
 
 // открытие всех модалок ****************************************************************
 const modalsOpenBtns = document.querySelectorAll(".modal-open"),
