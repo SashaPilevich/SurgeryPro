@@ -282,11 +282,13 @@ body.locked-body {
 .about,
 .aboutspace,
 .galleryabout,
-.whyus {
+.whyus,
+.aboutspaceowner {
   padding: 120px 0px;
 }
 
-.aboutspace {
+.aboutspace,
+.aboutspaceowner {
   padding-bottom: 0px;
 }
 
@@ -1265,10 +1267,34 @@ svg.ico__footer.ico-vk path {
   line-height: 100%;
   color: #E94D66;
 }
-.aboutspace .line {
+
+.line {
   margin: 0 auto;
   width: 600px;
   border: 1px solid #a1acfc;
+}
+
+.aboutspaceowner {
+  background: #f9faff;
+}
+.aboutspaceowner .aboutspaceowner__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  margin-bottom: 120px;
+}
+
+.aboutspaceowner__content-image {
+  width: 440px;
+  height: 320px;
+}
+.aboutspaceowner__content-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.aboutspaceowner__content-text-first {
+  margin-bottom: 15px;
 }
 
 .galleryabout {
