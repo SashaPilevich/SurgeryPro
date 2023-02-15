@@ -100,7 +100,9 @@
   .btn__signup,
   .btn__signup-light {
     display: block;
-    width: 200px;
+    // width: 200px;
+    min-width: 200px;
+    width: 100%;
     height: 40px;
     border: 1px solid $white;
     font-weight: bold;
@@ -776,7 +778,8 @@ svg.ico__footer.ico-vk path {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     margin-bottom: 40px;
-    .aboutspace__content-item,
+    min-height: 380px;
+    height: 100%;
     .aboutspace__content-image {
       max-height: 380px;
       height: 100%;
@@ -850,41 +853,41 @@ svg.ico__footer.ico-vk path {
   }
 
   .item-h {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_h.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_h.jpg");
     grid-area: h;
   }
 
   .item-i {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_i.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_i.jpg");
     grid-area: i;
   }
 
   .item-j {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_j.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_j.jpg");
     grid-area: j;
   }
 
   .item-k {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_k.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_k.jpg");
     grid-area: k;
   }
 
   .item-l {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_l.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_l.jpg");
     grid-area: l;
   }
 
   .item-m {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_m.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_m.jpg");
     grid-area: m;
   }
 
   .item-n {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_n.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_n.jpg");
     grid-area: n;
   }
   .item-o {
-    background-image: url("@img/aboutspacepage/aboutspacegallery_o.png");
+    background-image: url("@img/aboutspacepage/aboutspacegallery_o.jpg");
     grid-area: o;
   }
   &__item-modal {

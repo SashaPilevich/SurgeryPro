@@ -542,7 +542,8 @@ body.locked-body {
 .header__button-light .btn__signup,
 .header__button-light .btn__signup-light {
   display: block;
-  width: 200px;
+  min-width: 200px;
+  width: 100%;
   height: 40px;
   border: 1px solid #f9faff;
   font-weight: bold;
@@ -1160,8 +1161,9 @@ svg.ico__footer.ico-vk path {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   margin-bottom: 40px;
+  min-height: 380px;
+  height: 100%;
 }
-.aboutspace .aboutspace__content .aboutspace__content-item,
 .aboutspace .aboutspace__content .aboutspace__content-image {
   max-height: 380px;
   height: 100%;
@@ -1224,35 +1226,35 @@ svg.ico__footer.ico-vk path {
   cursor: pointer;
 }
 .galleryabout .item-h {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_h.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_h.jpg");
   grid-area: h;
 }
 .galleryabout .item-i {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_i.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_i.jpg");
   grid-area: i;
 }
 .galleryabout .item-j {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_j.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_j.jpg");
   grid-area: j;
 }
 .galleryabout .item-k {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_k.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_k.jpg");
   grid-area: k;
 }
 .galleryabout .item-l {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_l.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_l.jpg");
   grid-area: l;
 }
 .galleryabout .item-m {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_m.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_m.jpg");
   grid-area: m;
 }
 .galleryabout .item-n {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_n.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_n.jpg");
   grid-area: n;
 }
 .galleryabout .item-o {
-  background-image: url("../img/aboutspacepage/aboutspacegallery_o.png");
+  background-image: url("../img/aboutspacepage/aboutspacegallery_o.jpg");
   grid-area: o;
 }
 .galleryabout__item-modal {
