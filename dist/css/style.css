@@ -283,7 +283,8 @@ body.locked-body {
 .aboutspace,
 .galleryabout,
 .whyus,
-.aboutspaceowner {
+.aboutspaceowner,
+.programmes {
   padding: 120px 0px;
 }
 
@@ -666,6 +667,7 @@ body.locked-body {
   color: #f9faff;
   border: 1px solid #f9faff;
   position: relative;
+  padding: 15px;
 }
 .hero__screen .banner .banner__content .banner__btn-programm:hover {
   color: #0062ff;
@@ -1356,6 +1358,277 @@ svg.ico__footer.ico-vk path {
 }
 .galleryabout__item-modal.active-photo {
   display: block;
+}
+
+.programmes__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 440px;
+  background: url("../img/programmes/downbg.png");
+  background-position: 0 265px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 350px;
+  background-size: contain;
+  background-position: 0 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.card:after {
+  content: "Подробнее";
+  position: absolute;
+  top: 90%;
+  left: 7%;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  color: #f9faff;
+  border: none;
+  transition: all 0.6s ease-in;
+  margin: 0 auto;
+  opacity: 1;
+  z-index: 1;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  padding: 8px;
+}
+
+.card:nth-child(1):hover .content .content__additional,
+.card:nth-child(2):hover .content .content__additional,
+.card:nth-child(7):hover .content .content__additional,
+.card:nth-child(8):hover .content .content__additional {
+  padding-top: 40px;
+}
+
+.star::after,
+.star-feellikeasurgeon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/mainscreen/star.svg");
+}
+.star::before,
+.star-feellikeasurgeon::before {
+  content: "онлайн";
+  display: block;
+  position: absolute;
+  top: 37px;
+  right: 20px;
+  width: 52px;
+  height: 30px;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  text-align: center;
+  color: #f9faff;
+  transform: rotate(15deg);
+  z-index: 1;
+}
+
+.star-feellikeasurgeon::before {
+  content: "школь- никам";
+  top: 32px;
+}
+
+.card:nth-child(1):before {
+  background-image: url("../img/programmes/basicsurgery.png");
+}
+
+.card:nth-child(2):before {
+  background-image: url("../img/programmes/basicsurgeryonlain.png");
+}
+
+.card:nth-child(3):before {
+  background-image: url("../img/programmes/cardiosurgery.png");
+}
+
+.card:nth-child(4):before {
+  background-image: url("../img/programmes/vascularsurgery.png");
+}
+
+.card:nth-child(5):before {
+  background-image: url("../img/programmes/microsurgery.png");
+}
+
+.card:nth-child(6):before {
+  background-image: url("../img/programmes/operatingroom.png");
+}
+
+.card:nth-child(7):before {
+  background-image: url("../img/programmes/fundamentals.png");
+}
+
+.card:nth-child(8):before {
+  background-image: url("../img/programmes/feellikeasurgeon.png");
+}
+
+.card:nth-child(9):before {
+  background-image: url("../img/programmes/futuresurgeon.png");
+}
+
+.content {
+  position: relative;
+  width: 280px;
+  height: 440px;
+  transition: all 0.6s ease;
+  z-index: 1;
+  transform: translateY(77%);
+}
+
+.content::after {
+  content: "";
+  position: absolute;
+  top: -115px;
+  left: 0px;
+  width: 100%;
+  height: 630px;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform 1050ms cubic-bezier(0.19, 1, 0.22, 1);
+  background: url("../img/programmes/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.content__title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #f9faff;
+  margin-bottom: 15px;
+  padding: 0px 15px;
+  height: 45px;
+}
+
+.content__additional {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  padding-top: 20px;
+}
+
+.content__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156%;
+  color: #f9faff;
+  padding: 0px 15px;
+  transform: translateY(15px);
+  transition: all 1s ease-in-out;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.content__text.down {
+  animation: textout 3s steps(50) 1;
+  opacity: 0;
+}
+
+.content__text.up {
+  animation: text 3s steps(50) 1;
+  opacity: 1;
+}
+
+@keyframes text {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes textout {
+  from {
+    opacity: 1;
+  }
+}
+.content__btn {
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 125%;
+  color: #f9faff;
+  border: none;
+  transition: all 0.7s ease-in-out;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.card:hover .content,
+.card:focus-within .content {
+  transform: translateY(0);
+  transition: transform 1050ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card:hover .content::after {
+  top: -120px;
+  opacity: 0.95;
+}
+
+.card:hover::after {
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.card:hover .content__btn {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #f9faff;
+  filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.card:hover .content .content__text {
+  transition: all 1s ease-in-out;
+  animation: text 1s steps(50) 1;
+  transform: translateY(0px);
+}
+
+.card:hover .content .content__title {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover .content .content__additional {
+  justify-content: space-between;
+  transition: all 0.4s ease-in-out;
+}
+
+.content__btn:hover {
+  background: #f9faff;
+  color: #0062ff;
+  transition: all 0.4s ease-in-out;
 }
 
 .title-course {
