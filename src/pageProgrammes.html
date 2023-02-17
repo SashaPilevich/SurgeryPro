@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+  "title":"Programmes"
+})
+<body>
+  <header class="header__anotherpage" style="position:static">
+    <div class="container">
+      @@include('html/nav.html',{"logo":"@@include('logolight.html')","menu":"@@include('menulight.html')"})
+    </div>
+  </header>
+  <main>
+    @@include('html/programmesPage/programmes.html',{})
+  </main>
+  @@include('html/footer.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+</html>
