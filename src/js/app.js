@@ -178,3 +178,42 @@ if (about) {
   }
 }
 
+//аккордион
+const accordionTitles = document.querySelectorAll(
+    ".faq__accordion-block-title"
+  ),
+  accordionContents = document.querySelectorAll(".faq__accordion-content");
+
+accordionTitles.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    let targetItem = event.target.closest(".faq__accordion-block-title");
+
+    openContent(targetItem);
+    activeBtn(targetItem);
+  });
+});
+
+function activeBtn(elem) {
+  if (elem.classList.contains("active-acc")) {
+    elem.classList.remove("active-acc");
+  } else {
+    accordionTitles.forEach((item) => {
+      item.classList.remove("active-acc");
+    });
+    elem.classList.add("active-acc");
+  }
+}
+
+function openContent(elem) {
+  let contentItem = elem.nextElementSibling;
+  if (contentItem.style.height) {
+    accordionContents.forEach((item) => {
+      item.style.height = null;
+    });
+  } else {
+    accordionContents.forEach((item) => {
+      item.style.height = null;
+    });
+    contentItem.style.height = contentItem.scrollHeight + 20 + "px";
+  }
+}
