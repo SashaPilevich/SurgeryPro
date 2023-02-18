@@ -6,11 +6,12 @@ body {
     size: 16px;
   }
   line-height: 156%;
-  color: $black-dark;
+  color: $black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background-color: $white;
 
   &.locked-body {
     overflow: hidden;
@@ -18,9 +19,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
-  padding: 0px 140px;
+  padding: 0px 40px;
   margin: 0px auto;
 }
 
@@ -40,11 +41,9 @@ body {
   }
 
   &__line {
-    // border: 1px solid $purple;
     flex-grow: 1;
     height: 1px;
     background-color: $purple;
-    // display: flex;
   }
 }
 .faq,
@@ -60,7 +59,7 @@ body {
   padding: 120px 0px;
 }
 .aboutspace,
-.aboutspaceowner{
+.aboutspaceowner {
   padding-bottom: 0px;
 }
 
@@ -139,7 +138,6 @@ body {
     display: flex;
     width: 760px;
     height: 100%;
-    padding: 0px 10px;
   }
 
   &__photo {
@@ -213,7 +211,6 @@ body {
     min-width: 250px;
     min-height: 150px;
     max-height: 90%;
-    background-color: $white;
     margin: auto;
     overflow: auto;
   }
