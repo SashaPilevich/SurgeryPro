@@ -703,23 +703,7 @@ body.locked-body {
   width: 70px;
   height: 70px;
   background-image: url("../img/mainscreen/star.svg");
-}
-.hero__screen .banner .banner__content .banner__btn-programm::before {
-  content: "можно онлайн";
-  display: block;
-  position: absolute;
-  top: -20px;
-  right: -27px;
-  width: 52px;
-  height: 30px;
-  font-family: "Mulish";
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 125%;
-  text-align: center;
-  color: #f9faff;
   transform: rotate(15deg);
-  z-index: 1;
 }
 .hero__screen .banner .banner__content .banner__btn-signup {
   font-family: "Montserrat";
@@ -1411,30 +1395,12 @@ svg.ico__footer.ico-vk path {
   right: 10px;
   width: 70px;
   height: 70px;
-  background-image: url("../img/mainscreen/star.svg");
-}
-.star::before,
-.star-feellikeasurgeon::before {
-  content: "онлайн";
-  display: block;
-  position: absolute;
-  top: 37px;
-  right: 20px;
-  width: 52px;
-  height: 30px;
-  font-family: "Mulish";
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 125%;
-  text-align: center;
-  color: #f9faff;
+  background-image: url("../img/programmes/star.svg");
   transform: rotate(15deg);
-  z-index: 1;
 }
 
-.star-feellikeasurgeon::before {
-  content: "школь- никам";
-  top: 32px;
+.star-feellikeasurgeon::after {
+  background-image: url("../img/programmes/school.svg");
 }
 
 .card:nth-child(1):before {
