@@ -5,7 +5,26 @@
     <header class="header__anotherpage" style="position: static;">
       <div class="container">
         <div class="header__dark">
-          @@include('html/navlight.html',{"logo":"@@include('logolight.html')"})
+          <div class="header__dark">
+            <a class="header-logo" href="index.html">@@include('html/logolight.html')</a>
+            <nav class="header__menu-light">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="light" href="index.html">Главная</a>
+                </li>
+                <li class="header__item">
+                  <a class="light" href="pageAboutSpace.html">О пространстве</a>
+                </li>
+                <li class="header__item">
+                  <a class="light" href="pageProgrammes.html">Обучение</a>
+                </li>
+                <li class="header__item">
+                  <a class="light redline" href="pagefaq.html">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="btn__signup-light" href="index.html#record">Записаться</a>
+          </div>
         </div>
       </div>
     </header>
