@@ -6,11 +6,12 @@ body {
     size: 16px;
   }
   line-height: 156%;
-  color: $black-dark;
+  color: $black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background-color: $white;
 
   &.locked-body {
     overflow: hidden;
@@ -77,7 +78,7 @@ body {
 // }
 
 .aboutspace,
-.aboutspaceowner{
+.aboutspaceowner {
   padding-bottom: 0px;
 }
 
@@ -156,7 +157,6 @@ body {
     display: flex;
     width: 760px;
     height: 100%;
-    padding: 0px 10px;
   }
 
   &__photo {
@@ -230,7 +230,6 @@ body {
     min-width: 250px;
     min-height: 150px;
     max-height: 90%;
-    background-color: $white;
     margin: auto;
     overflow: auto;
   }

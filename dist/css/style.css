@@ -245,6 +245,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background-color: #f9faff;
 }
 body.locked-body {
   overflow: hidden;
@@ -357,7 +358,6 @@ body.locked-body {
   display: flex;
   width: 760px;
   height: 100%;
-  padding: 0px 10px;
 }
 .slider__photo {
   display: block;
@@ -420,7 +420,6 @@ body.locked-body {
   min-width: 250px;
   min-height: 150px;
   max-height: 90%;
-  background-color: #f9faff;
   margin: auto;
   overflow: auto;
 }
@@ -454,7 +453,7 @@ body.locked-body {
 }
 
 .banner-version {
-  background-color: #061B34;
+  background-color: #061b34;
   position: fixed;
   width: 100%;
   z-index: 5;
@@ -521,8 +520,8 @@ body.locked-body {
 }
 .btn__signup:active,
 .btn__signup-light:active {
-  background: #D1D6F8;
-  border: 1px solid #D1D6F8;
+  background: #d1d6f8;
+  border: 1px solid #d1d6f8;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   transition: all 0.4s ease-in-out;
 }
@@ -609,7 +608,7 @@ body.locked-body {
 
 .header__item .light.redline:after {
   width: 100%;
-  background-color: #E94D66;
+  background-color: #e94d66;
 }
 
 .header__item:hover a:after {
@@ -627,7 +626,7 @@ body.locked-body {
 .header__item:active .light:after,
 .footer__item:active .light:after {
   width: 100%;
-  background-color: #E94D66;
+  background-color: #e94d66;
 }
 
 .header__anotherpage {
@@ -695,8 +694,8 @@ body.locked-body {
   filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
 }
 .hero__screen .banner .banner__content .banner__btn-programm:active {
-  background: #D1D6F8;
-  border: 1px solid #D1D6F8;
+  background: #d1d6f8;
+  border: 1px solid #d1d6f8;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   transition: all 0.4s ease-in-out;
 }
@@ -722,7 +721,7 @@ body.locked-body {
 }
 .hero__screen .banner .banner__content .banner__btn-signup:hover {
   color: #f9faff;
-  background: #E94D66;
+  background: #e94d66;
   transition: all 0.4s ease-in-out;
   filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
 }
@@ -745,11 +744,11 @@ body.locked-body {
   background-color: #f9faff;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   border-radius: 50%;
-  stroke: #E94D66;
+  stroke: #e94d66;
   transition: all 0.4s ease-in-out;
 }
 .hero__screen .banner .banner__content .socials a .ico__banner:active {
-  background-color: #E94D66;
+  background-color: #e94d66;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   stroke: #f9faff;
   transition: all 0.4s ease-in-out;
@@ -767,11 +766,11 @@ svg.ico__banner.ico-vk path {
   background-color: #f9faff;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   border-radius: 50%;
-  fill: #E94D66;
+  fill: #e94d66;
   transition: all 0.4s ease-in-out;
 }
 .hero__screen .banner .banner__content .socials a .ico__banner.ico-vk:active {
-  background: #E94D66;
+  background: #e94d66;
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
   fill: #f9faff;
   fill-rule: nonzero;
@@ -831,9 +830,6 @@ svg.ico__banner.ico-vk path {
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
 }
 
-.whyus {
-  background: #f9faff;
-}
 .whyus .whyus__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -897,7 +893,7 @@ svg.ico__banner.ico-vk path {
   font-weight: 600;
   font-size: 30px;
   line-height: 133%;
-  color: #000000;
+  color: #020c17;
   padding-bottom: 20px;
 }
 .record__content p {
@@ -920,12 +916,17 @@ svg.ico__banner.ico-vk path {
   box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
 }
 .record__btn:hover {
-  background: #E94D66;
+  background: #e94d66;
   transition: all 0.3s linear;
 }
 .record__btn:active {
   background: #c72c45;
   transition: all 0.1s linear;
+}
+
+
+.feedbacks {
+  background-color: #f9faff;
 }
 
 .gallery {
@@ -985,6 +986,9 @@ svg.ico__banner.ico-vk path {
   display: block;
 }
 
+.contacts {
+  background-color: #f9faff;
+}
 .contacts__block {
   display: flex;
   width: 100%;
@@ -995,7 +999,7 @@ svg.ico__banner.ico-vk path {
   width: 100%;
   min-height: 100%;
   margin-right: 34px;
-  color: #000000;
+  color: #020c17;
 }
 .contacts__address {
   padding-bottom: 50px;
@@ -1127,14 +1131,11 @@ svg.ico__footer.ico-vk path {
   font-weight: 300;
   font-size: 12px;
   line-height: 125%;
-  color: #000000;
+  color: #020c17;
   display: flex;
   justify-content: center;
 }
 
-.aboutspace {
-  background: #f9faff;
-}
 .aboutspace .aboutspace__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1180,7 +1181,7 @@ svg.ico__footer.ico-vk path {
   font-weight: 600;
   font-size: 40px;
   line-height: 100%;
-  color: #E94D66;
+  color: #e94d66;
 }
 
 .line {
@@ -1191,9 +1192,6 @@ svg.ico__footer.ico-vk path {
   background-color: #a1acfc;
 }
 
-.aboutspaceowner {
-  background: #f9faff;
-}
 .aboutspaceowner .aboutspaceowner__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1214,9 +1212,6 @@ svg.ico__footer.ico-vk path {
   margin-bottom: 15px;
 }
 
-.galleryabout {
-  background: #f9faff;
-}
 .galleryabout__block {
   width: 100%;
   height: 860px;
@@ -1276,7 +1271,6 @@ svg.ico__footer.ico-vk path {
 }
 
 .programmes {
-  background: #f9faff;
   position: relative;
   z-index: 0;
 }
@@ -1554,10 +1548,13 @@ svg.ico__footer.ico-vk path {
 }
 .title-course__back {
   position: relative;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-left: 30px;
-  margin: 52px 0px 54px;
+  margin: 40px 0px;
+  width: 180px;
+  height: 40px;
   font-weight: 300;
   font-size: 12px;
   line-height: 125%;
@@ -1611,8 +1608,9 @@ svg.ico__footer.ico-vk path {
   margin-right: 30px;
 }
 .title-course__line {
-  height: 1px;
+
   flex-grow: 1;
+  height: 1px;
   background-color: #a1acfc;
 }
 
@@ -1682,16 +1680,14 @@ svg.ico__footer.ico-vk path {
   width: 100%;
   padding: 0px 10px;
 }
-.description__item img {
-  display: block;
+.description__item svg {
   width: 60px;
   height: 60px;
-  object-fit: cover;
 }
 
 .lesson {
   padding-bottom: 120px;
-  color: #000000;
+  color: #020c17;
 }
 .lesson__top-block {
   display: grid;
@@ -1725,14 +1721,13 @@ svg.ico__footer.ico-vk path {
   cursor: default;
 }
 .lesson__item::before {
-  content: "";
+  content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='40' height='40' viewBox='0 0 40 40' fill='none'><path d='M20 35C23.4703 35 26.8333 33.7967 29.5159 31.5952C32.1985 29.3936 34.0348 26.33 34.7118 22.9264C35.3888 19.5227 34.8647 15.9896 33.2288 12.9291C31.5929 9.86849 28.9464 7.46985 25.7403 6.14181C22.5341 4.81377 18.9666 4.63851 15.6457 5.64589C12.3248 6.65328 9.45597 8.78097 7.52796 11.6664C5.59995 14.5519 4.73208 18.0166 5.07223 21.4703C5.41238 24.9239 6.9395 28.1527 9.3934 30.6066' stroke='%23A1ACFC' stroke-width='2' stroke-linecap='round' /><path d='M26.667 16.6665L19.7357 24.984C19.0801 25.7707 18.7523 26.1641 18.3118 26.1841C17.8712 26.204 17.5092 25.842 16.785 25.1179L13.3337 21.6665' stroke='%23A1ACFC' stroke-width='2' stroke-linecap='round' /></svg>");
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   width: 40px;
   height: 40px;
-  background-image: url("../img/basicSkillsOffPage/course_mark.png");
 }
 .lesson__item:not(:last-child) {
   padding-bottom: 20px;
@@ -1852,7 +1847,7 @@ svg.ico__footer.ico-vk path {
 }
 .faq__accordion-content {
   cursor: default;
-  padding-right: 80px;
+  padding-right: 15px;
   height: 0px;
   overflow: hidden;
   transition: all 0.5s linear;

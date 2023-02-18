@@ -46,7 +46,7 @@ if (imgFeedbacks) {
       dataAttribute === imgFeedbacks.dataset.slider
     ) {
       titleFeedbacks.innerText = arr[numberFeedbacks]["title"];
-      textFeedbacks.innerText = arr[numberFeedbacks]["text"];
+      textFeedbacks.innerHTML = arr[numberFeedbacks]["text"];
       imgFeedbacks.src = `${urlFeedbacks}${arr[numberFeedbacks]["img"]}`;
     }
   }
