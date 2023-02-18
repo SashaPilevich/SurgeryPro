@@ -276,16 +276,17 @@ body.locked-body {
   background-color: #a1acfc;
 }
 
-.faq,
-.contacts,
-.gallery,
-.feedbacks,
 .about,
-.aboutspace,
-.galleryabout,
 .whyus,
+.gallery,
+.galleryabout,
 .aboutspaceowner,
-.programmes {
+.aboutspace,
+.programmes,
+.faq,
+.feedbacks,
+.contacts,
+.gallery.gallerybasicskillsoff {
   padding: 120px 0px;
 }
 
@@ -547,6 +548,7 @@ body.locked-body {
   min-width: 275px;
   width: 100%;
   height: 30px;
+  padding-top: 5px;
 }
 
 .header__list,
@@ -596,8 +598,12 @@ body.locked-body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -5px;
+  bottom: 0px;
   transition: all 0.6s ease-in-out;
+}
+
+.footer__item .light:after {
+  bottom: -5px;
 }
 
 .header__item .light.redline:after {
@@ -637,7 +643,7 @@ body.locked-body {
   height: 712px;
   display: block;
   top: 200px;
-  right: 90px;
+  right: -15px;
   z-index: 3;
 }
 .hero__screen .banner {
@@ -918,66 +924,9 @@ svg.ico__banner.ico-vk path {
   transition: all 0.1s linear;
 }
 
+
 .feedbacks {
   background-color: #f9faff;
-}
-
-.galleryabout__block {
-  width: 100%;
-  height: 860px;
-  display: grid;
-  grid-template-areas: "h i j" "h i j" "k i j" "k i l" "m i l" "m n n" "o n n" "o n n";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 20px;
-}
-.galleryabout__item {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  cursor: pointer;
-}
-.galleryabout .item-h {
-  background-image: url("../img/gallery/gallery_a.jpg");
-  grid-area: h;
-}
-.galleryabout .item-i {
-  background-image: url("../img/gallery/gallery_b.jpg");
-  grid-area: i;
-}
-.galleryabout .item-j {
-  background-image: url("../img/gallery/gallery_c.jpg");
-  grid-area: j;
-}
-.galleryabout .item-k {
-  background-image: url("../img/gallery/gallery_d.jpg");
-  grid-area: k;
-}
-.galleryabout .item-l {
-  background-image: url("../img/gallery/gallery_e.jpg");
-  grid-area: l;
-}
-.galleryabout .item-m {
-  background-image: url("../img/gallery/gallery_f.jpg");
-  grid-area: m;
-}
-.galleryabout .item-n {
-  background-image: url("../img/gallery/gallery_g.jpg");
-  grid-area: n;
-}
-.galleryabout .item-o {
-  background-image: url("../img/gallery/gallery_g.jpg");
-  grid-area: o;
-}
-.galleryabout__item-modal {
-  display: none;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.galleryabout__item-modal.active-photo {
-  display: block;
 }
 
 .gallery {
@@ -1192,14 +1141,13 @@ svg.ico__footer.ico-vk path {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   margin-bottom: 40px;
-  min-height: 380px;
-  height: 100%;
-}
-.aboutspace .aboutspace__content .aboutspace__content-image {
   max-height: 380px;
   height: 100%;
 }
-.aboutspace .aboutspace__content .aboutspace__content-image {
+.aboutspace .aboutspace__content .aboutspace__content-image,
+.aboutspace .aboutspace__content .aboutspace__content-item {
+  max-height: 380px;
+  height: 100%;
   width: 100%;
 }
 .aboutspace .aboutspace__content .aboutspace__content-image img {
@@ -1207,9 +1155,13 @@ svg.ico__footer.ico-vk path {
   height: 100%;
   object-fit: cover;
 }
-.aboutspace .aboutspace__content .aboutspace__content-item-text {
+.aboutspace .aboutspace__content .aboutspace__content-item-text,
+.aboutspace .aboutspace__content .aboutspace__content-item-text-block {
   line-height: 156%;
   margin-bottom: 25px;
+}
+.aboutspace .aboutspace__content .aboutspace__content-item-text-block {
+  height: 380px;
 }
 .aboutspace .aboutspace__statistics {
   display: flex;
@@ -1234,15 +1186,17 @@ svg.ico__footer.ico-vk path {
 
 .line {
   margin: 0 auto;
-  width: 600px;
-  border: 1px solid #a1acfc;
+  max-width: 600px;
+  width: 100%;
+  height: 1px;
+  background-color: #a1acfc;
 }
 
 .aboutspaceowner .aboutspaceowner__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
-  margin-bottom: 120px;
+  margin-bottom: 119px;
 }
 
 .aboutspaceowner__content-image {
@@ -1375,13 +1329,6 @@ svg.ico__footer.ico-vk path {
   padding: 8px;
 }
 
-.card:nth-child(1):hover .content .content__additional,
-.card:nth-child(2):hover .content .content__additional,
-.card:nth-child(7):hover .content .content__additional,
-.card:nth-child(8):hover .content .content__additional {
-  padding-top: 40px;
-}
-
 .star::after,
 .star-feellikeasurgeon::after {
   content: "";
@@ -1466,17 +1413,29 @@ svg.ico__footer.ico-vk path {
   font-size: 20px;
   line-height: 125%;
   color: #f9faff;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   padding: 0px 15px;
-  height: 45px;
   cursor: default;
+}
+
+.card:nth-child(1) .content .content__title,
+.card:nth-child(2) .content .content__title,
+.card:nth-child(7) .content .content__title,
+.card:nth-child(8) .content .content__title {
+  margin-bottom: 15px;
 }
 
 .content__additional {
   display: flex;
   flex-direction: column;
-  height: 360px;
-  padding-top: 20px;
+  height: 350px;
+}
+
+.card:nth-child(1) .content .content__additional,
+.card:nth-child(2) .content .content__additional,
+.card:nth-child(7) .content .content__additional,
+.card:nth-child(8) .content .content__additional {
+  height: 325px;
 }
 
 .content__text {
@@ -1485,7 +1444,7 @@ svg.ico__footer.ico-vk path {
   line-height: 156%;
   color: #f9faff;
   padding: 0px 15px;
-  transform: translateY(15px);
+  transform: translateY(35px);
   transition: all 1s ease-in-out;
   text-align: left;
   margin-bottom: 15px;
@@ -1570,10 +1529,18 @@ svg.ico__footer.ico-vk path {
   transition: all 0.4s ease-in-out;
 }
 
-.content__btn:hover {
+.content__btn:hover,
+.content__btn:active {
   background: #f9faff;
   color: #0062ff;
   transition: all 0.4s ease-in-out;
+  border: none;
+}
+
+.card:hover .content__btn:active {
+  background: #D1D6F8;
+  border: 1px solid #D1D6F8;
+  box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
 }
 
 .title-course {
@@ -1641,6 +1608,7 @@ svg.ico__footer.ico-vk path {
   margin-right: 30px;
 }
 .title-course__line {
+
   flex-grow: 1;
   height: 1px;
   background-color: #a1acfc;
@@ -1897,10 +1865,11 @@ svg.ico__footer.ico-vk path {
   transform: translate(50%, -50%) rotate(90deg);
 }
 
-@media (max-width: 1180px) {
-  .hero__screen .hand__img {
-    max-width: 70rem;
-    height: 40rem;
-    top: 14rem;
+@media (max-width: 990px) {
+  .programmes__content {
+    grid-template-columns: 30% 30%;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 100px;
   }
 }

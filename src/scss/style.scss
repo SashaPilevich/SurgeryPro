@@ -109,6 +109,7 @@
   min-width: 275px;
   width: 100%;
   height: 30px;
+  padding-top: 5px;
 }
 .header__list,
 .footer__list {
@@ -154,8 +155,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -5px;
+  bottom: 0px;
   transition: all 0.6s ease-in-out;
+}
+.footer__item .light:after{
+  bottom: -5px;
 }
 .header__item .light.redline:after {
   width: 100%;
@@ -183,7 +187,6 @@
 } //для других страниц
 
 .hero__screen {
-  // position: relative;
   .container {
     position: relative;
     .hand__img {
@@ -192,7 +195,7 @@
       height: 712px;
       display: block;
       top: 200px;
-      right: 90px;
+      right: -15px;
       z-index: 3;
     }
   }
@@ -348,10 +351,8 @@ svg.ico__banner.ico-vk path {
       }
     }
     .about__image {
-      // width: 280px;
-      // height: 400px;
       width: 100%;
-      // height: auto;
+
       img {
         width: 100%;
         height: 100%;
@@ -496,89 +497,12 @@ svg.ico__banner.ico-vk path {
   }
 }
 
+
 .feedbacks {
   background-color: #f9faff;
 }
 
-.galleryabout {
-  &__block {
-    width: 100%;
-    height: 860px;
-    display: grid;
-    grid-template-areas:
-      "h i j"
-      "h i j"
-      "k i j"
-      "k i l"
-      "m i l"
-      "m n n"
-      "o n n"
-      "o n n";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
-  }
-  &__item {
-    background: {
-      repeat: no-repeat;
-      position: center center;
-    }
-    background-size: cover;
-    cursor: pointer;
-  }
 
-  .item-h {
-    background-image: url("@img/gallery/gallery_a.jpg");
-    grid-area: h;
-  }
-
-  .item-i {
-    background-image: url("@img/gallery/gallery_b.jpg");
-    grid-area: i;
-  }
-
-  .item-j {
-    background-image: url("@img/gallery/gallery_c.jpg");
-    grid-area: j;
-  }
-
-  .item-k {
-    background-image: url("@img/gallery/gallery_d.jpg");
-    grid-area: k;
-  }
-
-  .item-l {
-    background-image: url("@img/gallery/gallery_e.jpg");
-    grid-area: l;
-  }
-
-  .item-m {
-    background-image: url("@img/gallery/gallery_f.jpg");
-    grid-area: m;
-  }
-
-  .item-n {
-    background-image: url("@img/gallery/gallery_g.jpg");
-    grid-area: n;
-  }
-  .item-o {
-    background-image: url("@img/gallery/gallery_g.jpg");
-    grid-area: o;
-  }
-  &__item-modal {
-    display: none;
-    background: {
-      repeat: no-repeat;
-      position: center center;
-      size: cover;
-    }
-  }
-
-  &__item-modal.active-photo {
-    display: block;
-  }
-}
 
 //GALLERY//
 .gallery {
@@ -777,7 +701,6 @@ svg.ico__banner.ico-vk path {
   stroke: $black;
   border-radius: 50%;
   margin: 0px 12px;
-  // padding: 25px;
   &:hover {
     box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
     border-radius: 50%;
@@ -834,23 +757,28 @@ svg.ico__footer.ico-vk path {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     margin-bottom: 40px;
-    min-height: 380px;
+    max-height: 380px;
     height: 100%;
-    .aboutspace__content-image {
+    .aboutspace__content-image,
+    .aboutspace__content-item {
       max-height: 380px;
       height: 100%;
+      width: 100%;
     }
     .aboutspace__content-image {
-      width: 100%;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    .aboutspace__content-item-text {
+    .aboutspace__content-item-text,
+    .aboutspace__content-item-text-block {
       line-height: 156%;
       margin-bottom: 25px;
+    }
+    .aboutspace__content-item-text-block {
+      height: 380px;
     }
   }
   .aboutspace__statistics {
@@ -873,23 +801,20 @@ svg.ico__footer.ico-vk path {
       color: $red;
     }
   }
-  // .line {
-  //   margin: 0 auto;
-  //   width: 600px;
-  //   border: 1px solid #a1acfc;
-  // }
 }
 .line {
   margin: 0 auto;
-  width: 600px;
-  border: 1px solid #a1acfc;
+  max-width: 600px;
+  width: 100%;
+  height: 1px;
+  background-color: $purple;
 }
 .aboutspaceowner {
   .aboutspaceowner__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
-    margin-bottom: 120px;
+    margin-bottom: 119px;
   }
 }
 .aboutspaceowner__content-image {
@@ -986,6 +911,7 @@ svg.ico__footer.ico-vk path {
 }
 //programme
 .programmes {
+  background: $white;
   position: relative;
   z-index: 0;
 }
@@ -1039,12 +965,7 @@ svg.ico__footer.ico-vk path {
   text-align: center;
   padding: 8px;
 }
-.card:nth-child(1):hover .content .content__additional,
-.card:nth-child(2):hover .content .content__additional,
-.card:nth-child(7):hover .content .content__additional,
-.card:nth-child(8):hover .content .content__additional {
-  padding-top: 40px;
-}
+
 .star,
 .star-feellikeasurgeon {
   &::after {
@@ -1127,16 +1048,26 @@ svg.ico__footer.ico-vk path {
   font-size: 20px;
   line-height: 125%;
   color: $white;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   padding: 0px 15px;
-  height: 45px;
   cursor: default;
+}
+.card:nth-child(1) .content .content__title,
+.card:nth-child(2) .content .content__title,
+.card:nth-child(7) .content .content__title,
+.card:nth-child(8) .content .content__title {
+  margin-bottom: 15px;
 }
 .content__additional {
   display: flex;
   flex-direction: column;
-  height: 360px;
-  padding-top: 20px;
+  height: 350px;
+}
+.card:nth-child(1) .content .content__additional,
+.card:nth-child(2) .content .content__additional,
+.card:nth-child(7) .content .content__additional,
+.card:nth-child(8) .content .content__additional {
+  height: 325px;
 }
 .content__text {
   font-weight: 400;
@@ -1144,7 +1075,7 @@ svg.ico__footer.ico-vk path {
   line-height: 156%;
   color: $white;
   padding: 0px 15px;
-  transform: translateY(15px);
+  transform: translateY(35px);
   transition: all 1s ease-in-out;
   text-align: left;
   margin-bottom: 15px;
@@ -1219,11 +1150,20 @@ svg.ico__footer.ico-vk path {
   justify-content: space-between;
   transition: all 0.4s ease-in-out;
 }
-.content__btn:hover {
+.content__btn:hover,
+.content__btn:active {
   background: $white;
   color: $blue;
   transition: all 0.4s ease-in-out;
+  border: none;
 }
+.card:hover .content__btn:active{
+  background: $purple-medium;
+  border: 1px solid $purple-medium;
+  box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+}
+
+
 
 //title для направлений//
 .title-course {
@@ -1235,6 +1175,7 @@ svg.ico__footer.ico-vk path {
     justify-content: center;
     align-items: center;
     padding-left: 30px;
+
     margin: 40px 0px;
     width: 180px;
     height: 40px;
@@ -1304,8 +1245,10 @@ svg.ico__footer.ico-vk path {
   }
 
   &__line {
-    flex-grow: 1;
+
     height: 1px;
+    flex-grow: 1;
+
     background-color: $purple;
   }
 }
@@ -1633,76 +1576,11 @@ svg.ico__footer.ico-vk path {
   }
 }
 
-@media (max-width: 1180px) {
-  .hero__screen {
-    .hand__img {
-      max-width: 70rem;
-      height: 40rem;
-      top: 14rem;
-    }
+@media (max-width: 990px) {
+  .programmes__content {
+    grid-template-columns: 30% 30%;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 100px;
   }
 }
-// .header-block {
-//   background-color: transparent;
-//   width: 100%;
-//   height: 80px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .header-logo {
-//   display: block;
-//   min-width: 160px;
-//   height: 34px;
-// }
-
-// .header-btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   max-width: 200px;
-//   width: 100%;
-// height: 40px;
-// border: 1px solid #F9FAFF;
-// filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
-// font-family: 'Mulish';
-// font-style: normal;
-// font-weight: 700;
-// font-size: 14px;
-// line-height: 20px;
-// color: #F9FAFF
-// }
-
-// .header-menu {
-//   margin: 0 10px;
-//     max-width: 413px;
-//     min-width: 275px;
-//   width: 100%;
-//   height: 30px;
-// }
-
-// .header-list {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .header-item a{
-//   display: block;
-//   font-family: 'Mulish';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 14px;
-// line-height: 20px;
-// color: #F9FAFF;
-// border-bottom: 1px solid transparent;
-// }
-
-// .header-item:not(:last-child) {
-//   margin-right: 5px;
-// }
-
-// .header-item a:hover {
-// border-bottom: 1px solid #ff0000;
-// }
