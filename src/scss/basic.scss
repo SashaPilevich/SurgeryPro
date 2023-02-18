@@ -45,18 +45,37 @@ body {
     background-color: $purple;
   }
 }
-.faq,
-.contacts,
-.gallery,
-.feedbacks,
 .about,
-.aboutspace,
-.galleryabout,
 .whyus,
+.gallery,
+.galleryabout,
 .aboutspaceowner,
-.programmes {
+.aboutspace,
+.programmes,
+.faq,
+.feedbacks,
+.contacts,
+.gallery.gallerybasicskillsoff{
   padding: 120px 0px;
 }
+
+
+// .about,
+// .whyus,
+// .gallery,
+// .galleryabout,
+// .aboutspaceowner{
+//   padding: 120px 0px;
+// }
+// .aboutspace,
+// .programmes,
+// .faq,
+// .feedbacks,
+// .contacts,
+// .gallery.gallerybasicskillsoff{
+//   padding: 119px 0px;
+// }
+
 .aboutspace,
 .aboutspaceowner{
   padding-bottom: 0px;
