@@ -984,11 +984,17 @@ svg.ico__footer.ico-vk path {
   }
 }
 //programme
+.programmes{
+  background: $white;
+  position: relative;
+  z-index: 0;
+}
 .programmes__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   row-gap: 40px;
+  
 }
 .card {
   position: relative;

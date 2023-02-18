@@ -40,9 +40,11 @@ body {
   }
 
   &__line {
-    border: 1px solid $purple;
+    // border: 1px solid $purple;
     flex-grow: 1;
-    display: flex;
+    height: 1px;
+    background-color: $purple;
+    // display: flex;
   }
 }
 .faq,
