@@ -256,23 +256,7 @@
           width: 70px;
           height: 70px;
           background-image: url("@img/mainscreen/star.svg");
-        }
-        &::before {
-          content: "можно онлайн";
-          display: block;
-          position: absolute;
-          top: -20px;
-          right: -27px;
-          width: 52px;
-          height: 30px;
-          font-family: "Mulish";
-          font-weight: 300;
-          font-size: 12px;
-          line-height: 125%;
-          text-align: center;
-          color: $white;
           transform: rotate(15deg);
-          z-index: 1;
         }
       }
       .banner__btn-signup {
@@ -1066,33 +1050,16 @@ svg.ico__footer.ico-vk path {
     right: 10px;
     width: 70px;
     height: 70px;
-    background-image: url("@img/mainscreen/star.svg");
-  }
-  &::before {
-    content: "онлайн";
-    display: block;
-    position: absolute;
-    top: 37px;
-    right: 20px;
-    width: 52px;
-    height: 30px;
-    font-family: "Mulish";
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 125%;
-    text-align: center;
-    color: $white;
+    background-image: url("@img/programmes/star.svg");
     transform: rotate(15deg);
-    z-index: 1;
   }
-}
-.star-feellikeasurgeon {
-  &::before {
-    content: "школь- никам";
-    top: 32px;
-  }
-}
 
+}
+.star-feellikeasurgeon{
+  &::after{
+    background-image: url("@img/programmes/school.svg");
+  }
+}
 .card:nth-child(1):before {
   background-image: url("@img/programmes/basicsurgery.png");
 }
