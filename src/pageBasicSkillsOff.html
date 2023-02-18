@@ -2,9 +2,11 @@
 <html lang="en">
   @@include('html/head.html',{ "title":"Basic surgical skills - offline" })
   <body>
-    <header class="header__anotherpage" style="position: static">
+    <header class="header__anotherpage" style="position: static;">
       <div class="container">
-        @@include('html/nav.html',{"logo":"@@include('logolight.html')","menu":"@@include('menulight.html')"})
+        <div class="header__dark">
+          @@include('html/navlight.html',{"logo":"@@include('logolight.html')"})
+        </div>
       </div>
     </header>
     <main>

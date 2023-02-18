@@ -150,11 +150,11 @@ if (about) {
       header.classList.remove("banner-version");
       header.classList.add("light-version");
       headerDark.style.display = "none";
-      headerLight.style.display = "block";
+      headerLight.style.display = "flex";
     } else {
       header.classList.remove("light-version");
       header.classList.add("banner-version");
-      headerDark.style.display = "block";
+      headerDark.style.display = "flex";
       headerLight.style.display = "none";
     }
   });
