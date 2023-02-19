@@ -46,39 +46,38 @@ body {
     background-color: $purple;
   }
 }
+.about,
+.whyus,
+.gallery,
+.galleryabout,
+.programmes,
+.faq,
+.feedbacks,
+.contacts,
+.gallery,
+.aboutspaceowner{
+  padding: 120px 0px;
+}
+.aboutspace{
+  padding: 119px 0px;
+}
 // .about,
 // .whyus,
 // .gallery,
 // .galleryabout,
 // .aboutspaceowner,
+// .gallery.gallerybasicskillsoff,
+// .feedbacks.basicskills{
+//   padding: 120px 0px;
+// }
 // .aboutspace,
 // .programmes,
 // .faq,
 // .feedbacks,
-// .contacts,
-// .gallery.gallerybasicskillsoff{
-//   padding: 120px 0px;
+// .contacts
+// {
+//   padding: 119px 0px;
 // }
-
-
-.about,
-.whyus,
-.gallery,
-.galleryabout,
-.aboutspaceowner,
-.gallery.gallerybasicskillsoff,
-.feedbacks.basicskills{
-  padding: 120px 0px;
-}
-.aboutspace,
-.programmes,
-.faq,
-.feedbacks,
-.contacts
-{
-  padding: 119px 0px;
-}
-
 .aboutspace,
 .aboutspaceowner {
   padding-bottom: 0px;
