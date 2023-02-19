@@ -46,36 +46,38 @@ body {
     background-color: $purple;
   }
 }
-.about,
-.whyus,
-.gallery,
-.galleryabout,
-.aboutspaceowner,
-.aboutspace,
-.programmes,
-.faq,
-.feedbacks,
-.contacts,
-.gallery.gallerybasicskillsoff{
-  padding: 120px 0px;
-}
-
-
 // .about,
 // .whyus,
 // .gallery,
 // .galleryabout,
-// .aboutspaceowner{
-//   padding: 120px 0px;
-// }
+// .aboutspaceowner,
 // .aboutspace,
 // .programmes,
 // .faq,
 // .feedbacks,
 // .contacts,
 // .gallery.gallerybasicskillsoff{
-//   padding: 119px 0px;
+//   padding: 120px 0px;
 // }
+
+
+.about,
+.whyus,
+.gallery,
+.galleryabout,
+.aboutspaceowner,
+.gallery.gallerybasicskillsoff,
+.feedbacks.basicskills{
+  padding: 120px 0px;
+}
+.aboutspace,
+.programmes,
+.faq,
+.feedbacks,
+.contacts
+{
+  padding: 119px 0px;
+}
 
 .aboutspace,
 .aboutspaceowner {
