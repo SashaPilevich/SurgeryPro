@@ -280,17 +280,16 @@ body.locked-body {
 .whyus,
 .gallery,
 .galleryabout,
-.aboutspaceowner,
-.gallery.gallerybasicskillsoff,
-.feedbacks.basicskills {
-  padding: 120px 0px;
-}
-
-.aboutspace,
 .programmes,
 .faq,
 .feedbacks,
-.contacts {
+.contacts,
+.gallery,
+.aboutspaceowner {
+  padding: 120px 0px;
+}
+
+.aboutspace {
   padding: 119px 0px;
 }
 
@@ -1612,7 +1611,7 @@ svg.ico__footer.ico-vk path {
   margin-right: 30px;
 }
 .title-course__line {
-  height: 0.7px;
+  height: 1px;
   flex-grow: 1;
   background-color: #a1acfc;
 }
