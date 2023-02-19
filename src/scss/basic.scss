@@ -46,12 +46,16 @@ body {
     background-color: $purple;
   }
 }
+
+.programmes,
+.faq
+{
+  padding: 200px 0px;
+}
 .about,
 .whyus,
 .gallery,
 .galleryabout,
-.programmes,
-.faq,
 .feedbacks,
 .contacts,
 .gallery,
@@ -59,7 +63,10 @@ body {
   padding: 120px 0px;
 }
 .aboutspace{
-  padding: 119px 0px;
+  padding: 199px 0px;
+}
+.about-curse{
+  padding-top: 80px;
 }
 // .about,
 // .whyus,

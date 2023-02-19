@@ -276,12 +276,15 @@ body.locked-body {
   background-color: #a1acfc;
 }
 
+.programmes,
+.faq {
+  padding: 200px 0px;
+}
+
 .about,
 .whyus,
 .gallery,
 .galleryabout,
-.programmes,
-.faq,
 .feedbacks,
 .contacts,
 .gallery,
@@ -290,7 +293,11 @@ body.locked-body {
 }
 
 .aboutspace {
-  padding: 119px 0px;
+  padding: 199px 0px;
+}
+
+.about-curse {
+  padding-top: 80px;
 }
 
 .aboutspace,
