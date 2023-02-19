@@ -1078,7 +1078,7 @@ svg.ico__footer.ico-vk path {
   transform: translateY(35px);
   transition: all 1s ease-in-out;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   cursor: default;
 }
 .content__text.down {
@@ -1246,7 +1246,8 @@ svg.ico__footer.ico-vk path {
 
   &__line {
 
-    height: 1px;
+    // height: 1px;
+    height: 0.7px;
     flex-grow: 1;
 
     background-color: $purple;
@@ -1376,7 +1377,7 @@ svg.ico__footer.ico-vk path {
   &__bottom-block {
     ul {
       display: flex;
-      gap: 20px;
+      gap: 80px;
     }
 
     li {
