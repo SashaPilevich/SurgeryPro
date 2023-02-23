@@ -217,3 +217,121 @@ function openContent(elem) {
     contentItem.style.height = contentItem.scrollHeight + 20 + "px";
   }
 }
+
+///slider media
+const whyUsItems = document.querySelectorAll(".whyus__item");
+const galleryAbout = document.querySelectorAll(".galleryabout__item-media");
+const galleryBasicSurgeryOfflain = document.querySelectorAll(".gallerybasicsurgeryofflain__item-media");
+
+let swiperNavigationWhyus = document.querySelector("#whyus");
+let swiperNavigationGalleryAbout = document.querySelector("#galleryabout");
+let swiperBasicSurgeryOfflain = document.querySelector('#gallerybasicsurgeryofflain')
+
+const arrowPrev = document.querySelector(".arrow-prev");
+const arrowNext = document.querySelector(".arrow-next");
+
+const firstNumber = document.querySelector(".first-number");
+
+let currentSlide = 0;
+let currentNum = 1;
+
+if (firstNumber) {
+  firstNumber.innerHTML = currentNum;
+}
+
+if (arrowNext && arrowPrev) {
+  arrowNext.addEventListener("click", function () {
+    nextSlide();
+  });
+  arrowPrev.addEventListener("click", () => {
+    previousSlide();
+  });
+}
+
+
+function nextSlide() {
+  if (swiperNavigationWhyus) {
+    checkCurrentSlideForNext(whyUsItems);
+    goToSlide(currentSlide + 1, whyUsItems);
+  } else if (swiperNavigationGalleryAbout) {
+    checkCurrentSlideForNext(galleryAbout);
+    goToSlide(currentSlide + 1, galleryAbout);
+  } else if(swiperBasicSurgeryOfflain){
+    checkCurrentSlideForNext(galleryBasicSurgeryOfflain);
+    goToSlide(currentSlide + 1, galleryBasicSurgeryOfflain);
+  }
+  
+}
+
+function previousSlide() {
+  if (swiperNavigationWhyus) {
+    checkCurrentSlideForPrev(whyUsItems);
+    goToSlide(currentSlide - 1, whyUsItems);
+  } else if (swiperNavigationGalleryAbout) {
+    checkCurrentSlideForPrev(galleryAbout);
+    goToSlide(currentSlide - 1, galleryAbout);
+  } else if(swiperBasicSurgeryOfflain){
+    checkCurrentSlideForPrev(galleryBasicSurgeryOfflain);
+    goToSlide(currentSlide - 1, galleryBasicSurgeryOfflain);
+  }
+}
+
+function goToSlide(n, element) {
+  element[currentSlide].classList.remove("block");
+  currentSlide = (n + element.length) % element.length;
+  element[currentSlide].classList.add("block");
+}
+function checkCurrentSlideForNext(element) {
+  if (currentNum < element.length) {
+    ++currentNum;
+    firstNumber.innerHTML = currentNum;
+  } else if (currentNum == element.length) {
+    currentNum = 1;
+    firstNumber.innerHTML = currentNum;
+  }
+}
+function checkCurrentSlideForPrev(element) {
+  if (currentNum <= element.length && currentNum > 1) {
+    --currentNum;
+    firstNumber.innerHTML = currentNum;
+  } else if (currentNum == 1) {
+    currentNum = element.length;
+    firstNumber.innerHTML = currentNum;
+  }
+}
+//media gallery on main page
+const galleryMainPage = document.querySelectorAll(".gallery__item-media");
+let swiperNavigationGalleryMainPage = document.querySelector('#gallerymainpage');
+const mainFirstNumber = document.querySelector("#mainfirstnumber");
+const arrowPrevMain = document.querySelector("#mainprev");
+const arrowNextMain = document.querySelector("#mainnext");
+let currentSlideMain = 0
+if(swiperNavigationGalleryMainPage){
+  let currentNum = 1;
+  mainFirstNumber.innerHTML = currentNum;
+  arrowNextMain.addEventListener("click", function () {
+    if (currentNum < galleryMainPage.length) {
+      ++currentNum;
+      mainFirstNumber.innerHTML = currentNum;
+    } else if (currentNum == galleryMainPage.length) {
+      currentNum = 1;
+      mainFirstNumber.innerHTML = currentNum;
+    }
+    goToSlideMain(currentSlideMain + 1, galleryMainPage);
+  });
+  arrowPrevMain.addEventListener("click", () => {
+    if (currentNum <= galleryMainPage.length && currentNum > 1) {
+      --currentNum;
+      mainFirstNumber.innerHTML = currentNum;
+    } else if (currentNum == 1) {
+      currentNum = galleryMainPage.length;
+      mainFirstNumber.innerHTML = currentNum;
+    }
+    goToSlideMain(currentSlideMain - 1, galleryMainPage);
+  });
+}
+function goToSlideMain(n, element) {
+  element[currentSlideMain].classList.remove("block");
+  currentSlideMain = (n + element.length) % element.length;
+  element[currentSlideMain].classList.add("block");
+}

@@ -68,28 +68,14 @@ body {
 .about-curse{
   padding-top: 80px;
 }
-// .about,
-// .whyus,
-// .gallery,
-// .galleryabout,
-// .aboutspaceowner,
-// .gallery.gallerybasicskillsoff,
-// .feedbacks.basicskills{
-//   padding: 120px 0px;
-// }
-// .aboutspace,
-// .programmes,
-// .faq,
-// .feedbacks,
-// .contacts
-// {
-//   padding: 119px 0px;
-// }
+
 .aboutspace,
 .aboutspaceowner {
   padding-bottom: 0px;
 }
-
+.swiper-navigation{
+  display: none;
+}
 .slider {
   display: flex;
   flex-direction: column;
@@ -253,3 +239,73 @@ body {
     }
   }
 }
+@media(max-width:1000px){
+.about,
+.whyus,
+.feedbacks,
+.contacts{
+  padding: 60px 0px;
+}
+.gallery{
+  padding: 110px 0px 80px;
+}
+.title-up {
+  display: block;
+  align-items:normal;
+  margin-bottom: 30px;
+
+  &__text {
+    font: {
+      size: 25px;
+    }
+    line-height: 120%;
+    margin-right: 0px;
+    text-align: left;
+  }
+  &__line {
+    display: none;
+  }
+}
+.swiper-navigation {
+  display: flex;
+  justify-content: center;
+  .arrow-prev,
+  .arrow-next{
+    cursor: pointer;
+  }
+  .arrow-prev,
+  .indicate-number {
+    margin-right: 80px;
+  }
+  .first-number,
+  .slice,
+  .second-number {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 125%;
+    text-align: center;
+    color: $black;
+  }
+  .first-number,
+  .slice{
+    margin-right: 5px;
+  }
+}
+}
+// .about,
+// .whyus,
+// .gallery,
+// .galleryabout,
+// .aboutspaceowner,
+// .gallery.gallerybasicskillsoff,
+// .feedbacks.basicskills{
+//   padding: 120px 0px;
+// }
+// .aboutspace,
+// .programmes,
+// .faq,
+// .feedbacks,
+// .contacts
+// {
+//   padding: 119px 0px;
+// }
