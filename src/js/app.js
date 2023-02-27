@@ -16,7 +16,7 @@ const btnPrevFeedbacks = document.querySelector(".slider__btn.btn-prev"),
 let numberFeedbacks = 0;
 let urlFeedbacks;
 
-if (imgFeedbacks) {
+if (imgFeedbacks && btnPrevFeedbacks && btnNextFeedbacks) {
   urlFeedbacks = imgFeedbacks.src.slice(0, -15);
   btnNextFeedbacks.addEventListener("click", (event) => {
     numberFeedbacks === 2 ? (numberFeedbacks = 0) : numberFeedbacks++;
@@ -218,14 +218,39 @@ function openContent(elem) {
   }
 }
 
+//аккордион для lesson
+const accordionTitlesMedia = document.querySelectorAll(
+  ".lesson-media__accordion-block-title"
+);
+
+accordionTitlesMedia.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    let targetItem = event.target.closest(
+      ".lesson-media__accordion-block-title"
+    );
+    let contentItem = targetItem.nextElementSibling;
+
+    targetItem.classList.toggle("active-media");
+    if (targetItem.classList.contains("active-media")) {
+      contentItem.style.height = contentItem.scrollHeight + "px";
+    } else {
+      contentItem.style.height = 0;
+    }
+  });
+});
+
 ///slider media
 const whyUsItems = document.querySelectorAll(".whyus__item");
 const galleryAbout = document.querySelectorAll(".galleryabout__item-media");
-const galleryBasicSurgeryOfflain = document.querySelectorAll(".gallerybasicsurgeryofflain__item-media");
+const galleryBasicSurgeryOfflain = document.querySelectorAll(
+  ".gallerybasicsurgeryofflain__item-media"
+);
 
 let swiperNavigationWhyus = document.querySelector("#whyus");
 let swiperNavigationGalleryAbout = document.querySelector("#galleryabout");
-let swiperBasicSurgeryOfflain = document.querySelector('#gallerybasicsurgeryofflain')
+let swiperBasicSurgeryOfflain = document.querySelector(
+  "#gallerybasicsurgeryofflain"
+);
 
 const arrowPrev = document.querySelector(".arrow-prev");
 const arrowNext = document.querySelector(".arrow-next");
@@ -248,7 +273,6 @@ if (arrowNext && arrowPrev) {
   });
 }
 
-
 function nextSlide() {
   if (swiperNavigationWhyus) {
     checkCurrentSlideForNext(whyUsItems);
@@ -256,11 +280,10 @@ function nextSlide() {
   } else if (swiperNavigationGalleryAbout) {
     checkCurrentSlideForNext(galleryAbout);
     goToSlide(currentSlide + 1, galleryAbout);
-  } else if(swiperBasicSurgeryOfflain){
+  } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForNext(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide + 1, galleryBasicSurgeryOfflain);
   }
-  
 }
 
 function previousSlide() {
@@ -270,7 +293,7 @@ function previousSlide() {
   } else if (swiperNavigationGalleryAbout) {
     checkCurrentSlideForPrev(galleryAbout);
     goToSlide(currentSlide - 1, galleryAbout);
-  } else if(swiperBasicSurgeryOfflain){
+  } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForPrev(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide - 1, galleryBasicSurgeryOfflain);
   }
@@ -301,12 +324,13 @@ function checkCurrentSlideForPrev(element) {
 }
 //media gallery on main page
 const galleryMainPage = document.querySelectorAll(".gallery__item-media");
-let swiperNavigationGalleryMainPage = document.querySelector('#gallerymainpage');
+let swiperNavigationGalleryMainPage =
+  document.querySelector("#gallerymainpage");
 const mainFirstNumber = document.querySelector("#mainfirstnumber");
 const arrowPrevMain = document.querySelector("#mainprev");
 const arrowNextMain = document.querySelector("#mainnext");
-let currentSlideMain = 0
-if(swiperNavigationGalleryMainPage){
+let currentSlideMain = 0;
+if (swiperNavigationGalleryMainPage) {
   let currentNum = 1;
   mainFirstNumber.innerHTML = currentNum;
   arrowNextMain.addEventListener("click", function () {
