@@ -3,7 +3,6 @@
 @import "variables";
 @import "basic";
 
-
 //MAIN PAGE
 //HEADER-BANNER
 .main__banner {
@@ -699,7 +698,7 @@ svg.ico__banner.ico-vk path {
 .socials-media {
   display: flex;
 }
-.socials-media{
+.socials-media {
   display: none;
 }
 .socials a .ico__footer,
@@ -818,12 +817,18 @@ svg.ico__footer.ico-vk path {
   height: 1px;
   background-color: $purple;
 }
+.aboutspace__content-media {
+  display: none;
+}
 .aboutspaceowner {
   .aboutspaceowner__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     margin-bottom: 119px;
+  }
+  .aboutspaceowner__content-media{
+    display: none;
   }
 }
 .aboutspaceowner__content-image {
@@ -1604,7 +1609,7 @@ svg.ico__footer.ico-vk path {
       height: 60px;
     }
   }
-  .header-logo{
+  .header-logo {
     width: 120px;
     height: 26px;
   }
@@ -1752,6 +1757,79 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/gallery/gallery_g.jpg");
     }
   }
+  ///ABOUT SPACE
+  .aboutspace .aboutspace__content {
+    display: none;
+  }
+  .aboutspace__content-media {
+    display: block;
+    .aboutspace__content-item-text {
+      margin-bottom: 25px;
+    }
+    .aboutspace__content-image {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .aboutspace__content-item-text-block {
+      margin-bottom: 30px;
+    }
+  }
+  .aboutspace {
+    .aboutspace__statistics {
+      display: grid;
+      grid-template-columns: 140px 140px;
+      margin-bottom: 60px;
+      column-gap: 20px;
+      row-gap: 25px;
+      .aboutspace__statistics-item.second {
+        order: 1;
+      }
+      .aboutspace__statistics-item.first,
+      .aboutspace__statistics-item.second,
+      .aboutspace__statistics-item.third {
+        margin-right: 0px;
+      }
+      .aboutspace__statistics-number{
+        text-align: center;
+        font-size: 30px;
+        display: block;
+      }
+    }
+  }
+  .line{
+    width: 280px;
+  }
+  ///ABOUT OWNER
+  .aboutspaceowner{
+    .aboutspaceowner__content{
+      display: none;
+    }
+    .aboutspaceowner__content-media{
+      display: block;
+    }
+  }
+  .aboutspaceowner__content-image{
+    width: 280px;
+    height: 200px;
+    margin-bottom: 30px;
+    img{
+      height: 100%;
+    }
+  }
+  .aboutspaceowner__content-text-first{
+    margin-bottom: 25px;
+  }
+  .aboutspaceowner__content-text-second{
+    margin-bottom: 61px;
+  }
+  
+  
   ///GALLERY ABOUT SPACE
   .galleryabout {
     &__block {
@@ -1767,7 +1845,7 @@ svg.ico__footer.ico-vk path {
       display: block;
       width: 100%;
       height: 360px;
-      margin-bottom: 47px;
+      margin-bottom: 40px;
       background: {
         repeat: no-repeat;
         position: center center;
@@ -1811,7 +1889,7 @@ svg.ico__footer.ico-vk path {
     &__block {
       display: none;
     }
-    .gallerybasicsurgeryofflain__block-media{
+    .gallerybasicsurgeryofflain__block-media {
       max-width: 360px;
       width: 100%;
       height: 360px;
@@ -1849,7 +1927,6 @@ svg.ico__footer.ico-vk path {
     }
     .gallerybasicsurgeryofflain__item-media:nth-child(6) {
       background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
-     
     }
   }
   //FOOTER
@@ -1859,38 +1936,38 @@ svg.ico__footer.ico-vk path {
       flex-direction: column;
       margin-bottom: 50px;
       padding-top: 20px;
-      .footer-logo{
+      .footer-logo {
         margin: 0 auto 56px;
       }
-      .footer__menu{
+      .footer__menu {
         height: 220px;
         display: flex;
         justify-content: space-between;
       }
-      .footer__list{
+      .footer__list {
         flex-direction: column;
         align-items: flex-start;
       }
-      .footer__item{
+      .footer__item {
         height: 20px;
         margin-bottom: 40px;
       }
     }
   }
-  
+
   .socials {
     display: none;
   }
-  .socials-media{
+  .socials-media {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 7px;
   }
-  .socials-media a .ico__footer{
+  .socials-media a .ico__footer {
     margin-bottom: 10px;
   }
-  .socials-media a .ico__footer.ico-vk{
+  .socials-media a .ico__footer.ico-vk {
     margin-bottom: 0px;
   }
 }
