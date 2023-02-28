@@ -250,8 +250,11 @@ body {
 
 .br-media {
   display: none;
+}
 
-@media(max-width:1000px){
+  
+
+@media (max-width: 1000px) {
   .br{
     display: none;
   }
@@ -276,25 +279,6 @@ body {
 .gallery{
   padding: 110px 0px 180px;
 }
-
-@media (max-width: 1000px) {
-  .br {
-    display: none;
-  }
-
-  .br-media {
-    display: block;
-  }
-
-  .about,
-  .whyus,
-  .feedbacks,
-  .contacts {
-    padding: 60px 0px;
-  }
-  .gallery {
-    padding: 110px 0px 80px;
-  }
   .title-up {
     display: block;
     align-items: normal;
