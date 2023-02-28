@@ -471,6 +471,9 @@ body.locked-body {
   .contacts {
     padding: 60px 0px;
   }
+  .programmes {
+    padding: 120px 0px 60px;
+  }
   .aboutspace {
     padding-top: 120px;
   }
@@ -1515,6 +1518,10 @@ svg.ico__footer.ico-vk path {
   background-image: url("../img/programmes/feellikeasurgeon.png");
 }
 
+.card:nth-child(7):before {
+  background-image: url("../img/programmes/youngsurgeon.png");
+}
+
 .card:nth-child(8):before {
   background-image: url("../img/programmes/cardiosurgery.png");
 }
@@ -1525,6 +1532,10 @@ svg.ico__footer.ico-vk path {
 
 .card:nth-child(10):before {
   background-image: url("../img/programmes/fundamentals.png");
+}
+
+.card:nth-child(11):before {
+  background-image: url("../img/programmes/youngmedician.png");
 }
 
 .content {
@@ -2013,7 +2024,9 @@ svg.ico__footer.ico-vk path {
     max-width: 360px;
   }
   .header .header__dark,
-  .header .header__light {
+  .header .header__light,
+  .header__anotherpage .header__dark,
+  .header__anotherpage .header__light {
     height: 60px;
   }
   .header-logo {
@@ -2077,6 +2090,7 @@ svg.ico__footer.ico-vk path {
   .whyus .whyus__content {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0px;
   }
   .whyus .whyus__content .whyus__item.block {
     display: flex;
@@ -2353,6 +2367,124 @@ svg.ico__footer.ico-vk path {
   }
   .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(6) {
     background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
+  }
+  .programmes__content {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    row-gap: 40px;
+  }
+  .card {
+    height: 300px;
+    background-position: 0 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/programmes/backfigma.png");
+  }
+  .card:before {
+    height: 200px;
+  }
+  .card:after {
+    display: none;
+  }
+  .card:nth-child(1):before {
+    background-image: url("../img/programmes/basicsurgerymedia.jpg");
+  }
+  .card:nth-child(2):before {
+    background-image: url("../img/programmes/basicsurgeryonlainmedia.jpg");
+  }
+  .card:nth-child(3):before {
+    background-image: url("../img/programmes/microsurgerymedia.jpg");
+  }
+  .card:nth-child(4):before {
+    background-image: url("../img/programmes/operatingroommedia.jpg");
+  }
+  .card:nth-child(5):before {
+    background-image: url("../img/programmes/futuresurgeonmedia.jpg");
+  }
+  .card:nth-child(6):before {
+    background-image: url("../img/programmes/feellikeasurgeonmedia.jpg");
+  }
+  .card:nth-child(7):before {
+    background-image: url("../img/programmes/youngsurgeonmedia.jpg");
+  }
+  .card:nth-child(8):before {
+    background-image: url("../img/programmes/cardiosurgerymedia.jpg");
+  }
+  .card:nth-child(9):before {
+    background-image: url("../img/programmes/vascularsurgerymedia.jpg");
+  }
+  .card:nth-child(10):before {
+    background-image: url("../img/programmes/fundamentalsmedia.jpg");
+  }
+  .card:nth-child(11):before {
+    background-image: url("../img/programmes/youngmedicianmedia.jpg");
+  }
+  .content {
+    transform: translateY(42%);
+  }
+  .content::after {
+    background: url("../img/programmes/backfigma.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  .card:nth-child(1) .content .content__title,
+  .card:nth-child(2) .content .content__title,
+  .card:nth-child(10) .content .content__title {
+    margin-bottom: 12px;
+  }
+  .card:nth-child(6) .content .content__title {
+    margin-bottom: 35px;
+  }
+  .card:hover:nth-child(1) .content .content__title,
+  .card:hover:nth-child(2) .content .content__title,
+  .card:hover:nth-child(10) .content .content__title {
+    margin-bottom: 12px;
+  }
+  .card:hover:nth-child(6) .content .content__title {
+    margin-bottom: 0px;
+  }
+  .content__additional,
+  .card:nth-child(6) .content .content__additional {
+    height: 75px;
+  }
+  .card:nth-child(1) .content .content__additional,
+  .card:nth-child(2) .content .content__additional,
+  .card:nth-child(10) .content .content__additional {
+    height: 40px;
+  }
+  .content__text {
+    display: none;
+  }
+  .content__title {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+  .card:hover .content,
+  .card:focus-within .content {
+    transform: translateY(42%);
+    transition: none;
+  }
+  .card:hover .content::after {
+    top: none;
+    opacity: 0.95;
+  }
+  .content__btn {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #f9faff;
+    filter: drop-shadow(2px 2px 10px rgba(250, 250, 255, 0.1));
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    transition: all 0.7s ease-in-out;
+  }
+  .card:hover .content .content__title {
+    padding-top: 0px;
+    margin-bottom: 0px;
+    transition: none;
   }
   .footer {
     height: 475px;
