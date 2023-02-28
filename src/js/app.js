@@ -254,7 +254,6 @@ let swiperBasicSurgeryOfflain = document.querySelector(
 
 const arrowPrev = document.querySelector(".arrow-prev");
 const arrowNext = document.querySelector(".arrow-next");
-
 const firstNumber = document.querySelector(".first-number");
 
 let currentSlide = 0;
