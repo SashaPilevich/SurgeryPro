@@ -459,7 +459,12 @@ body.locked-body {
 }
 
 @media (max-width: 1000px) {
- 
+  .br {
+    display: none;
+  }
+  .br-media {
+    display: block;
+  }
   .about,
   .whyus,
   .feedbacks,
@@ -517,7 +522,6 @@ body.locked-body {
   .swiper-navigation .slice {
     margin-right: 5px;
   }
-
   .slider.slider-desctop {
     display: none;
   }
@@ -548,14 +552,6 @@ body.locked-body {
     line-height: 139%;
     padding-bottom: 10px;
   }
-
-  .br {
-    display: none;
-  }
-  .br-media {
-    display: block;
-  }
-
 }
 .main__banner {
   background-image: url("../img/mainscreen/hero screen_bg.png");
@@ -2173,7 +2169,6 @@ svg.ico__footer.ico-vk path {
   .gallery .gallery__item-media:nth-child(7) {
     background-image: url("../img/gallery/gallery_g.jpg");
   }
-
   .contacts__content {
     max-width: 280px;
     margin-right: 0px;
@@ -2207,7 +2202,7 @@ svg.ico__footer.ico-vk path {
   .contacts__map-media iframe {
     width: inherit;
     min-height: inherit;
-    }
+  }
   .aboutspace .aboutspace__content {
     display: none;
   }
@@ -2398,7 +2393,6 @@ svg.ico__footer.ico-vk path {
   .socials-media a .ico__footer.ico-vk {
     margin-bottom: 0px;
   }
-
   .faq {
     padding: 140px 0px 60px;
   }
@@ -2561,5 +2555,4 @@ svg.ico__footer.ico-vk path {
   .lesson-media__accordion-block-title.active-media .lesson-media__accordion-btn::after {
     transform: translate(50%, -50%) rotate(90deg);
   }
-
 }
