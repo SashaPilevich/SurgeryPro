@@ -250,6 +250,31 @@ body {
 
 .br-media {
   display: none;
+
+@media(max-width:1000px){
+  .br{
+    display: none;
+  }
+  .br-media{
+    display: block;
+  }
+.about,
+.whyus,
+.feedbacks,
+.contacts{
+  padding: 60px 0px;
+}
+.aboutspace{
+  padding-top: 120px;
+}
+.aboutspaceowner {
+  padding-top: 60px;
+}
+.galleryabout{
+  padding: 70px 0px 130px;
+}
+.gallery{
+  padding: 110px 0px 180px;
 }
 
 @media (max-width: 1000px) {

@@ -821,12 +821,18 @@ svg.ico__footer.ico-vk path {
   height: 1px;
   background-color: $purple;
 }
+.aboutspace__content-media {
+  display: none;
+}
 .aboutspaceowner {
   .aboutspaceowner__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     margin-bottom: 119px;
+  }
+  .aboutspaceowner__content-media{
+    display: none;
   }
 }
 .aboutspaceowner__content-image {
@@ -1785,6 +1791,7 @@ svg.ico__footer.ico-vk path {
     }
   }
 
+
   //CONTACTS MAIN PAGE
   .contacts {
     &__content {
@@ -1834,6 +1841,79 @@ svg.ico__footer.ico-vk path {
     }
   }
 
+
+  ///ABOUT SPACE
+  .aboutspace .aboutspace__content {
+    display: none;
+  }
+  .aboutspace__content-media {
+    display: block;
+    .aboutspace__content-item-text {
+      margin-bottom: 25px;
+    }
+    .aboutspace__content-image {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .aboutspace__content-item-text-block {
+      margin-bottom: 30px;
+    }
+  }
+  .aboutspace {
+    .aboutspace__statistics {
+      display: grid;
+      grid-template-columns: 140px 140px;
+      margin-bottom: 60px;
+      column-gap: 20px;
+      row-gap: 25px;
+      .aboutspace__statistics-item.second {
+        order: 1;
+      }
+      .aboutspace__statistics-item.first,
+      .aboutspace__statistics-item.second,
+      .aboutspace__statistics-item.third {
+        margin-right: 0px;
+      }
+      .aboutspace__statistics-number{
+        text-align: center;
+        font-size: 30px;
+        display: block;
+      }
+    }
+  }
+  .line{
+    width: 280px;
+  }
+  ///ABOUT OWNER
+  .aboutspaceowner{
+    .aboutspaceowner__content{
+      display: none;
+    }
+    .aboutspaceowner__content-media{
+      display: block;
+    }
+  }
+  .aboutspaceowner__content-image{
+    width: 280px;
+    height: 200px;
+    margin-bottom: 30px;
+    img{
+      height: 100%;
+    }
+  }
+  .aboutspaceowner__content-text-first{
+    margin-bottom: 25px;
+  }
+  .aboutspaceowner__content-text-second{
+    margin-bottom: 61px;
+  }
+ 
   ///GALLERY ABOUT SPACE
   .galleryabout {
     &__block {
@@ -1849,7 +1929,7 @@ svg.ico__footer.ico-vk path {
       display: block;
       width: 100%;
       height: 360px;
-      margin-bottom: 47px;
+      margin-bottom: 40px;
       background: {
         repeat: no-repeat;
         position: center center;
