@@ -42,7 +42,8 @@
   width: 100%;
   margin: 0 auto;
   .header__dark,
-  .header__light {
+  .header__light,
+  .header__mobile {
     background-color: transparent;
     width: 100%;
     height: 80px;
@@ -50,12 +51,14 @@
     justify-content: space-between;
     align-items: center;
   }
-  .header__light {
+  .header__light,
+  .header__mobile {
     display: none;
   }
 }
 .header-logo,
-.footer-logo {
+.footer-logo,
+.header-logo-media-open {
   display: block;
   width: 160px;
   height: 34px;
@@ -184,10 +187,89 @@
 }
 
 .header__anotherpage {
-  background: $white;
+  background-color: $white;
   box-shadow: 0px 2px 5px rgba(6, 27, 52, 0.05);
 } //для других страниц
 
+///BURGER MENU
+.header__dark-media-open {
+  position: relative;
+  top: 0;
+  left: -120px;
+  opacity: 0;
+  display: none;
+}
+.burger-menu,
+.burger-menu-light {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu-light::before,
+.burger-menu-light::after {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: $white;
+  transition: top 0.1s 0.2s ease, bottom 0.1s 0.2s ease, transform 0.1s ease;
+}
+.burger-menu-light::before,
+.burger-menu-light::after {
+  background-color: $black;
+}
+.burger-menu::after,
+.burger-menu-light::after {
+  top: 24px;
+}
+.burger-menu.active,
+.burger-menu-light.active {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+/////
+.burger-menu.active::before,
+.burger-menu-light.active::before {
+  background-color: $black;
+  top: 18px;
+  transform: rotate(45deg);
+  transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+.burger-menu.active::after,
+.burger-menu-light.active::after {
+  background-color: $black;
+  top: 18px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+}
+.burger-line,
+.burger-line-light {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 20px;
+  height: 1px;
+  background-color: $white;
+}
+.burger-line-light {
+  background-color: $black;
+}
+.burger-line.active,
+.burger-line-light.active {
+  display: none;
+}
+.mobile-container,
+.mobile-container-light {
+  display: none;
+}
 .hero__screen {
   .container {
     position: relative;
@@ -505,7 +587,7 @@ svg.ico__banner.ico-vk path {
   background-color: #f9faff;
 }
 
-//GALLERY//
+//GALLERY MAIN PAGE//
 .gallery {
   background: $purple-light;
 
@@ -762,7 +844,7 @@ svg.ico__footer.ico-vk path {
   justify-content: center;
 }
 
-//aboutspace
+//ABOUT SPACE//
 .aboutspace {
   .aboutspace__content {
     display: grid;
@@ -927,7 +1009,9 @@ svg.ico__footer.ico-vk path {
     display: block;
   }
 }
-//programme
+
+
+//PROGRAMMES//
 .programmes {
   background: $white;
   position: relative;
@@ -1359,6 +1443,10 @@ svg.ico__footer.ico-vk path {
 }
 
 //lesson блок для направление//
+.lesson-media__block {
+  display: none;
+}
+
 .lesson {
   padding-bottom: 120px;
   color: $black;
@@ -1519,7 +1607,6 @@ svg.ico__footer.ico-vk path {
   &__accordion-title {
     max-width: 520px;
     padding: 20px 0px;
-    // margin-right: 10px;
     display: flex;
     justify-content: space-between;
 
@@ -1595,14 +1682,187 @@ svg.ico__footer.ico-vk path {
   .container {
     max-width: 360px;
   }
+  //BURGER MENU//
+  .header__dark-media-open{
+    display: block;
+  }
+  .burger-menu,
+  .burger-menu-light {
+    display: block;
+  }
+  .mobile-container,
+  .mobile-container-light {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 58px;
+    left: 0px;
+    width: 100%;
+    height: 740px;
+    padding-top: 110px;
+    background-color: $purple-light;
+    transition: display 0.4s ease-in;
+    overflow: auto;
+    display: none;
+    animation: mobile 0.4s ease 1;
+    
+  }
+  .mobile-container.active,
+  .mobile-container-light.active {
+    display: flex;
+    animation: mobile 0.4s ease 1;
+  }
+  @keyframes mobile{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-item {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .mobile-item a {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: $black;
+    position: relative;
+    width: min-content;
+    height: 20px;
+  }
+  .mobile-item a::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    width: 0px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    transition: all 0.6s ease-in-out;
+  }
+  .mobile-item:hover a::after {
+    width: 100%;
+    background-color: $blue;
+  }
+  .mobile-item:active a::after {
+    width: 100%;
+    background-color: $red;
+  }
+
+  .mobile-list:last-child {
+    margin-bottom: 40px;
+  }
+
+  .mobile-socials .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-left: 20px;
+  }
+  .mobile-socials .socials a .ico__banner {
+    display: block;
+    stroke: $black;
+    border-radius: 50%;
+    margin-right: 20px;
+    &:hover {
+      background-color: $purple;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      border-radius: 50%;
+      stroke: $white;
+      transition: all 0.4s ease-in-out;
+    }
+    &:active {
+      background-color: $blue;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      stroke: $white;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  svg.ico__banner.ico-vk path {
+    fill: inherit;
+  }
+  .mobile-socials .socials a .ico__banner.ico-vk {
+    stroke: none;
+    fill: $black;
+    &:hover {
+      background-color: $purple;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      border-radius: 50%;
+      fill: $white;
+      transition: all 0.4s ease-in-out;
+    }
+    &:active {
+      background: $blue;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      fill: $white;
+      fill-rule: nonzero;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .mobile-btn-record {
+    width: 280px;
+    height: 50px;
+    background: $purple;
+    box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+    display: block;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: $white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease-in;
+    &:hover {
+      background: $blue;
+      border: 1px solid $blue;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      transition: all 0.4s ease-in;
+    }
+    &:active {
+      background: $blue-dark;
+      border: 1px solid $blue-dark;
+      box-shadow: 2px 2px 10px rgba(250, 250, 255, 0.1);
+      transition: all 0.4s ease-in;
+    }
+  }
+  .mobile-text-record {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 125%;
+    color: $black;
+  }
+  //HEADER//
   .header,
   .header__anotherpage {
     .header__dark,
-    .header__light {
+    .header__light,
+    .header__mobile {
       height: 60px;
     }
   }
-  .header-logo {
+  .header-logo,
+  .header-logo-media-open {
     width: 120px;
     height: 26px;
   }
@@ -1612,6 +1872,8 @@ svg.ico__footer.ico-vk path {
   .btn__signup-light {
     display: none;
   }
+
+  //BANNER//
   .hero__screen .banner {
     padding: 180px 0 250px;
     .banner__content {
@@ -1690,7 +1952,6 @@ svg.ico__footer.ico-vk path {
           }
           .whyus__text {
             text-align: left;
-            // margin-bottom: 42px;
           }
         }
       }
@@ -1831,7 +2092,7 @@ svg.ico__footer.ico-vk path {
     }
   }
 
-  ///ABOUT SPACE
+  ///PAGE ABOUT SPACE
   .aboutspace .aboutspace__content {
     display: none;
   }
@@ -1957,54 +2218,7 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/aboutspacepage/aboutspacegallery_n.jpg");
     }
   }
-  ///GALLERY BASICS OF SKILLS
-  .gallerybasicskillsoff {
-    &__block {
-      display: none;
-    }
-    .gallerybasicsurgeryofflain__block-media {
-      max-width: 360px;
-      width: 100%;
-      height: 360px;
-      margin: 0 auto;
-      
-    }
-    .gallerybasicsurgeryofflain__item-media.block {
-      display: block;
-      width: 100%;
-      height: 360px;
-      margin-bottom: 47px;
-      background: {
-        repeat: no-repeat;
-        position: center center;
-      }
-      background-size: cover;
-      cursor: pointer;
-      
-    }
-    .gallerybasicsurgeryofflain__item-media {
-      display: none;
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(1) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
-      
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(2) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(3) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(4) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(5) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(6) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
-    }
-  }
+  
   ///PROGRAMMES
   .programmes__content {
     display: flex;
@@ -2075,7 +2289,7 @@ svg.ico__footer.ico-vk path {
   .card:nth-child(10) .content .content__title {
     margin-bottom: 12px;
   }
-  .card:nth-child(6) .content .content__title{
+  .card:nth-child(6) .content .content__title {
     margin-bottom: 35px;
   }
   .card:hover:nth-child(1) .content .content__title,
@@ -2083,7 +2297,7 @@ svg.ico__footer.ico-vk path {
   .card:hover:nth-child(10) .content .content__title {
     margin-bottom: 12px;
   }
-  .card:hover:nth-child(6) .content .content__title{
+  .card:hover:nth-child(6) .content .content__title {
     margin-bottom: 0px;
   }
   .content__additional,
@@ -2098,7 +2312,7 @@ svg.ico__footer.ico-vk path {
   .content__text {
     display: none;
   }
-  .content__title{
+  .content__title {
     margin-bottom: 35px;
     font-size: 18px;
   }
@@ -2128,7 +2342,6 @@ svg.ico__footer.ico-vk path {
     margin-bottom: 0px;
     transition: none;
   }
-  
 
   //FOOTER
   .footer {
@@ -2299,11 +2512,6 @@ svg.ico__footer.ico-vk path {
       align-items: center;
       cursor: pointer;
       height: 80px;
-
-      &:active .lesson-media__accordion-btn {
-        background: $blue;
-        transition: all 0.1s linear;
-      }
     }
 
     &__accordion-title {
@@ -2348,14 +2556,14 @@ svg.ico__footer.ico-vk path {
         background-color: $purple;
         border-radius: 10px;
         transform: translate(50%, -50%) rotate(0deg);
-        transition: all 0.5s linear;
+        transition: all 0.3s linear;
       }
     }
 
     &__accordion-content {
       height: 0px;
       overflow: hidden;
-      transition: all 0.5s linear;
+      transition: all 0.3s linear;
     }
 
     &__accordion-text {
@@ -2379,5 +2587,50 @@ svg.ico__footer.ico-vk path {
         transform: translate(50%, -50%) rotate(90deg);
       }
     }
+  }
+}
+///GALLERY BASICS OF SKILLS
+.gallerybasicskillsoff {
+  &__block {
+    display: none;
+  }
+  .gallerybasicsurgeryofflain__block-media {
+    max-width: 360px;
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+  }
+  .gallerybasicsurgeryofflain__item-media.block {
+    display: block;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 47px;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    }
+    background-size: cover;
+    cursor: pointer;
+  }
+  .gallerybasicsurgeryofflain__item-media {
+    display: none;
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(1) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(2) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(3) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(4) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(5) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(6) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
   }
 }
