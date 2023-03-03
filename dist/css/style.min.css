@@ -2911,44 +2911,44 @@ svg.ico__footer.ico-vk path {
   .lesson-media__accordion-block-title.active-media .lesson-media__accordion-btn::after {
     transform: translate(50%, -50%) rotate(90deg);
   }
-}
-.gallerybasicskillsoff__block {
-  display: none;
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__block-media {
-  max-width: 360px;
-  width: 100%;
-  height: 360px;
-  margin: 0 auto;
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media.block {
-  display: block;
-  width: 100%;
-  height: 360px;
-  margin-bottom: 47px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  cursor: pointer;
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media {
-  display: none;
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(1) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(2) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(3) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(4) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(5) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
-}
-.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(6) {
-  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
+  .gallerybasicskillsoff__block {
+    display: none;
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__block-media {
+    max-width: 360px;
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media.block {
+    display: block;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 47px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media {
+    display: none;
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(1) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(2) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(3) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(4) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(5) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
+  }
+  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(6) {
+    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
+  }
 }
