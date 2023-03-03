@@ -131,6 +131,8 @@ const headerDark = document.querySelector(".header__dark");
 const headerLight = document.querySelector(".header__light");
 const mainBanner = document.querySelector(".main__banner");
 const about = document.querySelector(".about");
+
+
 if (about) {
   let heightAbout = about.offsetHeight;
   let offsetAbout = offset(about).top;
@@ -158,6 +160,7 @@ if (about) {
       headerLight.style.display = "none";
     }
   });
+  
   //dark header на баннере*************************************
   window.addEventListener("scroll", () => {
     if (
@@ -169,15 +172,67 @@ if (about) {
       header.classList.remove("banner-version");
     }
   });
-  //функция для определения местоположения
-  function offset(el) {
-    const rect = el.getBoundingClientRect();
-    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-  }
+}
+//функция для определения местоположения
+function offset(el) {
+  const rect = el.getBoundingClientRect();
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
 
+///BURGER MENU
+let isOpen = false;
+const burger = document.querySelector('.burger-menu');
+const burgerLine = document.querySelector('.burger-line');
+const headerDarkMediaOpen = document.querySelector('.header__dark-media-open')
+const logoDark = document.querySelector('.header-logo')
+const navMobileContainer = document.querySelector('.mobile-container')
+const navMobileContainerLight = document.querySelector('.mobile-container-light')
+
+if(burger){
+  burger.addEventListener('click', () => {
+    if (!isOpen) {
+      burger.classList.add('active');
+      burgerLine.classList.add('active');
+      header.classList.add('light-version');
+      logoDark.style.opacity = '0';
+      headerDarkMediaOpen.style.opacity = '1';
+      navMobileContainer.classList.add('active');
+      isOpen = true;
+      body.classList.add('locked-body')
+    } else{
+      burger.classList.remove('active');
+      burgerLine.classList.remove('active');
+      header.classList.remove('light-version');
+      logoDark.style.opacity = '1';
+      headerDarkMediaOpen.style.opacity = '0';
+      navMobileContainer.classList.remove('active');
+      isOpen = false;
+      body.classList.remove('locked-body')
+      
+    }
+  })
+}
+const burgerLight = document.querySelector('.burger-menu-light');
+const burgerLineLight = document.querySelector('.burger-line-light');
+burgerLight.addEventListener('click', () => {
+  if (!isOpen) {
+    burgerLight.classList.add('active');
+    burgerLineLight.classList.add('active');
+    navMobileContainerLight.classList.add('active')
+    isOpen = true;
+    // body.classList.add('locked-body')
+  } else{
+    burgerLight.classList.remove('active');
+    burgerLineLight.classList.remove('active');
+    navMobileContainerLight.classList.remove('active')
+    isOpen = false;
+    // body.classList.remove('locked-body')
+  }
+})
+  
+  
 //аккордион
 const accordionTitles = document.querySelectorAll(
     ".faq__accordion-block-title"
@@ -254,7 +309,6 @@ let swiperBasicSurgeryOfflain = document.querySelector(
 
 const arrowPrev = document.querySelector(".arrow-prev");
 const arrowNext = document.querySelector(".arrow-next");
-
 const firstNumber = document.querySelector(".first-number");
 
 let currentSlide = 0;
