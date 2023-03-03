@@ -1937,6 +1937,10 @@ svg.ico__footer.ico-vk path {
   height: 60px;
 }
 
+.lesson-media__block {
+  display: none;
+}
+
 .lesson {
   padding-bottom: 120px;
   color: #020c17;
@@ -2846,10 +2850,6 @@ svg.ico__footer.ico-vk path {
     cursor: pointer;
     height: 80px;
   }
-  .lesson-media__accordion-block-title:active .lesson-media__accordion-btn {
-    background: #0062ff;
-    transition: all 0.1s linear;
-  }
   .lesson-media__accordion-title {
     max-width: 100px;
     display: flex;
@@ -2887,12 +2887,12 @@ svg.ico__footer.ico-vk path {
     background-color: #a1acfc;
     border-radius: 10px;
     transform: translate(50%, -50%) rotate(0deg);
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
   }
   .lesson-media__accordion-content {
     height: 0px;
     overflow: hidden;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
   }
   .lesson-media__accordion-text {
     position: relative;
