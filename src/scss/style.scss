@@ -1360,6 +1360,10 @@ svg.ico__footer.ico-vk path {
 }
 
 //lesson блок для направление//
+.lesson-media__block {
+  display: none;
+}
+
 .lesson {
   padding-bottom: 120px;
   color: $black;
@@ -2182,11 +2186,6 @@ svg.ico__footer.ico-vk path {
       align-items: center;
       cursor: pointer;
       height: 80px;
-
-      &:active .lesson-media__accordion-btn {
-        background: $blue;
-        transition: all 0.1s linear;
-      }
     }
 
     &__accordion-title {
@@ -2231,14 +2230,14 @@ svg.ico__footer.ico-vk path {
         background-color: $purple;
         border-radius: 10px;
         transform: translate(50%, -50%) rotate(0deg);
-        transition: all 0.5s linear;
+        transition: all 0.3s linear;
       }
     }
 
     &__accordion-content {
       height: 0px;
       overflow: hidden;
-      transition: all 0.5s linear;
+      transition: all 0.3s linear;
     }
 
     &__accordion-text {
