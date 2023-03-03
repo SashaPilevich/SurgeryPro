@@ -486,6 +486,9 @@ body.locked-body {
   .gallery {
     padding: 110px 0px 180px;
   }
+  .gallery.gallerybasicskillsoff {
+    padding: 60px 0px 140px;
+  }
   .title-up {
     display: block;
     align-items: normal;
@@ -556,93 +559,6 @@ body.locked-body {
     padding-bottom: 10px;
   }
 }
-.header__dark-media-open {
-  position: relative;
-  top: 0;
-  left: -120px;
-  opacity: 0;
-}
-
-.burger-menu,
-.burger-menu-light {
-  display: none;
-  position: relative;
-  z-index: 2;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.burger-menu::before,
-.burger-menu::after,
-.burger-menu-light::before,
-.burger-menu-light::after {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #f9faff;
-  transition: top 0.1s 0.2s ease, bottom 0.1s 0.2s ease, transform 0.1s ease;
-}
-
-.burger-menu-light::before,
-.burger-menu-light::after {
-  background-color: #020c17;
-}
-
-.burger-menu::after,
-.burger-menu-light::after {
-  top: 24px;
-}
-
-.burger-menu.active,
-.burger-menu-light.active {
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-
-.burger-menu.active::before,
-.burger-menu-light.active::before {
-  background-color: #020c17;
-  top: 18px;
-  transform: rotate(45deg);
-  transition: top 0.3s ease, transform 0.3s 0.3s ease;
-}
-
-.burger-menu.active::after,
-.burger-menu-light.active::after {
-  background-color: #020c17;
-  top: 18px;
-  transform: rotate(-45deg);
-  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
-}
-
-.burger-line,
-.burger-line-light {
-  position: absolute;
-  top: 18px;
-  left: 10px;
-  width: 20px;
-  height: 1px;
-  background-color: #f9faff;
-}
-
-.burger-line-light {
-  background-color: #020c17;
-}
-
-.burger-line.active,
-.burger-line-light.active {
-  display: none;
-}
-
-.mobile-container {
-  display: none;
-}
-
 .main__banner {
   background-image: url("../img/mainscreen/hero screen_bg.png");
   background-size: cover;
@@ -847,6 +763,95 @@ body.locked-body {
 .header__anotherpage {
   background-color: #f9faff;
   box-shadow: 0px 2px 5px rgba(6, 27, 52, 0.05);
+}
+
+.header__dark-media-open {
+  position: relative;
+  top: 0;
+  left: -120px;
+  opacity: 0;
+  display: none;
+}
+
+.burger-menu,
+.burger-menu-light {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu-light::before,
+.burger-menu-light::after {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #f9faff;
+  transition: top 0.1s 0.2s ease, bottom 0.1s 0.2s ease, transform 0.1s ease;
+}
+
+.burger-menu-light::before,
+.burger-menu-light::after {
+  background-color: #020c17;
+}
+
+.burger-menu::after,
+.burger-menu-light::after {
+  top: 24px;
+}
+
+.burger-menu.active,
+.burger-menu-light.active {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.burger-menu.active::before,
+.burger-menu-light.active::before {
+  background-color: #020c17;
+  top: 18px;
+  transform: rotate(45deg);
+  transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+.burger-menu.active::after,
+.burger-menu-light.active::after {
+  background-color: #020c17;
+  top: 18px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+.burger-line,
+.burger-line-light {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 20px;
+  height: 1px;
+  background-color: #f9faff;
+}
+
+.burger-line-light {
+  background-color: #020c17;
+}
+
+.burger-line.active,
+.burger-line-light.active {
+  display: none;
+}
+
+.mobile-container,
+.mobile-container-light {
+  display: none;
 }
 
 .hero__screen .container {
@@ -2115,6 +2120,9 @@ svg.ico__footer.ico-vk path {
   .container {
     max-width: 360px;
   }
+  .header__dark-media-open {
+    display: block;
+  }
   .burger-menu,
   .burger-menu-light {
     display: block;
@@ -2584,46 +2592,6 @@ svg.ico__footer.ico-vk path {
   .galleryabout .galleryabout__item-media:nth-child(8) {
     background-image: url("../img/aboutspacepage/aboutspacegallery_n.jpg");
   }
-  .gallerybasicskillsoff__block {
-    display: none;
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    cursor: pointer;
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media {
-    display: none;
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(1) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(2) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(3) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(4) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(5) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
-  }
-  .gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(6) {
-    background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
-  }
   .programmes__content {
     display: flex;
     flex-direction: column;
@@ -2943,4 +2911,44 @@ svg.ico__footer.ico-vk path {
   .lesson-media__accordion-block-title.active-media .lesson-media__accordion-btn::after {
     transform: translate(50%, -50%) rotate(90deg);
   }
+}
+.gallerybasicskillsoff__block {
+  display: none;
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__block-media {
+  max-width: 360px;
+  width: 100%;
+  height: 360px;
+  margin: 0 auto;
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media.block {
+  display: block;
+  width: 100%;
+  height: 360px;
+  margin-bottom: 47px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media {
+  display: none;
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(1) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(2) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(3) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(4) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(5) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
+}
+.gallerybasicskillsoff .gallerybasicsurgeryofflain__item-media:nth-child(6) {
+  background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
 }

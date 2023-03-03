@@ -131,7 +131,7 @@ const headerDark = document.querySelector(".header__dark");
 const headerLight = document.querySelector(".header__light");
 const mainBanner = document.querySelector(".main__banner");
 const about = document.querySelector(".about");
-let isOpen = false;
+
 
 if (about) {
   let heightAbout = about.offsetHeight;
@@ -173,11 +173,16 @@ if (about) {
     }
   });
 }
-
+//функция для определения местоположения
+function offset(el) {
+  const rect = el.getBoundingClientRect();
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
 
 ///BURGER MENU
-
-
+let isOpen = false;
 const burger = document.querySelector('.burger-menu');
 const burgerLine = document.querySelector('.burger-line');
 const headerDarkMediaOpen = document.querySelector('.header__dark-media-open')
@@ -195,7 +200,7 @@ if(burger){
       headerDarkMediaOpen.style.opacity = '1';
       navMobileContainer.classList.add('active');
       isOpen = true;
-      // body.classList.add('locked-body')
+      body.classList.add('locked-body')
     } else{
       burger.classList.remove('active');
       burgerLine.classList.remove('active');
@@ -204,7 +209,7 @@ if(burger){
       headerDarkMediaOpen.style.opacity = '0';
       navMobileContainer.classList.remove('active');
       isOpen = false;
-      // body.classList.remove('locked-body')
+      body.classList.remove('locked-body')
       
     }
   })
@@ -227,13 +232,7 @@ burgerLight.addEventListener('click', () => {
   }
 })
   
-  //функция для определения местоположения
-  function offset(el) {
-    const rect = el.getBoundingClientRect();
-    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-  }
+  
 //аккордион
 const accordionTitles = document.querySelectorAll(
     ".faq__accordion-block-title"

@@ -3,82 +3,6 @@
 @import "variables";
 @import "basic";
 
-.header__dark-media-open {
-  position: relative;
-  top: 0;
-  left: -120px;
-  opacity: 0;
-}
-.burger-menu,
-.burger-menu-light {
-  display: none;
-  position: relative;
-  z-index: 2;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-.burger-menu::before,
-.burger-menu::after,
-.burger-menu-light::before,
-.burger-menu-light::after {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: $white;
-  transition: top 0.1s 0.2s ease, bottom 0.1s 0.2s ease, transform 0.1s ease;
-}
-.burger-menu-light::before,
-.burger-menu-light::after {
-  background-color: $black;
-}
-.burger-menu::after,
-.burger-menu-light::after {
-  top: 24px;
-}
-.burger-menu.active,
-.burger-menu-light.active {
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-/////
-.burger-menu.active::before,
-.burger-menu-light.active::before {
-  background-color: $black;
-  top: 18px;
-  transform: rotate(45deg);
-  transition: top 0.3s ease, transform 0.3s 0.3s ease;
-}
-.burger-menu.active::after,
-.burger-menu-light.active::after {
-  background-color: $black;
-  top: 18px;
-  transform: rotate(-45deg);
-  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
-}
-.burger-line,
-.burger-line-light {
-  position: absolute;
-  top: 18px;
-  left: 10px;
-  width: 20px;
-  height: 1px;
-  background-color: $white;
-}
-.burger-line-light {
-  background-color: $black;
-}
-.burger-line.active,
-.burger-line-light.active {
-  display: none;
-}
-.mobile-container {
-  display: none;
-}
 //MAIN PAGE
 //HEADER-BANNER
 .main__banner {
@@ -267,6 +191,85 @@
   box-shadow: 0px 2px 5px rgba(6, 27, 52, 0.05);
 } //для других страниц
 
+///BURGER MENU
+.header__dark-media-open {
+  position: relative;
+  top: 0;
+  left: -120px;
+  opacity: 0;
+  display: none;
+}
+.burger-menu,
+.burger-menu-light {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu-light::before,
+.burger-menu-light::after {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: $white;
+  transition: top 0.1s 0.2s ease, bottom 0.1s 0.2s ease, transform 0.1s ease;
+}
+.burger-menu-light::before,
+.burger-menu-light::after {
+  background-color: $black;
+}
+.burger-menu::after,
+.burger-menu-light::after {
+  top: 24px;
+}
+.burger-menu.active,
+.burger-menu-light.active {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+/////
+.burger-menu.active::before,
+.burger-menu-light.active::before {
+  background-color: $black;
+  top: 18px;
+  transform: rotate(45deg);
+  transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+.burger-menu.active::after,
+.burger-menu-light.active::after {
+  background-color: $black;
+  top: 18px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+}
+.burger-line,
+.burger-line-light {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 20px;
+  height: 1px;
+  background-color: $white;
+}
+.burger-line-light {
+  background-color: $black;
+}
+.burger-line.active,
+.burger-line-light.active {
+  display: none;
+}
+.mobile-container,
+.mobile-container-light {
+  display: none;
+}
 .hero__screen {
   .container {
     position: relative;
@@ -584,7 +587,7 @@ svg.ico__banner.ico-vk path {
   background-color: #f9faff;
 }
 
-//GALLERY//
+//GALLERY MAIN PAGE//
 .gallery {
   background: $purple-light;
 
@@ -841,7 +844,7 @@ svg.ico__footer.ico-vk path {
   justify-content: center;
 }
 
-//aboutspace
+//ABOUT SPACE//
 .aboutspace {
   .aboutspace__content {
     display: grid;
@@ -1006,7 +1009,9 @@ svg.ico__footer.ico-vk path {
     display: block;
   }
 }
-//programme
+
+
+//PROGRAMMES//
 .programmes {
   background: $white;
   position: relative;
@@ -1598,7 +1603,6 @@ svg.ico__footer.ico-vk path {
   &__accordion-title {
     max-width: 520px;
     padding: 20px 0px;
-    // margin-right: 10px;
     display: flex;
     justify-content: space-between;
 
@@ -1674,6 +1678,10 @@ svg.ico__footer.ico-vk path {
   .container {
     max-width: 360px;
   }
+  //BURGER MENU//
+  .header__dark-media-open{
+    display: block;
+  }
   .burger-menu,
   .burger-menu-light {
     display: block;
@@ -1697,7 +1705,6 @@ svg.ico__footer.ico-vk path {
   }
   .mobile-container.active,
   .mobile-container-light.active {
-    // transition: display 0.4s ease-in;
     display: flex;
     animation: mobile 0.4s ease 1;
   }
@@ -1841,6 +1848,7 @@ svg.ico__footer.ico-vk path {
     line-height: 125%;
     color: $black;
   }
+  //HEADER//
   .header,
   .header__anotherpage {
     .header__dark,
@@ -1860,6 +1868,8 @@ svg.ico__footer.ico-vk path {
   .btn__signup-light {
     display: none;
   }
+
+  //BANNER//
   .hero__screen .banner {
     padding: 180px 0 250px;
     .banner__content {
@@ -1938,7 +1948,6 @@ svg.ico__footer.ico-vk path {
           }
           .whyus__text {
             text-align: left;
-            // margin-bottom: 42px;
           }
         }
       }
@@ -2079,7 +2088,7 @@ svg.ico__footer.ico-vk path {
     }
   }
 
-  ///ABOUT SPACE
+  ///PAGE ABOUT SPACE
   .aboutspace .aboutspace__content {
     display: none;
   }
@@ -2205,51 +2214,7 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/aboutspacepage/aboutspacegallery_n.jpg");
     }
   }
-  ///GALLERY BASICS OF SKILLS
-  .gallerybasicskillsoff {
-    &__block {
-      display: none;
-    }
-    .gallerybasicsurgeryofflain__block-media {
-      max-width: 360px;
-      width: 100%;
-      height: 360px;
-      margin: 0 auto;
-    }
-    .gallerybasicsurgeryofflain__item-media.block {
-      display: block;
-      width: 100%;
-      height: 360px;
-      margin-bottom: 47px;
-      background: {
-        repeat: no-repeat;
-        position: center center;
-      }
-      background-size: cover;
-      cursor: pointer;
-    }
-    .gallerybasicsurgeryofflain__item-media {
-      display: none;
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(1) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(2) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(3) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(4) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(5) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
-    }
-    .gallerybasicsurgeryofflain__item-media:nth-child(6) {
-      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
-    }
-  }
+  
   ///PROGRAMMES
   .programmes__content {
     display: flex;
@@ -2623,5 +2588,50 @@ svg.ico__footer.ico-vk path {
         transform: translate(50%, -50%) rotate(90deg);
       }
     }
+  }
+}
+///GALLERY BASICS OF SKILLS
+.gallerybasicskillsoff {
+  &__block {
+    display: none;
+  }
+  .gallerybasicsurgeryofflain__block-media {
+    max-width: 360px;
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+  }
+  .gallerybasicsurgeryofflain__item-media.block {
+    display: block;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 47px;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    }
+    background-size: cover;
+    cursor: pointer;
+  }
+  .gallerybasicsurgeryofflain__item-media {
+    display: none;
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(1) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(2) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(3) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(4) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(5) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
+  }
+  .gallerybasicsurgeryofflain__item-media:nth-child(6) {
+    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
   }
 }
