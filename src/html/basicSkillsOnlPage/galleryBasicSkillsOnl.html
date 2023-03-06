@@ -1,0 +1,61 @@
+<section class="gallery gallerybasicskillsonlain">
+  <div class="container">
+    @@include('../title.html',{"textForTitle":"Как проходит обучение"})
+    <div class="gallerybasicskillsonlain__block">
+      <div
+        class="gallery__item item-a1 modal-open"
+        data-modal-open="modal-2"
+        data-img-open="img-a1"
+      ></div>
+      <div
+        class="gallery__item item-b1 modal-open"
+        data-modal-open="modal-2"
+        data-img-open="img-b1"
+      ></div>
+      <div
+        class="gallery__item item-c1 modal-open"
+        data-modal-open="modal-2"
+        data-img-open="img-c1"
+      ></div>
+    </div>
+  </div>
+  <div class="modal" data-modal="modal-2">
+    <div class="modal__bg">
+      <div class="modal__body">
+        <div class="modal__content">
+          <img
+            class="big-img gallery__item-modal big-item-a1 active-photo"
+            src="@img/basicSkillsOnlPage/basicSkillsOnlPage_a1.jpg"
+            alt="photo"
+            data-img="img-a1"
+          />
+          <img
+            class="big-img gallery__item-modal big-item-b1"
+            src="@img/basicSkillsOnlPage/basicSkillsOnlPage_b1.jpg"
+            alt="photo"
+            data-img="img-b1"
+          />
+          <img
+            class="big-img gallery__item-modal big-item-c1"
+            src="@img/basicSkillsOnlPage/basicSkillsOnlPage_c1.jpg"
+            alt="photo"
+            data-img="img-c1"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gallerybasicsurgeryonlain__block-media">
+    <div
+      class="gallerybasicsurgeryonlain__item-media block"
+    ></div>
+    <div
+      class="gallerybasicsurgeryonlain__item-media "
+    ></div>
+    <div
+      class="gallerybasicsurgeryonlain__item-media"
+    ></div>
+    
+    @@include('../swipernavigation.html',{"elementlength":"3","nameofclass":"gallerybasicsurgeryonlain"})
+  </div>
+</section>
