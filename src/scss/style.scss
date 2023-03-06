@@ -1010,7 +1010,6 @@ svg.ico__footer.ico-vk path {
   }
 }
 
-
 //PROGRAMMES//
 .programmes {
   background: $white;
@@ -1415,6 +1414,21 @@ svg.ico__footer.ico-vk path {
       object-fit: cover;
     }
   }
+
+  &__block.about-big {
+    grid-template-columns: 2fr 1fr;
+    min-height: 250px;
+  }
+
+  &__text-block.about-big {
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__image.about-big {
+    width: 280px;
+  }
 }
 
 //description блок для направление//
@@ -1556,6 +1570,36 @@ svg.ico__footer.ico-vk path {
   }
 }
 
+// галерея страницы juniorMedic
+.galleryjuniormedic{
+  &__block {
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_a0.jpg");
+    grid-area: a0;
+  }
+
+  .item-b0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_c0.jpg");
+    grid-area: c0;
+  }
+}
+
 // FAQ
 
 .faq {
@@ -1683,7 +1727,7 @@ svg.ico__footer.ico-vk path {
     max-width: 360px;
   }
   //BURGER MENU//
-  .header__dark-media-open{
+  .header__dark-media-open {
     display: block;
   }
   .burger-menu,
@@ -1705,18 +1749,17 @@ svg.ico__footer.ico-vk path {
     overflow: auto;
     display: none;
     animation: mobile 0.4s ease 1;
-    
   }
   .mobile-container.active,
   .mobile-container-light.active {
     display: flex;
     animation: mobile 0.4s ease 1;
   }
-  @keyframes mobile{
-    0%{
+  @keyframes mobile {
+    0% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 1;
     }
   }
@@ -2218,7 +2261,7 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/aboutspacepage/aboutspacegallery_n.jpg");
     }
   }
-  
+
   ///PROGRAMMES
   .programmes__content {
     display: flex;
@@ -2589,49 +2632,48 @@ svg.ico__footer.ico-vk path {
     }
   }
   ///GALLERY BASICS OF SKILLS
-.gallerybasicskillsoff {
-  &__block {
-    display: none;
-  }
-  .gallerybasicsurgeryofflain__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerybasicsurgeryofflain__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+  .gallerybasicskillsoff {
+    &__block {
+      display: none;
     }
-    background-size: cover;
-    cursor: pointer;
-  }
-  .gallerybasicsurgeryofflain__item-media {
-    display: none;
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(1) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(2) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(3) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(4) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(5) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
-  }
-  .gallerybasicsurgeryofflain__item-media:nth-child(6) {
-    background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
+    .gallerybasicsurgeryofflain__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .gallerybasicsurgeryofflain__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
+    }
+    .gallerybasicsurgeryofflain__item-media {
+      display: none;
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(1) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_a0.jpg");
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(2) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_b0.jpg");
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(3) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_c0.jpg");
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(4) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_d0.jpg");
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(5) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_e0.jpg");
+    }
+    .gallerybasicsurgeryofflain__item-media:nth-child(6) {
+      background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
+    }
   }
 }
-}
-
