@@ -1,5 +1,5 @@
 import * as flsFunctions from "./modules/functions.js";
-import { slider_1, slider_2 } from "./modules/mocks.js";
+import { slider_1, slider_2, slider_3, slider_4, slider_5,slider_6,slider_7 } from "./modules/mocks.js";
 flsFunctions.isWebp();
 import Swiper from "swiper";
 const swiper = new Swiper();
@@ -38,6 +38,16 @@ if (imgFeedbacks && btnPrevFeedbacks && btnNextFeedbacks) {
       arr = slider_1;
     } else if (dataAttribute === "slider_2") {
       arr = slider_2;
+    }else if (dataAttribute === "slider_3") {
+      arr = slider_3;
+    }else if (dataAttribute === "slider_4") {
+      arr = slider_4;
+    }else if (dataAttribute === "slider_5") {
+      arr = slider_5;
+    }else if (dataAttribute === "slider_6") {
+      arr = slider_6;
+    }else if (dataAttribute === "slider_7") {
+      arr = slider_7;
     }
 
     if (
@@ -300,11 +310,42 @@ const galleryAbout = document.querySelectorAll(".galleryabout__item-media");
 const galleryBasicSurgeryOfflain = document.querySelectorAll(
   ".gallerybasicsurgeryofflain__item-media"
 );
+const galleryBasicSurgeryOnlain = document.querySelectorAll(
+  ".gallerybasicsurgeryonlain__item-media"
+);
+const galleryCardio = document.querySelectorAll(
+  ".gallerycardio__item-media"
+);
+const galleryVascularSurgery = document.querySelectorAll(
+  ".galleryvascularsurgery__item-media"
+);
+const galleryMicroSurgery = document.querySelectorAll(
+  ".gallerymicrosurgery__item-media"
+);
+const galleryDental = document.querySelectorAll(
+  ".gallerydental__item-media"
+);
+
 
 let swiperNavigationWhyus = document.querySelector("#whyus");
 let swiperNavigationGalleryAbout = document.querySelector("#galleryabout");
 let swiperBasicSurgeryOfflain = document.querySelector(
   "#gallerybasicsurgeryofflain"
+);
+let swiperBasicSurgeryOnlain = document.querySelector(
+  "#gallerybasicsurgeryonlain"
+);
+let swiperCardio = document.querySelector(
+  "#gallerycardio"
+);
+let swiperVascularSurgery = document.querySelector(
+  "#galleryvascularsurgery"
+);
+let swiperMicroSurgery = document.querySelector(
+  "#gallerymicrosurgery"
+);
+let swiperDental = document.querySelector(
+  "#gallerydental"
 );
 
 const arrowPrev = document.querySelector(".arrow-prev");
@@ -337,7 +378,24 @@ function nextSlide() {
   } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForNext(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide + 1, galleryBasicSurgeryOfflain);
+  }else if (swiperBasicSurgeryOnlain) {
+    checkCurrentSlideForNext(galleryBasicSurgeryOnlain);
+    goToSlide(currentSlide + 1, galleryBasicSurgeryOnlain);
+  }else if (swiperCardio) {
+    checkCurrentSlideForNext(galleryCardio);
+    goToSlide(currentSlide + 1, galleryCardio);
   }
+  else if (swiperVascularSurgery) {
+    checkCurrentSlideForNext(galleryVascularSurgery);
+    goToSlide(currentSlide + 1, galleryVascularSurgery);
+  }else if (swiperMicroSurgery) {
+    checkCurrentSlideForNext(galleryMicroSurgery);
+    goToSlide(currentSlide + 1, galleryMicroSurgery);
+  }else if (swiperDental) {
+    checkCurrentSlideForNext(galleryDental);
+    goToSlide(currentSlide + 1, galleryDental);
+  }
+
 }
 
 function previousSlide() {
@@ -350,6 +408,21 @@ function previousSlide() {
   } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForPrev(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide - 1, galleryBasicSurgeryOfflain);
+  }else if (swiperBasicSurgeryOnlain) {
+    checkCurrentSlideForPrev(galleryBasicSurgeryOnlain);
+    goToSlide(currentSlide - 1, galleryBasicSurgeryOnlain);
+  }else if (swiperCardio) {
+    checkCurrentSlideForPrev(galleryCardio);
+    goToSlide(currentSlide - 1, galleryCardio);
+  }else if (swiperVascularSurgery) {
+    checkCurrentSlideForPrev(galleryVascularSurgery);
+    goToSlide(currentSlide - 1, galleryVascularSurgery);
+  }else if (swiperMicroSurgery) {
+    checkCurrentSlideForPrev(galleryMicroSurgery);
+    goToSlide(currentSlide - 1, galleryMicroSurgery);
+  }else if (swiperDental) {
+    checkCurrentSlideForPrev(galleryDental);
+    goToSlide(currentSlide - 1, galleryDental);
   }
 }
 
