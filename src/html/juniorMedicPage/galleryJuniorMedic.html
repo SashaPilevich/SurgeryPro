@@ -1,0 +1,60 @@
+<section class="gallery galleryjuniormedic">
+  <div class="container">
+    @@include('../title.html',{"textForTitle":"Как проходит обучение"})
+    <div class="galleryjuniormedic__block">
+      <div
+        class="gallery__item item-a0 modal-open"
+        data-modal-open="modal-12"
+        data-img-open="img-a0"
+      ></div>
+      <div
+        class="gallery__item item-b0 modal-open"
+        data-modal-open="modal-12"
+        data-img-open="img-b0"
+      ></div>
+      <div
+        class="gallery__item item-c0 modal-open"
+        data-modal-open="modal-12"
+        data-img-open="img-c0"
+      ></div>
+    </div>
+  </div>
+  <div class="modal" data-modal="modal-12">
+    <div class="modal__bg">
+      <div class="modal__body">
+        <div class="modal__content">
+          <img
+            class="big-img gallery__item-modal big-item-a0 active-photo"
+            src="@img/juniorMedicPage/juniorMedicPage_a0.jpg"
+            alt="photo"
+            data-img="img-a0"
+          />
+          <img
+            class="big-img gallery__item-modal big-item-b0"
+            src="@img/juniorMedicPage/juniorMedicPage_b0.jpg"
+            alt="photo"
+            data-img="img-b0"
+          />
+          <img
+            class="big-img gallery__item-modal big-item-c0"
+            src="@img/juniorMedicPage/juniorMedicPage_c0.jpg"
+            alt="photo"
+            data-img="img-c0"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gallerybasicsurgeryofflain__block-media">
+    <div
+      class="gallerybasicsurgeryofflain__item-media block"
+    ></div>
+    <div
+      class="gallerybasicsurgeryofflain__item-media "
+    ></div>
+    <div
+      class="gallerybasicsurgeryofflain__item-media"
+    ></div>
+    @@include('../swipernavigation.html',{"elementlength":"6","nameofclass":"gallerybasicsurgeryofflain"})
+  </div>
+</section>
