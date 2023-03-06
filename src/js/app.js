@@ -1,5 +1,8 @@
 import * as flsFunctions from "./modules/functions.js";
-import { slider_1, slider_2, slider_3, slider_4, slider_5,slider_6,slider_7 } from "./modules/mocks.js";
+
+
+import { slider_1, slider_2, slider_3, slider_4, slider_5,slider_6,slider_7,slider_12 } from "./modules/mocks.js";
+
 flsFunctions.isWebp();
 import Swiper from "swiper";
 const swiper = new Swiper();
@@ -38,7 +41,8 @@ if (imgFeedbacks && btnPrevFeedbacks && btnNextFeedbacks) {
       arr = slider_1;
     } else if (dataAttribute === "slider_2") {
       arr = slider_2;
-    }else if (dataAttribute === "slider_3") {
+
+    } else if (dataAttribute === "slider_3") {
       arr = slider_3;
     }else if (dataAttribute === "slider_4") {
       arr = slider_4;
@@ -48,8 +52,10 @@ if (imgFeedbacks && btnPrevFeedbacks && btnNextFeedbacks) {
       arr = slider_6;
     }else if (dataAttribute === "slider_7") {
       arr = slider_7;
+    }else if (dataAttribute === "slider_12") {
+      arr = slider_12;
     }
-
+    
     if (
       dataAttribute === titleFeedbacks.dataset.slider &&
       dataAttribute === textFeedbacks.dataset.slider &&

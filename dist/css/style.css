@@ -1921,6 +1921,24 @@ svg.ico__footer.ico-vk path {
   height: 100%;
   object-fit: cover;
 }
+.about-curse__block.about-big {
+  grid-template-columns: 2fr 1fr;
+  min-height: 250px;
+}
+.about-curse__text-block.about-big p {
+  padding-bottom: 10px;
+}
+.about-curse__image.about-big {
+  width: 280px;
+}
+.about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage {
+  width: 280px;
+  height: 320px;
+}
+.about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
+  width: 280px;
+  height: 290px;
+}
 
 .description__block {
   display: flex;
@@ -2027,6 +2045,28 @@ svg.ico__footer.ico-vk path {
 .gallerybasicskillsoff .item-f0 {
   background-image: url("../img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
   grid-area: f0;
+}
+
+.galleryjuniormedic__block {
+  width: 100%;
+  height: 360px;
+  display: grid;
+  grid-template-areas: "a0 b0 c0";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 20px;
+}
+.galleryjuniormedic .item-a0 {
+  background-image: url("../img/juniorMedicPage/juniorMedicPage_a0.jpg");
+  grid-area: a0;
+}
+.galleryjuniormedic .item-b0 {
+  background-image: url("../img/juniorMedicPage/juniorMedicPage_b0.jpg");
+  grid-area: b0;
+}
+.galleryjuniormedic .item-c0 {
+  background-image: url("../img/juniorMedicPage/juniorMedicPage_c0.jpg");
+  grid-area: c0;
 }
 
 .faq__block {
@@ -3002,6 +3042,12 @@ svg.ico__footer.ico-vk path {
     grid-column: 1;
     grid-row: 3;
     height: 320px;
+  }
+  .about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage, .about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
+    height: 200px;
+  }
+  .about-curse .about-curse__text-block.about-big {
+    margin-bottom: 25px;
   }
   .lesson {
     background-color: #f1f2fe;

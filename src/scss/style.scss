@@ -1414,6 +1414,32 @@ svg.ico__footer.ico-vk path {
       object-fit: cover;
     }
   }
+
+  &__block.about-big {
+    grid-template-columns: 2fr 1fr;
+    min-height: 250px;
+  }
+
+  &__text-block.about-big {
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__image.about-big {
+    width: 280px;
+  }
+  &__image.about-big.about-box3.basicSkillsOnlPage,
+  &__image.about-big.about-box3.microSurgeryPage {
+    width: 280px;
+    height: 320px;
+  }
+  &__image.about-big.about-box3.cardioPage,
+  &__image.about-big.about-box3.dentalPage,
+  &__image.about-big.about-box3.vascularSurgeryPage {
+    width: 280px;
+    height: 290px;
+  }
 }
 
 //description блок для направление//
@@ -1553,6 +1579,36 @@ svg.ico__footer.ico-vk path {
   .item-f0 {
     background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
     grid-area: f0;
+  }
+}
+
+// галерея страницы juniorMedic
+.galleryjuniormedic{
+  &__block {
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_a0.jpg");
+    grid-area: a0;
+  }
+
+  .item-b0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/juniorMedicPage/juniorMedicPage_c0.jpg");
+    grid-area: c0;
   }
 }
 
@@ -2710,6 +2766,17 @@ svg.ico__footer.ico-vk path {
       grid-row: 3;
       height: 320px;
     }
+    &__image.about-big.about-box3.basicSkillsOnlPage,
+  &__image.about-big.about-box3.microSurgeryPage,
+  &__image.about-big.about-box3.cardioPage,
+  &__image.about-big.about-box3.dentalPage,
+  &__image.about-big.about-box3.vascularSurgeryPage {
+    height: 200px;
+  }
+  .about-curse__text-block.about-big{
+    margin-bottom: 25px;
+  }
+   
   }
 
   //lesson для направлений//
@@ -2868,6 +2935,8 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
     }
   }
+
+    
   //PAGE BASIC SKILLS ONLAIN
 .lessonBasicOnlainContainer {
   padding-top: 0px;
@@ -3092,3 +3161,4 @@ svg.ico__footer.ico-vk path {
   }
 }
 }
+
