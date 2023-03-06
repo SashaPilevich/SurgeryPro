@@ -1931,6 +1931,14 @@ svg.ico__footer.ico-vk path {
 .about-curse__image.about-big {
   width: 280px;
 }
+.about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage {
+  width: 280px;
+  height: 320px;
+}
+.about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
+  width: 280px;
+  height: 290px;
+}
 
 .description__block {
   display: flex;
@@ -3034,6 +3042,12 @@ svg.ico__footer.ico-vk path {
     grid-column: 1;
     grid-row: 3;
     height: 320px;
+  }
+  .about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage, .about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
+    height: 200px;
+  }
+  .about-curse .about-curse__text-block.about-big {
+    margin-bottom: 25px;
   }
   .lesson {
     background-color: #f1f2fe;

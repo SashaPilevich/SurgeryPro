@@ -1429,6 +1429,17 @@ svg.ico__footer.ico-vk path {
   &__image.about-big {
     width: 280px;
   }
+  &__image.about-big.about-box3.basicSkillsOnlPage,
+  &__image.about-big.about-box3.microSurgeryPage {
+    width: 280px;
+    height: 320px;
+  }
+  &__image.about-big.about-box3.cardioPage,
+  &__image.about-big.about-box3.dentalPage,
+  &__image.about-big.about-box3.vascularSurgeryPage {
+    width: 280px;
+    height: 290px;
+  }
 }
 
 //description блок для направление//
@@ -2755,6 +2766,17 @@ svg.ico__footer.ico-vk path {
       grid-row: 3;
       height: 320px;
     }
+    &__image.about-big.about-box3.basicSkillsOnlPage,
+  &__image.about-big.about-box3.microSurgeryPage,
+  &__image.about-big.about-box3.cardioPage,
+  &__image.about-big.about-box3.dentalPage,
+  &__image.about-big.about-box3.vascularSurgeryPage {
+    height: 200px;
+  }
+  .about-curse__text-block.about-big{
+    margin-bottom: 25px;
+  }
+   
   }
 
   //lesson для направлений//
@@ -2913,9 +2935,8 @@ svg.ico__footer.ico-vk path {
       background-image: url("@img/basicSkillsOffPage/basicSkillsOffPage_f0.jpg");
     }
   }
-}
-    }
-  }
+
+    
   //PAGE BASIC SKILLS ONLAIN
 .lessonBasicOnlainContainer {
   padding-top: 0px;
@@ -3140,3 +3161,4 @@ svg.ico__footer.ico-vk path {
   }
 }
 }
+
