@@ -319,14 +319,15 @@ body.locked-body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 210px;
+  min-height: 280px;
 }
 .slider__block {
   display: flex;
   align-items: start;
   justify-content: space-between;
   width: 100%;
-  min-height: 160px;
+  min-height: 245px;
+  height: 100%;
 }
 .slider__btn {
   position: relative;
@@ -389,9 +390,6 @@ body.locked-body {
   line-height: 125%;
   padding-bottom: 20px;
 }
-.slider__text {
-  padding-bottom: 10px;
-}
 .slider__points-list {
   display: flex;
   align-items: center;
@@ -431,6 +429,7 @@ body.locked-body {
   background: rgba(6, 27, 52, 0.65);
   display: flex;
   padding: 20px;
+  cursor: pointer;
 }
 .modal__body {
   position: relative;
@@ -444,6 +443,7 @@ body.locked-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
 }
 .modal__content img {
   max-width: 100%;
@@ -1922,7 +1922,7 @@ svg.ico__footer.ico-vk path {
   object-fit: cover;
 }
 .about-curse__block.about-big {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   min-height: 250px;
 }
 .about-curse__text-block.about-big p {
@@ -1931,13 +1931,20 @@ svg.ico__footer.ico-vk path {
 .about-curse__image.about-big {
   width: 280px;
 }
-.about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage {
-  width: 280px;
+.about-curse__image.about-big.about-box3.juniormedicpage, .about-curse__image.about-big.about-box3.basicSkillsOnlPage, .about-curse__image.about-big.about-box3.microSurgeryPage {
   height: 320px;
 }
-.about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
-  width: 280px;
+.about-curse__image.about-big.about-box3.surgerypage, .about-curse__image.about-big.about-box3.cardioPage, .about-curse__image.about-big.about-box3.dentalPage, .about-curse__image.about-big.about-box3.vascularSurgeryPage {
   height: 290px;
+}
+.about-curse__image.about-big.about-box3.anatomypage {
+  height: 370px;
+}
+.about-curse__image.about-big.about-box3.youngsurgeonpage {
+  height: 340px;
+}
+.about-curse__image.about-big.about-box3.operationpage {
+  height: 260px;
 }
 
 .description__block {
@@ -2004,7 +2011,7 @@ svg.ico__footer.ico-vk path {
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -7.5px;
   width: 40px;
   height: 40px;
 }
@@ -2067,6 +2074,146 @@ svg.ico__footer.ico-vk path {
 .galleryjuniormedic .item-c0 {
   background-image: url("../img/juniorMedicPage/juniorMedicPage_c0.jpg");
   grid-area: c0;
+}
+
+.galleryanatomy__block {
+  width: 100%;
+  height: 620px;
+  display: grid;
+  grid-template-areas: "a0 b0 c0" "a0 b0 c0" "d0 b0 f0" "d0 e0 f0" "d0 e0 f0";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.galleryanatomy .item-a0 {
+  background-image: url("../img/anatomyPage/anatomyPage_a0.jpg");
+  grid-area: a0;
+}
+.galleryanatomy .item-b0 {
+  background-image: url("../img/anatomyPage/anatomyPage_b0.jpg");
+  grid-area: b0;
+}
+.galleryanatomy .item-c0 {
+  background-image: url("../img/anatomyPage/anatomyPage_c0.jpg");
+  grid-area: c0;
+}
+.galleryanatomy .item-d0 {
+  background-image: url("../img/anatomyPage/anatomyPage_d0.jpg");
+  grid-area: d0;
+}
+.galleryanatomy .item-e0 {
+  background-image: url("../img/anatomyPage/anatomyPage_e0.jpg");
+  grid-area: e0;
+}
+.galleryanatomy .item-f0 {
+  background-image: url("../img/anatomyPage/anatomyPage_f0.jpg");
+  grid-area: f0;
+}
+
+.galleryyoungsurgeon__block {
+  width: 100%;
+  height: 620px;
+  display: grid;
+  grid-template-areas: "a0 b0 c0" "a0 b0 c0" "d0 b0 f0" "d0 e0 f0" "d0 e0 f0";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.galleryyoungsurgeon .item-a0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_a0.jpg");
+  grid-area: a0;
+}
+.galleryyoungsurgeon .item-b0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_b0.jpg");
+  grid-area: b0;
+}
+.galleryyoungsurgeon .item-c0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_c0.jpg");
+  grid-area: c0;
+}
+.galleryyoungsurgeon .item-d0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_d0.jpg");
+  grid-area: d0;
+}
+.galleryyoungsurgeon .item-e0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_e0.jpg");
+  grid-area: e0;
+}
+.galleryyoungsurgeon .item-f0 {
+  background-image: url("../img/youngSurgeonPage/youngSurgeonPage_f0.jpg");
+  grid-area: f0;
+}
+
+.gallerysurgery__block {
+  width: 100%;
+  height: 620px;
+  display: grid;
+  grid-template-areas: "a0 b0 c0" "a0 b0 c0" "d0 b0 f0" "d0 e0 f0" "d0 e0 f0";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.gallerysurgery .item-a0 {
+  background-image: url("../img/surgeryPage/surgeryPage_a0.jpg");
+  grid-area: a0;
+}
+.gallerysurgery .item-b0 {
+  background-image: url("../img/surgeryPage/surgeryPage_b0.jpg");
+  grid-area: b0;
+}
+.gallerysurgery .item-c0 {
+  background-image: url("../img/surgeryPage/surgeryPage_c0.jpg");
+  grid-area: c0;
+}
+.gallerysurgery .item-d0 {
+  background-image: url("../img/surgeryPage/surgeryPage_d0.jpg");
+  grid-area: d0;
+}
+.gallerysurgery .item-e0 {
+  background-image: url("../img/surgeryPage/surgeryPage_e0.jpg");
+  grid-area: e0;
+}
+.gallerysurgery .item-f0 {
+  background-image: url("../img/surgeryPage/surgeryPage_f0.jpg");
+  grid-area: f0;
+}
+
+.galleryoperation__block {
+  width: 100%;
+  height: 620px;
+  display: grid;
+  grid-template-areas: "a0 b0 c0" "a0 b0 c0" "d0 b0 f0" "d0 e0 f0" "d0 e0 f0";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.galleryoperation .item-a0 {
+  background-image: url("../img/operationPage/operationPage_a0.jpg");
+  grid-area: a0;
+}
+.galleryoperation .item-b0 {
+  background-image: url("../img/operationPage/operationPage_b0.jpg");
+  grid-area: b0;
+}
+.galleryoperation .item-c0 {
+  background-image: url("../img/operationPage/operationPage_c0.jpg");
+  grid-area: c0;
+}
+.galleryoperation .item-d0 {
+  background-image: url("../img/operationPage/operationPage_d0.jpg");
+  grid-area: d0;
+}
+.galleryoperation .item-e0 {
+  background-image: url("../img/operationPage/operationPage_e0.jpg");
+  grid-area: e0;
+}
+.galleryoperation .item-f0 {
+  background-image: url("../img/operationPage/operationPage_f0.jpg");
+  grid-area: f0;
 }
 
 .faq__block {
