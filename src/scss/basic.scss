@@ -173,12 +173,6 @@ body {
     line-height: 125%;
     padding-bottom: 20px;
   }
-
-  // &__text {
-    // opacity: 0.8;
-    // padding-bottom: 10px;
-  // }
-
   &__points-list {
     display: flex;
     align-items: center;
@@ -290,7 +284,12 @@ body {
 .gallery.gallerycardio,
 .gallery.galleryvascularsurgery,
 .gallery.gallerymicrosurgery,
-.gallery.gallerydental{
+.gallery.gallerydental,
+.gallery.galleryoperation,
+.gallery.galleryanatomy,
+.gallery.gallerysurgery,
+.gallery.galleryyoungsurgeon,
+.gallery.galleryjuniormedic{
   padding: 60px 0px 140px;
 }
   .title-up {
@@ -375,20 +374,3 @@ body {
     }
   }
 }
-// .about,
-// .whyus,
-// .gallery,
-// .galleryabout,
-// .aboutspaceowner,
-// .gallery.gallerybasicskillsoff,
-// .feedbacks.basicskills{
-//   padding: 120px 0px;
-// }
-// .aboutspace,
-// .programmes,
-// .faq,
-// .feedbacks,
-// .contacts
-// {
-//   padding: 119px 0px;
-// }
