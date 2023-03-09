@@ -345,6 +345,12 @@ const galleryMicroSurgery = document.querySelectorAll(
   ".gallerymicrosurgery__item-media"
 );
 const galleryDental = document.querySelectorAll(".gallerydental__item-media");
+const galleryOperation = document.querySelectorAll(".galleryoperation__item-media");
+const galleryAnatomy = document.querySelectorAll(".galleryanatomy__item-media");
+const gallerySurgery = document.querySelectorAll(".gallerysurgery__item-media");
+const galleryYoungSurgeon = document.querySelectorAll(".galleryyoungsurgeon__item-media");
+const galleryJuniorMedic = document.querySelectorAll(".galleryjuniormedic__item-media");
+
 
 let swiperNavigationWhyus = document.querySelector("#whyus");
 let swiperNavigationGalleryAbout = document.querySelector("#galleryabout");
@@ -358,6 +364,11 @@ let swiperCardio = document.querySelector("#gallerycardio");
 let swiperVascularSurgery = document.querySelector("#galleryvascularsurgery");
 let swiperMicroSurgery = document.querySelector("#gallerymicrosurgery");
 let swiperDental = document.querySelector("#gallerydental");
+let swiperOperation = document.querySelector("#galleryoperation");
+let swiperAnatomy = document.querySelector("#galleryanatomy");
+let swiperSurgery = document.querySelector("#gallerysurgery");
+let swiperYoungSurgeon = document.querySelector("#galleryyoungsurgeon");
+let swiperJuniorMedic = document.querySelector("#galleryjuniormedic");
 
 const arrowPrev = document.querySelector(".arrow-prev");
 const arrowNext = document.querySelector(".arrow-next");
@@ -404,6 +415,21 @@ function nextSlide() {
   } else if (swiperDental) {
     checkCurrentSlideForNext(galleryDental);
     goToSlide(currentSlide + 1, galleryDental);
+  }else if (swiperOperation) {
+    checkCurrentSlideForNext(galleryOperation);
+    goToSlide(currentSlide + 1, galleryOperation);
+  }else if (swiperAnatomy) {
+    checkCurrentSlideForNext(galleryAnatomy);
+    goToSlide(currentSlide + 1, galleryAnatomy);
+  }else if (swiperSurgery) {
+    checkCurrentSlideForNext(gallerySurgery);
+    goToSlide(currentSlide + 1, gallerySurgery);
+  }else if (swiperYoungSurgeon) {
+    checkCurrentSlideForNext(galleryYoungSurgeon);
+    goToSlide(currentSlide + 1, galleryYoungSurgeon);
+  }else if (swiperJuniorMedic) {
+    checkCurrentSlideForNext(galleryJuniorMedic);
+    goToSlide(currentSlide + 1, galleryJuniorMedic);
   }
 }
 
@@ -432,6 +458,21 @@ function previousSlide() {
   } else if (swiperDental) {
     checkCurrentSlideForPrev(galleryDental);
     goToSlide(currentSlide - 1, galleryDental);
+  }else if (swiperOperation) {
+    checkCurrentSlideForPrev(galleryOperation);
+    goToSlide(currentSlide - 1, galleryOperation);
+  }else if (swiperAnatomy) {
+    checkCurrentSlideForPrev(galleryAnatomy);
+    goToSlide(currentSlide - 1, galleryAnatomy);
+  }else if (swiperSurgery) {
+    checkCurrentSlideForPrev(gallerySurgery);
+    goToSlide(currentSlide - 1, gallerySurgery);
+  }else if (swiperYoungSurgeon) {
+    checkCurrentSlideForPrev(galleryYoungSurgeon);
+    goToSlide(currentSlide - 1, galleryYoungSurgeon);
+  }else if (swiperJuniorMedic) {
+    checkCurrentSlideForPrev(galleryJuniorMedic);
+    goToSlide(currentSlide - 1, galleryJuniorMedic);
   }
 }
 
