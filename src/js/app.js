@@ -1,7 +1,19 @@
 import * as flsFunctions from "./modules/functions.js";
 
-
-import { slider_1, slider_2, slider_3, slider_4, slider_5,slider_6,slider_7,slider_12 } from "./modules/mocks.js";
+import {
+  slider_1,
+  slider_2,
+  slider_3,
+  slider_4,
+  slider_5,
+  slider_6,
+  slider_7,
+  slider_8,
+  slider_9,
+  slider_10,
+  slider_11,
+  slider_12,
+} from "./modules/mocks.js";
 
 flsFunctions.isWebp();
 import Swiper from "swiper";
@@ -41,21 +53,28 @@ if (imgFeedbacks && btnPrevFeedbacks && btnNextFeedbacks) {
       arr = slider_1;
     } else if (dataAttribute === "slider_2") {
       arr = slider_2;
-
     } else if (dataAttribute === "slider_3") {
       arr = slider_3;
-    }else if (dataAttribute === "slider_4") {
+    } else if (dataAttribute === "slider_4") {
       arr = slider_4;
-    }else if (dataAttribute === "slider_5") {
+    } else if (dataAttribute === "slider_5") {
       arr = slider_5;
-    }else if (dataAttribute === "slider_6") {
+    } else if (dataAttribute === "slider_6") {
       arr = slider_6;
-    }else if (dataAttribute === "slider_7") {
+    } else if (dataAttribute === "slider_7") {
       arr = slider_7;
-    }else if (dataAttribute === "slider_12") {
+    } else if (dataAttribute === "slider_8") {
+      arr = slider_8;
+    } else if (dataAttribute === "slider_9") {
+      arr = slider_9;
+    } else if (dataAttribute === "slider_10") {
+      arr = slider_10;
+    } else if (dataAttribute === "slider_11") {
+      arr = slider_11;
+    } else if (dataAttribute === "slider_12") {
       arr = slider_12;
     }
-    
+
     if (
       dataAttribute === titleFeedbacks.dataset.slider &&
       dataAttribute === textFeedbacks.dataset.slider &&
@@ -148,7 +167,6 @@ const headerLight = document.querySelector(".header__light");
 const mainBanner = document.querySelector(".main__banner");
 const about = document.querySelector(".about");
 
-
 if (about) {
   let heightAbout = about.offsetHeight;
   let offsetAbout = offset(about).top;
@@ -176,7 +194,7 @@ if (about) {
       headerLight.style.display = "none";
     }
   });
-  
+
   //dark header на баннере*************************************
   window.addEventListener("scroll", () => {
     if (
@@ -199,56 +217,56 @@ function offset(el) {
 
 ///BURGER MENU
 let isOpen = false;
-const burger = document.querySelector('.burger-menu');
-const burgerLine = document.querySelector('.burger-line');
-const headerDarkMediaOpen = document.querySelector('.header__dark-media-open')
-const logoDark = document.querySelector('.header-logo')
-const navMobileContainer = document.querySelector('.mobile-container')
-const navMobileContainerLight = document.querySelector('.mobile-container-light')
+const burger = document.querySelector(".burger-menu");
+const burgerLine = document.querySelector(".burger-line");
+const headerDarkMediaOpen = document.querySelector(".header__dark-media-open");
+const logoDark = document.querySelector(".header-logo");
+const navMobileContainer = document.querySelector(".mobile-container");
+const navMobileContainerLight = document.querySelector(
+  ".mobile-container-light"
+);
 
-if(burger){
-  burger.addEventListener('click', () => {
+if (burger) {
+  burger.addEventListener("click", () => {
     if (!isOpen) {
-      burger.classList.add('active');
-      burgerLine.classList.add('active');
-      header.classList.add('light-version');
-      logoDark.style.opacity = '0';
-      headerDarkMediaOpen.style.opacity = '1';
-      navMobileContainer.classList.add('active');
+      burger.classList.add("active");
+      burgerLine.classList.add("active");
+      header.classList.add("light-version");
+      logoDark.style.opacity = "0";
+      headerDarkMediaOpen.style.opacity = "1";
+      navMobileContainer.classList.add("active");
       isOpen = true;
-      body.classList.add('locked-body')
-    } else{
-      burger.classList.remove('active');
-      burgerLine.classList.remove('active');
-      header.classList.remove('light-version');
-      logoDark.style.opacity = '1';
-      headerDarkMediaOpen.style.opacity = '0';
-      navMobileContainer.classList.remove('active');
+      body.classList.add("locked-body");
+    } else {
+      burger.classList.remove("active");
+      burgerLine.classList.remove("active");
+      header.classList.remove("light-version");
+      logoDark.style.opacity = "1";
+      headerDarkMediaOpen.style.opacity = "0";
+      navMobileContainer.classList.remove("active");
       isOpen = false;
-      body.classList.remove('locked-body')
-      
+      body.classList.remove("locked-body");
     }
-  })
+  });
 }
-const burgerLight = document.querySelector('.burger-menu-light');
-const burgerLineLight = document.querySelector('.burger-line-light');
-burgerLight.addEventListener('click', () => {
+const burgerLight = document.querySelector(".burger-menu-light");
+const burgerLineLight = document.querySelector(".burger-line-light");
+burgerLight.addEventListener("click", () => {
   if (!isOpen) {
-    burgerLight.classList.add('active');
-    burgerLineLight.classList.add('active');
-    navMobileContainerLight.classList.add('active')
+    burgerLight.classList.add("active");
+    burgerLineLight.classList.add("active");
+    navMobileContainerLight.classList.add("active");
     isOpen = true;
     // body.classList.add('locked-body')
-  } else{
-    burgerLight.classList.remove('active');
-    burgerLineLight.classList.remove('active');
-    navMobileContainerLight.classList.remove('active')
+  } else {
+    burgerLight.classList.remove("active");
+    burgerLineLight.classList.remove("active");
+    navMobileContainerLight.classList.remove("active");
     isOpen = false;
     // body.classList.remove('locked-body')
   }
-})
-  
-  
+});
+
 //аккордион
 const accordionTitles = document.querySelectorAll(
     ".faq__accordion-block-title"
@@ -319,19 +337,14 @@ const galleryBasicSurgeryOfflain = document.querySelectorAll(
 const galleryBasicSurgeryOnlain = document.querySelectorAll(
   ".gallerybasicsurgeryonlain__item-media"
 );
-const galleryCardio = document.querySelectorAll(
-  ".gallerycardio__item-media"
-);
+const galleryCardio = document.querySelectorAll(".gallerycardio__item-media");
 const galleryVascularSurgery = document.querySelectorAll(
   ".galleryvascularsurgery__item-media"
 );
 const galleryMicroSurgery = document.querySelectorAll(
   ".gallerymicrosurgery__item-media"
 );
-const galleryDental = document.querySelectorAll(
-  ".gallerydental__item-media"
-);
-
+const galleryDental = document.querySelectorAll(".gallerydental__item-media");
 
 let swiperNavigationWhyus = document.querySelector("#whyus");
 let swiperNavigationGalleryAbout = document.querySelector("#galleryabout");
@@ -341,18 +354,10 @@ let swiperBasicSurgeryOfflain = document.querySelector(
 let swiperBasicSurgeryOnlain = document.querySelector(
   "#gallerybasicsurgeryonlain"
 );
-let swiperCardio = document.querySelector(
-  "#gallerycardio"
-);
-let swiperVascularSurgery = document.querySelector(
-  "#galleryvascularsurgery"
-);
-let swiperMicroSurgery = document.querySelector(
-  "#gallerymicrosurgery"
-);
-let swiperDental = document.querySelector(
-  "#gallerydental"
-);
+let swiperCardio = document.querySelector("#gallerycardio");
+let swiperVascularSurgery = document.querySelector("#galleryvascularsurgery");
+let swiperMicroSurgery = document.querySelector("#gallerymicrosurgery");
+let swiperDental = document.querySelector("#gallerydental");
 
 const arrowPrev = document.querySelector(".arrow-prev");
 const arrowNext = document.querySelector(".arrow-next");
@@ -384,24 +389,22 @@ function nextSlide() {
   } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForNext(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide + 1, galleryBasicSurgeryOfflain);
-  }else if (swiperBasicSurgeryOnlain) {
+  } else if (swiperBasicSurgeryOnlain) {
     checkCurrentSlideForNext(galleryBasicSurgeryOnlain);
     goToSlide(currentSlide + 1, galleryBasicSurgeryOnlain);
-  }else if (swiperCardio) {
+  } else if (swiperCardio) {
     checkCurrentSlideForNext(galleryCardio);
     goToSlide(currentSlide + 1, galleryCardio);
-  }
-  else if (swiperVascularSurgery) {
+  } else if (swiperVascularSurgery) {
     checkCurrentSlideForNext(galleryVascularSurgery);
     goToSlide(currentSlide + 1, galleryVascularSurgery);
-  }else if (swiperMicroSurgery) {
+  } else if (swiperMicroSurgery) {
     checkCurrentSlideForNext(galleryMicroSurgery);
     goToSlide(currentSlide + 1, galleryMicroSurgery);
-  }else if (swiperDental) {
+  } else if (swiperDental) {
     checkCurrentSlideForNext(galleryDental);
     goToSlide(currentSlide + 1, galleryDental);
   }
-
 }
 
 function previousSlide() {
@@ -414,19 +417,19 @@ function previousSlide() {
   } else if (swiperBasicSurgeryOfflain) {
     checkCurrentSlideForPrev(galleryBasicSurgeryOfflain);
     goToSlide(currentSlide - 1, galleryBasicSurgeryOfflain);
-  }else if (swiperBasicSurgeryOnlain) {
+  } else if (swiperBasicSurgeryOnlain) {
     checkCurrentSlideForPrev(galleryBasicSurgeryOnlain);
     goToSlide(currentSlide - 1, galleryBasicSurgeryOnlain);
-  }else if (swiperCardio) {
+  } else if (swiperCardio) {
     checkCurrentSlideForPrev(galleryCardio);
     goToSlide(currentSlide - 1, galleryCardio);
-  }else if (swiperVascularSurgery) {
+  } else if (swiperVascularSurgery) {
     checkCurrentSlideForPrev(galleryVascularSurgery);
     goToSlide(currentSlide - 1, galleryVascularSurgery);
-  }else if (swiperMicroSurgery) {
+  } else if (swiperMicroSurgery) {
     checkCurrentSlideForPrev(galleryMicroSurgery);
     goToSlide(currentSlide - 1, galleryMicroSurgery);
-  }else if (swiperDental) {
+  } else if (swiperDental) {
     checkCurrentSlideForPrev(galleryDental);
     goToSlide(currentSlide - 1, galleryDental);
   }

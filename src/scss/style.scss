@@ -1416,7 +1416,7 @@ svg.ico__footer.ico-vk path {
   }
 
   &__block.about-big {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     min-height: 250px;
   }
 
@@ -1429,16 +1429,25 @@ svg.ico__footer.ico-vk path {
   &__image.about-big {
     width: 280px;
   }
+  &__image.about-big.about-box3.juniormedicpage,
   &__image.about-big.about-box3.basicSkillsOnlPage,
   &__image.about-big.about-box3.microSurgeryPage {
-    width: 280px;
     height: 320px;
   }
+  &__image.about-big.about-box3.surgerypage,
   &__image.about-big.about-box3.cardioPage,
   &__image.about-big.about-box3.dentalPage,
   &__image.about-big.about-box3.vascularSurgeryPage {
-    width: 280px;
     height: 290px;
+  }
+  &__image.about-big.about-box3.anatomypage {
+    height: 370px;
+  }
+  &__image.about-big.about-box3.youngsurgeonpage {
+    height: 340px;
+  }
+  &__image.about-big.about-box3.operationpage {
+    height: 260px;
   }
 }
 
@@ -1523,7 +1532,7 @@ svg.ico__footer.ico-vk path {
       display: block;
       position: absolute;
       left: 0;
-      top: 0;
+      top: -7.5px;
       width: 40px;
       height: 40px;
     }
@@ -1583,14 +1592,12 @@ svg.ico__footer.ico-vk path {
 }
 
 // галерея страницы juniorMedic
-.galleryjuniormedic{
+.galleryjuniormedic {
   &__block {
     width: 100%;
     height: 360px;
     display: grid;
-    grid-template-areas:
-      "a0 b0 c0"
-      ;
+    grid-template-areas: "a0 b0 c0";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 20px;
@@ -1609,6 +1616,200 @@ svg.ico__footer.ico-vk path {
   .item-c0 {
     background-image: url("@img/juniorMedicPage/juniorMedicPage_c0.jpg");
     grid-area: c0;
+  }
+}
+
+// галерея страницы anatomyPage
+.galleryanatomy {
+  &__block {
+    width: 100%;
+    height: 620px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      "a0 b0 c0"
+      "d0 b0 f0"
+      "d0 e0 f0"
+      "d0 e0 f0";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/anatomyPage/anatomyPage_a0.jpg");
+    grid-area: a0;
+  }
+
+  .item-b0 {
+    background-image: url("@img/anatomyPage/anatomyPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/anatomyPage/anatomyPage_c0.jpg");
+    grid-area: c0;
+  }
+
+  .item-d0 {
+    background-image: url("@img/anatomyPage/anatomyPage_d0.jpg");
+    grid-area: d0;
+  }
+
+  .item-e0 {
+    background-image: url("@img/anatomyPage/anatomyPage_e0.jpg");
+    grid-area: e0;
+  }
+
+  .item-f0 {
+    background-image: url("@img/anatomyPage/anatomyPage_f0.jpg");
+    grid-area: f0;
+  }
+}
+
+// галерея страницы youngSurgeonPage
+.galleryyoungsurgeon {
+  &__block {
+    width: 100%;
+    height: 620px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      "a0 b0 c0"
+      "d0 b0 f0"
+      "d0 e0 f0"
+      "d0 e0 f0";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_a0.jpg");
+    grid-area: a0;
+  }
+
+  .item-b0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_c0.jpg");
+    grid-area: c0;
+  }
+
+  .item-d0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_d0.jpg");
+    grid-area: d0;
+  }
+
+  .item-e0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_e0.jpg");
+    grid-area: e0;
+  }
+
+  .item-f0 {
+    background-image: url("@img/youngSurgeonPage/youngSurgeonPage_f0.jpg");
+    grid-area: f0;
+  }
+}
+
+// галерея страницы SurgeryPage
+.gallerysurgery {
+  &__block {
+    width: 100%;
+    height: 620px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      "a0 b0 c0"
+      "d0 b0 f0"
+      "d0 e0 f0"
+      "d0 e0 f0";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/surgeryPage/surgeryPage_a0.jpg");
+    grid-area: a0;
+  }
+
+  .item-b0 {
+    background-image: url("@img/surgeryPage/surgeryPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/surgeryPage/surgeryPage_c0.jpg");
+    grid-area: c0;
+  }
+
+  .item-d0 {
+    background-image: url("@img/surgeryPage/surgeryPage_d0.jpg");
+    grid-area: d0;
+  }
+
+  .item-e0 {
+    background-image: url("@img/surgeryPage/surgeryPage_e0.jpg");
+    grid-area: e0;
+  }
+
+  .item-f0 {
+    background-image: url("@img/surgeryPage/surgeryPage_f0.jpg");
+    grid-area: f0;
+  }
+}
+// галерея страницы OperationPage
+.galleryoperation {
+  &__block {
+    width: 100%;
+    height: 620px;
+    display: grid;
+    grid-template-areas:
+      "a0 b0 c0"
+      "a0 b0 c0"
+      "d0 b0 f0"
+      "d0 e0 f0"
+      "d0 e0 f0";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .item-a0 {
+    background-image: url("@img/operationPage/operationPage_a0.jpg");
+    grid-area: a0;
+  }
+  .item-b0 {
+    background-image: url("@img/operationPage/operationPage_b0.jpg");
+    grid-area: b0;
+  }
+
+  .item-c0 {
+    background-image: url("@img/operationPage/operationPage_c0.jpg");
+    grid-area: c0;
+  }
+
+  .item-d0 {
+    background-image: url("@img/operationPage/operationPage_d0.jpg");
+    grid-area: d0;
+  }
+
+  .item-e0 {
+    background-image: url("@img/operationPage/operationPage_e0.jpg");
+    grid-area: e0;
+  }
+
+  .item-f0 {
+    background-image: url("@img/operationPage/operationPage_f0.jpg");
+    grid-area: f0;
   }
 }
 
@@ -1744,11 +1945,10 @@ svg.ico__footer.ico-vk path {
     font-weight: 300;
     font-size: 12px;
     line-height: 125%;
-    color:$black;
-   
+    color: $black;
   }
-  .lessonBasicOnlainStar{
- margin-right: 10px;
+  .lessonBasicOnlainStar {
+    margin-right: 10px;
   }
 }
 .gallerybasicskillsonlain {
@@ -1756,8 +1956,7 @@ svg.ico__footer.ico-vk path {
     width: 100%;
     height: 360px;
     display: grid;
-    grid-template-areas:
-      "a1 b1 c1";
+    grid-template-areas: "a1 b1 c1";
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
   }
@@ -1849,7 +2048,7 @@ svg.ico__footer.ico-vk path {
   }
 
   .item-b3 {
-    background-image:url("@img/vascularSurgeryPage/vascularSurgeryPage_b3.jpg");
+    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_b3.jpg");
     grid-area: b3;
   }
 
@@ -1869,7 +2068,7 @@ svg.ico__footer.ico-vk path {
   }
 
   .item-f3 {
-    background-image:url("@img/vascularSurgeryPage/vascularSurgeryPage_f3.jpg");
+    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_f3.jpg");
     grid-area: f3;
   }
 }
@@ -1955,7 +2154,7 @@ svg.ico__footer.ico-vk path {
   }
 
   .item-d5 {
-    background-image:  url("@img/dentalPage/dentalPage_d5.jpg");
+    background-image: url("@img/dentalPage/dentalPage_d5.jpg");
     grid-area: d5;
   }
 
@@ -2767,16 +2966,15 @@ svg.ico__footer.ico-vk path {
       height: 320px;
     }
     &__image.about-big.about-box3.basicSkillsOnlPage,
-  &__image.about-big.about-box3.microSurgeryPage,
-  &__image.about-big.about-box3.cardioPage,
-  &__image.about-big.about-box3.dentalPage,
-  &__image.about-big.about-box3.vascularSurgeryPage {
-    height: 200px;
-  }
-  .about-curse__text-block.about-big{
-    margin-bottom: 25px;
-  }
-   
+    &__image.about-big.about-box3.microSurgeryPage,
+    &__image.about-big.about-box3.cardioPage,
+    &__image.about-big.about-box3.dentalPage,
+    &__image.about-big.about-box3.vascularSurgeryPage {
+      height: 200px;
+    }
+    .about-curse__text-block.about-big {
+      margin-bottom: 25px;
+    }
   }
 
   //lesson для направлений//
@@ -2936,229 +3134,227 @@ svg.ico__footer.ico-vk path {
     }
   }
 
-    
   //PAGE BASIC SKILLS ONLAIN
-.lessonBasicOnlainContainer {
-  padding-top: 0px;
-  margin-left: 25px;
-  margin-bottom: 20px;
-}
-.gallerybasicskillsonlain {
-  &__block {
-    display: none;
+  .lessonBasicOnlainContainer {
+    padding-top: 0px;
+    margin-left: 25px;
+    margin-bottom: 20px;
   }
-  .gallerybasicsurgeryonlain__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerybasicsurgeryonlain__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+  .gallerybasicskillsonlain {
+    &__block {
+      display: none;
     }
-    background-size: cover;
-    cursor: pointer;
+    .gallerybasicsurgeryonlain__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .gallerybasicsurgeryonlain__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
+    }
+    .gallerybasicsurgeryonlain__item-media {
+      display: none;
+    }
+    .gallerybasicsurgeryonlain__item-media:nth-child(1) {
+      background-image: url("@img/basicSkillsOnlPage/basicSkillsOnlPage_a1.jpg");
+    }
+    .gallerybasicsurgeryonlain__item-media:nth-child(2) {
+      background-image: url("@img/basicSkillsOnlPage/basicSkillsOnlPage_b1.jpg");
+    }
+    .gallerybasicsurgeryonlain__item-media:nth-child(3) {
+      background-image: url("@img/basicSkillsOnlPage/basicSkillsOnlPage_c1.jpg");
+    }
   }
-  .gallerybasicsurgeryonlain__item-media {
-    display: none;
-  }
-  .gallerybasicsurgeryonlain__item-media:nth-child(1) {
-    background-image: url("@img/basicSkillsOnlPage/basicSkillsOnlPage_a1.jpg");
-  }
-  .gallerybasicsurgeryonlain__item-media:nth-child(2) {
-    background-image: url("@img/basicSkillsOnlPage/basicSkillsOnlPage_b1.jpg");
-  }
-  .gallerybasicsurgeryonlain__item-media:nth-child(3) {
-    background-image:  url("@img/basicSkillsOnlPage/basicSkillsOnlPage_c1.jpg");
-  }
-}
 
-///GALLERY CARDIO
-.gallerycardio {
-  &__block {
-    display: none;
-  }
-  .gallerycardio__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerycardio__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+  ///GALLERY CARDIO
+  .gallerycardio {
+    &__block {
+      display: none;
     }
-    background-size: cover;
-    cursor: pointer;
+    .gallerycardio__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .gallerycardio__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
+    }
+    .gallerycardio__item-media {
+      display: none;
+    }
+    .gallerycardio__item-media:nth-child(1) {
+      background-image: url("@img/cardioPage/cardioPage_a2.jpg");
+    }
+    .gallerycardio__item-media:nth-child(2) {
+      background-image: url("@img/cardioPage/cardioPage_b2.jpg");
+    }
+    .gallerycardio__item-media:nth-child(3) {
+      background-image: url("@img/cardioPage/cardioPage_c2.jpg");
+    }
+    .gallerycardio__item-media:nth-child(4) {
+      background-image: url("@img/cardioPage/cardioPage_d2.jpg");
+    }
+    .gallerycardio__item-media:nth-child(5) {
+      background-image: url("@img/cardioPage/cardioPage_e2.jpg");
+    }
+    .gallerycardio__item-media:nth-child(6) {
+      background-image: url("@img/cardioPage/cardioPage_f2.jpg");
+    }
   }
-  .gallerycardio__item-media {
-    display: none;
-  }
-  .gallerycardio__item-media:nth-child(1) {
-    background-image: url("@img/cardioPage/cardioPage_a2.jpg");
-  }
-  .gallerycardio__item-media:nth-child(2) {
-    background-image: url("@img/cardioPage/cardioPage_b2.jpg");
-  }
-  .gallerycardio__item-media:nth-child(3) {
-    background-image: url("@img/cardioPage/cardioPage_c2.jpg");
-  }
-  .gallerycardio__item-media:nth-child(4) {
-    background-image: url("@img/cardioPage/cardioPage_d2.jpg");
-  }
-  .gallerycardio__item-media:nth-child(5) {
-    background-image: url("@img/cardioPage/cardioPage_e2.jpg");
-  }
-  .gallerycardio__item-media:nth-child(6) {
-    background-image: url("@img/cardioPage/cardioPage_f2.jpg");
-  }
-}
 
-///GALLERY VASCULAR SURGERY
-.galleryvascularsurgery {
-  &__block {
-    display: none;
-  }
-  .galleryvascularsurgery__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .galleryvascularsurgery__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+  ///GALLERY VASCULAR SURGERY
+  .galleryvascularsurgery {
+    &__block {
+      display: none;
     }
-    background-size: cover;
-    cursor: pointer;
-  }
-  .galleryvascularsurgery__item-media {
-    display: none;
-  }
-  .galleryvascularsurgery__item-media:nth-child(1) {
-    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_a3.jpg");
-  }
-  .galleryvascularsurgery__item-media:nth-child(2) {
-    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_b3.jpg");
-  }
-  .galleryvascularsurgery__item-media:nth-child(3) {
-    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_c3.jpg");
-  }
-  .galleryvascularsurgery__item-media:nth-child(4) {
-    background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_d3.jpg");
-  }
-  .galleryvascularsurgery__item-media:nth-child(5) {
-    background-image:url("@img/vascularSurgeryPage/vascularSurgeryPage_e3.jpg");
-  }
-  .galleryvascularsurgery__item-media:nth-child(6) {
-    background-image:url("@img/vascularSurgeryPage/vascularSurgeryPage_f3.jpg");
-  }
-}
-///GALLERY VASCULAR SURGERY
-.gallerymicrosurgery {
-  &__block {
-    display: none;
-  }
-  .gallerymicrosurgery__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerymicrosurgery__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+    .galleryvascularsurgery__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
     }
-    background-size: cover;
-    cursor: pointer;
-  }
-  .gallerymicrosurgery__item-media {
-    display: none;
-  }
-  .gallerymicrosurgery__item-media:nth-child(1) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_a4.jpg");
-  }
-  .gallerymicrosurgery__item-media:nth-child(2) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_b4.jpg");
-  }
-  .gallerymicrosurgery__item-media:nth-child(3) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_c4.jpg");
-  }
-  .gallerymicrosurgery__item-media:nth-child(4) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_d4.jpg");
-  }
-  .gallerymicrosurgery__item-media:nth-child(5) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_e4.jpg");
-  }
-  .gallerymicrosurgery__item-media:nth-child(6) {
-    background-image: url("@img/microSurgeryPage/microSurgeryPage_f4.jpg");
-  }
-}
-///GALLERY DENTAL
-.gallerydental {
-  &__block {
-    display: none;
-  }
-  .gallerydental__block-media {
-    max-width: 360px;
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-  }
-  .gallerydental__item-media.block {
-    display: block;
-    width: 100%;
-    height: 360px;
-    margin-bottom: 47px;
-    background: {
-      repeat: no-repeat;
-      position: center center;
+    .galleryvascularsurgery__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
     }
-    background-size: cover;
-    cursor: pointer;
+    .galleryvascularsurgery__item-media {
+      display: none;
+    }
+    .galleryvascularsurgery__item-media:nth-child(1) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_a3.jpg");
+    }
+    .galleryvascularsurgery__item-media:nth-child(2) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_b3.jpg");
+    }
+    .galleryvascularsurgery__item-media:nth-child(3) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_c3.jpg");
+    }
+    .galleryvascularsurgery__item-media:nth-child(4) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_d3.jpg");
+    }
+    .galleryvascularsurgery__item-media:nth-child(5) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_e3.jpg");
+    }
+    .galleryvascularsurgery__item-media:nth-child(6) {
+      background-image: url("@img/vascularSurgeryPage/vascularSurgeryPage_f3.jpg");
+    }
   }
-  .gallerydental__item-media {
-    display: none;
+  ///GALLERY VASCULAR SURGERY
+  .gallerymicrosurgery {
+    &__block {
+      display: none;
+    }
+    .gallerymicrosurgery__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .gallerymicrosurgery__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
+    }
+    .gallerymicrosurgery__item-media {
+      display: none;
+    }
+    .gallerymicrosurgery__item-media:nth-child(1) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_a4.jpg");
+    }
+    .gallerymicrosurgery__item-media:nth-child(2) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_b4.jpg");
+    }
+    .gallerymicrosurgery__item-media:nth-child(3) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_c4.jpg");
+    }
+    .gallerymicrosurgery__item-media:nth-child(4) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_d4.jpg");
+    }
+    .gallerymicrosurgery__item-media:nth-child(5) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_e4.jpg");
+    }
+    .gallerymicrosurgery__item-media:nth-child(6) {
+      background-image: url("@img/microSurgeryPage/microSurgeryPage_f4.jpg");
+    }
   }
-  .gallerydental__item-media:nth-child(1) {
-    background-image: url("@img/dentalPage/dentalPage_a5.jpg");
-  }
-  .gallerydental__item-media:nth-child(2) {
-    background-image: url("@img/dentalPage/dentalPage_b5.jpg");
-  }
-  .gallerydental__item-media:nth-child(3) {
-    background-image: url("@img/dentalPage/dentalPage_c5.jpg");
-  }
-  .gallerydental__item-media:nth-child(4) {
-    background-image: url("@img/dentalPage/dentalPage_d5.jpg");
-  }
-  .gallerydental__item-media:nth-child(5) {
-    background-image: url("@img/dentalPage/dentalPage_e5.jpg");
-  }
-  .gallerydental__item-media:nth-child(6) {
-    background-image: url("@img/dentalPage/dentalPage_f5.jpg");
+  ///GALLERY DENTAL
+  .gallerydental {
+    &__block {
+      display: none;
+    }
+    .gallerydental__block-media {
+      max-width: 360px;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+    .gallerydental__item-media.block {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 47px;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+      background-size: cover;
+      cursor: pointer;
+    }
+    .gallerydental__item-media {
+      display: none;
+    }
+    .gallerydental__item-media:nth-child(1) {
+      background-image: url("@img/dentalPage/dentalPage_a5.jpg");
+    }
+    .gallerydental__item-media:nth-child(2) {
+      background-image: url("@img/dentalPage/dentalPage_b5.jpg");
+    }
+    .gallerydental__item-media:nth-child(3) {
+      background-image: url("@img/dentalPage/dentalPage_c5.jpg");
+    }
+    .gallerydental__item-media:nth-child(4) {
+      background-image: url("@img/dentalPage/dentalPage_d5.jpg");
+    }
+    .gallerydental__item-media:nth-child(5) {
+      background-image: url("@img/dentalPage/dentalPage_e5.jpg");
+    }
+    .gallerydental__item-media:nth-child(6) {
+      background-image: url("@img/dentalPage/dentalPage_f5.jpg");
+    }
   }
 }
-}
-
