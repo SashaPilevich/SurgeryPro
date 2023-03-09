@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title":"Операционная" })
+  <body>
+    <header class="header__anotherpage">
+      <div class="container">
+        <div class="header__dark">
+          <a class="header-logo" href="index.html"
+            >@@include('html/logolight.html')</a
+          >
+          <div class="burger-menu-light">
+            <span class="burger-line-light"></span>
+          </div>
+          @@include('html/navmobilelight.html')
+          <nav class="header__menu-light">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="light" href="index.html">Главная</a>
+              </li>
+              <li class="header__item">
+                <a class="light" href="pageAboutSpace.html">О пространстве</a>
+              </li>
+              <li class="header__item">
+                <a class="light redline" href="pageProgrammes.html">Обучение</a>
+              </li>
+              <li class="header__item">
+                <a class="light" href="pagefaq.html">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="btn__signup-light" href="index.html#record">Записаться</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      @@include('html/operationPage/aboutOperation.html',{})
+      @@include('html/operationPage/descriptionOperation.html',{})
+      @@include('html/operationPage/lessonOperation.html',{})
+      @@include('html/operationPage/galleryOperation.html',{})
+      @@include('html/operationPage/feedbacksOperation.html',{})
+    </main>
+    @@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
